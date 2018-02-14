@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="31px" viewBox="0 0 31 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_graph_v1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="31" height="31"></rect>
+    </defs>
+    <g id="ico-site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-65.000000, -2019.000000)">
+        <g id="Lunes-market" transform="translate(-77.000000, 1978.000000)">
+            <g id="ic_Lunes-market" transform="translate(101.000000, 0.000000)">
+                <g id="ic_graph_v1" transform="translate(41.000000, 41.000000)">
+                    <g id="Rectangle-6" opacity="0">
+                        <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <rect stroke="#FFFFFF" stroke-width="2.178" x="1.089" y="1.089" width="28.822" height="28.822"></rect>
+                    </g>
+                    <path d="M1.9375,1.9375 L1.9375,29.0625" id="Line" stroke="#FFFFFF" stroke-width="3.267" stroke-linecap="round"></path>
+                    <path d="M1.9375,29.0625 L29.0625,29.0625" id="Line" stroke="#FFFFFF" stroke-width="3.267" stroke-linecap="round"></path>
+                    <polyline id="Path-4" stroke="#FFFFFF" stroke-width="3.267" stroke-linecap="round" stroke-linejoin="round" points="5.8125 23.25 11.828478 13.1760638 16.3699024 20.1674218 22.4632152 5.8125 27.125 15.9261829"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
