@@ -44,3 +44,19 @@ $("#navbar #cont a").on('click', function(event) {
         return window.history.pushState(null, null, target);
     });
 });
+
+/* time counter */
+function getTime(){
+    var dataInicio = new Date();
+    var dataFim = new Date("02/25/2018");
+    var diffMilissegundos = dataFim - dataInicio;
+
+    var dif = new Date(diffMilissegundos);
+
+    $("#con_days").html(dif.getDate());
+    $("#con_hours").html(dif.getHours());
+    $("#con_min").html(dif.getMinutes());
+    $("#con_sec").html(dif.getSeconds());
+    
+}
+setInterval(getTime, 1000);
