@@ -140,6 +140,7 @@ header a:hover {
     display:block;
     position: absolute;
     right:0px;
+    animation: flashflash 8s infinite;
 }
 
 
@@ -287,6 +288,9 @@ header a:hover {
 .bt_green:hover {
     text-decoration: none;
     color:#fff;
+
+    background: linear-gradient(#4cd566, #77f38d);
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
 }
 
 
@@ -509,4 +513,67 @@ footer .link a {
 footer .bt_green {
     padding: 5px;
     font-size: 10px;
+    text-align:center;
+}
+
+
+ul.lSGallery {
+    border-top: solid 3px #fff;
+    padding-top:10px;
+}
+#slide_time .lslide .social_bar {
+    text-align: right;
+}
+#slide_time .lslide .social_bar a {
+    float:right;
+    margin: 5px;
+}
+#slide_time .lslide .social_bar a:hover {
+    opacity: .3;
+}
+#slide_time .lslide h3 {
+    display: block;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.8em;
+}
+#slide_time .lslide h4 {
+    display: block;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    margin-top:-5px;
+    color: #4cd566;
+}
+#slide_time .lslide .img-responsive {
+    padding-top:40px;
+}
+
+/* animations */
+#robo {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes flashflash {
+	0% {
+		opacity: .2;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: .2;
+	}
 }

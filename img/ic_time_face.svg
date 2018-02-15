@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="28px" viewBox="0 0 13 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="100%" gradientTransform="translate(0.500000,0.000000),scale(1.000000,0.464286),rotate(90.000000),translate(-0.500000,-0.000000)" id="radialGradient-1">
+            <stop stop-color="#9E87D1" offset="0%"></stop>
+            <stop stop-color="#654FA4" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="ico-site" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-210.000000, -14012.000000)">
+        <path d="M213.318583,14039.9997 L213.318583,14026.8614 L210,14026.8614 L210,14022.1308 L213.318583,14022.1308 L213.318583,14018.0904 C213.318583,14014.9154 215.278911,14012 219.795783,14012 C221.624674,14012 222.977322,14012.1835 222.977322,14012.1835 L222.870515,14016.6009 C222.870515,14016.6009 221.491287,14016.5869 219.986232,14016.5869 C218.3573,14016.5869 218.096378,14017.3726 218.096378,14018.677 C218.096378,14019.708 218.096378,14016.4794 218.096378,14022.131 L223,14022.131 L222.786629,14026.8617 L218.096378,14026.8617 L218.096378,14040 L213.318583,14040 L213.318583,14039.9997 Z" id="Shape-3" fill="url(#radialGradient-1)"></path>
+    </g>
+</svg>

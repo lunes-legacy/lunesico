@@ -60,3 +60,22 @@ function getTime(){
     
 }
 setInterval(getTime, 1000);
+
+
+/* slide time */
+$(document).ready(function() {
+    $("#slide_time").lightSlider({
+        gallery:true,
+        item:1,
+        loop:true,
+        thumbItem:9,
+        slideMargin:0,
+        enableDrag: true,
+        currentPagerPosition:'left',
+        onSliderLoad: function(el) {
+            el.lightGallery({
+                selector: '#slide_time .lslide'
+            });
+        }   
+    });
+});

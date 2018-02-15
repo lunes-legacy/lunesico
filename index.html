@@ -17,6 +17,9 @@
     <!-- icons -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
+    <!-- light slider -->
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" /> 
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/main.css"/>
 
@@ -65,62 +68,71 @@
             <span id="logo">Lun<span class="green-word">e</span>s</span>
             <a href="#" class="bt_green join-top">JOIN OUT WHITELIST</a>
             
-            <h3 style="margin-top:40px;">
-                A Lunes é uma plataforma que fornece um conjunto de 
-                soluções descentralizadas através do blockchain.
-            </h3>
-            <p>
-                De forma descomplicada e acessível, levaremos nossas tecnologias 
-                para toda a população. Com soluções reais para o dia-a-dia, 
-                entregamos serviços e produtos que vão desde processos de pagamentos 
-                e captação de recursos, até registros de autenticidade.
-            </p>
-
-            <div id="counter">
-                <span id="coin_counter">$ 11 765 537</span>
-                <div id="loading_bar">
-                    <div id="loading_bar_green" style="width:30%;"></div>
+            <div class="row">
+                
+                <div class="col-xs-12 col-md-8">
+                    <h3 style="margin-top:40px;">
+                        A Lunes é uma plataforma que fornece um conjunto de 
+                        soluções descentralizadas através do blockchain.
+                    </h3>
+                    <p>
+                        De forma descomplicada e acessível, levaremos nossas tecnologias 
+                        para toda a população. Com soluções reais para o dia-a-dia, 
+                        entregamos serviços e produtos que vão desde processos de pagamentos 
+                        e captação de recursos, até registros de autenticidade.
+                    </p>
                 </div>
-                <div id="base_counter">
-                    <div class="row" style="text-align:center;">
-                        <div class="col-xs-6">
-                            Pré-Ico<br>
-                            <span class="label label-success">Live</span>
+            
+                <div id="counter" class="col-xs-12 col-md-4">
+                    <span id="coin_counter">$ 11 765 537</span>
+                    <div id="loading_bar">
+                        <div id="loading_bar_green" style="width:30%;"></div>
+                    </div>
+                    <div id="base_counter">
+                        <div class="row" style="text-align:center;">
+                            <div class="col-xs-6">
+                                Pré-Ico<br>
+                                <span class="label label-success">Live</span>
+                            </div>
+                            <div class="col-xs-6">
+                                Ico
+                            </div>
                         </div>
-                        <div class="col-xs-6">
-                            Ico
+                        <!-- conter -->
+                        <div class="row" id="number">
+                            <div class="col-xs-3">
+                                <div id="con_days"></div>
+                                <span>Day</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <div id="con_hours"></div>
+                                <span>Time</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <div id="con_min"></div>
+                                <span>Minute</span>
+                            </div>
+                            <div class="col-xs-3">
+                                <div id="con_sec"></div>
+                                <span>Seconds</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- conter -->
-                    <div class="row" id="number">
-                        <div class="col-xs-3">
-                            <div id="con_days"></div>
-                            <span>Day</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <div id="con_hours"></div>
-                            <span>Time</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <div id="con_min"></div>
-                            <span>Minute</span>
-                        </div>
-                        <div class="col-xs-3">
-                            <div id="con_sec"></div>
-                            <span>Seconds</span>
-                        </div>
+                    <div id="hard-cap">
+                        Hard cap
+                        <span>$ 100 000 000</span>
                     </div>
                 </div>
-                <div id="hard-cap">
-                    Hard cap
-                    <span>$ 100 000 000</span>
+                <!-- socials icons -->
+                <div class="col-xs-8 col-xs-offset-2 text-center" style="margin-top:20px;margin-bottom:20px;">
+                    <a href="https://www.facebook.com/lunesplatform/" target="_blank"><img src="img/face.png" width="40px"/></a>
+                    <a href="https://medium.com/@lunes.platform" target="_blank"><img src="img/medium.png" width="40px" /></a>
+                    <a href="https://t.me/LunesPlatformEN" target="_blank"><img src="img/telegram.png" width="40px" /></a>
+                    <a href="https://twitter.com/lunesplatform" target="_blank"><img src="img/twitter.png" width="40px" /></a>
                 </div>
             </div>
 
-            <!-- socials icons -->
-            <div>
-
-            </div>
+            
 
             <h2>NOSSA FILOSOFIA</h2>
             <div class="row">
@@ -133,8 +145,8 @@
                         aos indivíduos.
                     </p>
                 </div>
-                <div class="col-xs-5">
-                    <img src="img/robo.png" />
+                <div class="col-xs-5 text-center">
+                    <img src="img/robo.png" id="robo" class="img-responsive" />
                 </div>
             </div>
         </div>
@@ -180,10 +192,11 @@
                         <li>Gestão de Cartões</li>
                     </ul>            
                 </div>
+                <div class="col-xs-12 col-md-4 text-center">
+                    <img src="img/ilust_lunes_wallet.png" class="img-responsive" />
+                </div>
             </div>
-            <div>
-                <img src="img/ilust_lunes_wallet.png" />
-            </div>
+            
         </div>
     </section>
 
@@ -223,11 +236,13 @@
                         <li>Transações P2P</li>
                     </ul>                
                 </div>
+                <div class="col-xs-12 col-md-4 text-center">
+                    <img src="img/ilust_lunes_market.png" class="img-responsive" />
+                </div>
             </div>
+            
             </div>
-            <div>
-                <img src="img/ilust_lunes_market.png" width="100%"/>
-            </div>
+            
     </section>
 
     <!-- card -->
@@ -260,9 +275,9 @@
                         <li>Controle seus gastos pela Lunes Wallet</li>
                     </ul>
                 </div>
-            </div>
-            <div>
-                <img src="img/ilust_lunes_card.png" />
+                <div class="col-xs-12 col-md-4 text-center">
+                    <img src="img/ilust_lunes_card.png" class="img-responsive" />
+                </div>
             </div>
         </div>
     </section>
@@ -297,9 +312,9 @@
                         <li>Diminua seus custos de transações</li>
                     </ul>
                 </div>
-            </div>
-            <div>
-                <img src="img/ilust_lunes_label.png" />
+                <div class="col-xs-12 text-center">
+                    <img src="img/ilust_lunes_label.png" class="img-responsive" />
+                </div>
             </div>
         </div>
     </section>
@@ -343,11 +358,13 @@
                         <li>Baixo custo</li>
                     </ul>
                 </div>
+                <div class="col-xs-12 col-md-4 text-center">
+                    <img src="img/ilust_lunes_truth.png" class="img-responsive" />
+                </div>
             </div>
+            
         </div>
-        <div>
-            <img src="img/ilust_lunes_truth.png" />
-        </div>
+        
     </section>
 
     <!-- point -->
@@ -389,10 +406,11 @@
                     <li>Avaliação de tokens e moedas para exchange</li>
                 </ul>
             </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <img src="img/ilust_lunes_point.png" class="img-responsive" />
+            </div>
         </div>
-        <div>
-            <img src="img/ilust_lunes_point.png" />
-        </div>
+        
         </div>
     </section>
 
@@ -412,16 +430,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-md-8">
                 <p>
                     Crie seus contratos e valide-os sem a necessidade de 
                     terceiros. Conquiste independência e autonomia por meio da 
                     tecnologia blockchain!
                 </p>
             </div>
-        </div>
-        <div>
-            <img src="img/ilust_lunes_contract.png" />
+            <div class="col-xs-12 col-md-4 text-center">
+                <img src="img/ilust_lunes_contract.png" class="img-responsive" />
+            </div>
         </div>
         </div>
     </section>
@@ -463,10 +481,11 @@
                     <li>Máquina sem mensalidade</li>
                 </ul>
             </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <img src="img/ilust_lunes_machine.png" class="img-responsive" />
+            </div>
         </div>
-        <div>
-            <img src="img/ilust_lunes_machine.png" />
-        </div>
+        
         </div>
     </section>
 
@@ -486,7 +505,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-md-8">
                 <p>
                     Aceite criptomoedas como forma de pagamento em seu 
                     e-commerce, app, game etc, recebendo em moeda fiat ou 
@@ -494,10 +513,11 @@
                     usando as moedas do futuro.
                 </p>
             </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <img src="img/ilust_lunes_gateway.png" class="img-responsive" />
+            </div>
         </div>
-        <div>
-            <img src="img/ilust_lunes_gateway.png" />
-        </div>
+        
         </div>
     </section>
 
@@ -527,10 +547,11 @@
                     participar da rede Lunes deixando suas moedas em leasing.
                 </p>
             </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <img src="img/ilust_lunes_pos.png" class="img-responsive" />
+            </div>
         </div>
-        <div>
-            <img src="img/ilust_lunes_pos.png" />
-        </div>
+        
         </div>
     </section>
 
@@ -558,10 +579,11 @@
                     um nó minerador da rede para emprestar o poder de seus Lunes.
                 </p>
             </div>
+            <div class="col-xs-12 col-md-4 text-center">
+                <img src="img/ilust_lunes_leasing.png" class="img-responsive" />
+            </div>
         </div>
-        <div>
-            <img src="img/ilust_lunes_leasing.png" />
-        </div>
+        
         </div>
     </section>
 
@@ -834,27 +856,298 @@
     <section id="lunes-time">
         <div class="container">
         <h2>Time<span style="font-size:10px;margin-left:20px;">O futuro no presente.</span></h2>
-        [ LISTA CARROCEL]
+        
+        <ul id="slide_time">
+            <li data-thumb="img/time/thumb/Lucas_Magno.png" data-src="img/time/Lucas_Magno.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Lucas_Magno.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Lucas Cabral</h3>
+                        <h4>CEO/Fundador</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            
+            <li data-thumb="img/time/thumb/Adriana_Santos.png" data-src="img/time/Adriana_Santos.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Adriana_Santos.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Adriana Santos</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Alvaro_Votan.png" data-src="img/time/Alvaro_Votan.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Alvaro_Votan.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Álvaro Votan</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Damiao_Vieira.png" data-src="img/time/Damiao_Vieira.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Damiao_Vieira.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Damião Vieira</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Daniel_Laurindo.png" data-src="img/time/Daniel_Laurindo.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Daniel_Laurindo.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Daniel Laurindo</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Felipe_Matheus_Rosa.png" data-src="img/time/Felipe_Matheus_Rosa.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Felipe_Matheus_Rosa.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Felipe Matheus Rosa</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Felipe_Mendes.png" data-src="img/time/Felipe_Mendes.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Felipe_Mendes.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Felipe Mendes</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Felipe_Siqueira.png" data-src="img/time/Felipe_Siqueira.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Felipe_Siqueira.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Felipe Siqueira</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Jorge_Lenon_Araujo.png" data-src="img/time/Jorge_Lenon_Araujo.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Jorge_Lenon_Araujo.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Jorge Lenon Araujo</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!--- -->
+            <li data-thumb="img/time/thumb/Kleberthon_Grenzi_Hora.png" data-src="img/time/Kleberthon_Grenzi_Hora.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Kleberthon_Grenzi_Hora.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Kleberthon Grenzi Hora</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Luiz_Feitosa.png" data-src="img/time/Luiz_Feitosa.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Luiz_Feitosa.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Luiz Feitosa</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Luiz_Fernando_da_Silva.png" data-src="img/time/Luiz_Fernando_da_Silva.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Luiz_Fernando_da_Silva.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Luiz Fernando da Silva</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Marcos_Lima.png" data-src="img/time/Marcos_Lima.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Marcos_Lima.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Marcos Lima</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li data-thumb="img/time/thumb/Wandyer_Silva.png" data-src="img/time/Wandyer_Silva.png">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <img src="img/time/Wandyer_Silva.png" class="img-responsive" />
+                    </div>
+                    <div class="col-xs-8">
+                        <h3>Wandyer Silva</h3>
+                        <h4>Cargo/Funcao</h4>
+                        <div class="social_bar">
+                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+
         </div>
     </section>
 
     <footer>
-        <div class="row">
-            <div class="col-xs-8">
-                <span style="font-size:14px;font-family:'Offside',cursive;">Lun<span class="green-word">e</span>s</span>
-                <span class="link">Support: <a href="mailto:lunes@lunes.io">lunes@lunes.io</a></span>
-                <span class="link">Press: <a href="mailto:lunes@lunes.io">lunes@lunes.io</a></span>
-                <span class="link">Partners: <a href="mailto:lunes@lunes.io">lunes@lunes.io</a></span>
-                <span class="link">Smart contract: <a href="#">github.com</a></span>
-            </div>
-            <div class="col-xs-4">
-                <div>
-                    <a href="#"><img src="img/ic_face.png" /></a>
-                    <a href="#"><img src="img/ic_face.png" /></a>
-                    <a href="#"><img src="img/ic_face.png" /></a>
-                    <a href="#"><img src="img/ic_face.png" /></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-7">
+                    <span style="font-size:14px;font-family:'Offside',cursive;">Lun<span class="green-word">e</span>s</span>
+                    <span class="link">Support: <a href="mailto:lunes@lunes.io">lunes@lunes.io</a></span>
+                    <span class="link">Press: <a href="mailto:lunes@lunes.io">lunes@lunes.io</a></span>
+                    <span class="link">Partners: <a href="mailto:lunes@lunes.io">lunes@lunes.io</a></span>
+                    <span class="link">Smart contract: <a href="#">github.com</a></span>
                 </div>
-                <a href="#" class="bt_green">JOIN OUR WHITELIST</a>
+                <div class="col-xs-5">
+                    <div style="margin-top:10px; margin-bottom:10px;">
+                        <a href="https://www.facebook.com/lunesplatform/" target="_blank"><img src="img/face.png" width="30px"/></a>
+                        <a href="https://medium.com/@lunes.platform" target="_blank"><img src="img/medium.png" width="30px" /></a>
+                        <a href="https://t.me/LunesPlatformEN" target="_blank"><img src="img/telegram.png" width="30px" /></a>
+                        <a href="https://twitter.com/lunesplatform" target="_blank"><img src="img/twitter.png" width="30px" /></a>
+                    </div>
+                    <a href="#" class="bt_green">JOIN OUR WHITELIST</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -862,6 +1155,7 @@
         
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/lightslider.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
