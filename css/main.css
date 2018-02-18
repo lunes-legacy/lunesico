@@ -266,7 +266,10 @@ header a:hover {
 .list-simple {
     font-size:.8em;
     opacity: .7;
-    list-style: inside;
+    /* list-style: inside; */
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 

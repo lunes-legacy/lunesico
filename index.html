@@ -32,7 +32,8 @@
                 <a href="javascript: void();" id="bt-menu" onclick="toggleMenu();"><i class="fa fa-bars fa-2x"></i></a>
             </div>
             <div class="col-xs-8">
-                <a href="#" class="bt_green" style="display:block; padding-left:20px; padding-right:20px;float:right;text-align:center;">WHITEPAPER</a>
+                <a href="#" class="bt_green hidden-sm hidden-md hidden-lg" style="display:block; padding-left:20px; padding-right:20px;float:right;text-align:center;">WHITEPAPER</a>
+                <span class="hidden-xs" id="logo">Lun<span class="green-word">e</span>s</span>
             </div>
             <div class="col-xs-2">
                 <a href="pt" id="bt-lang">PT</a>
@@ -65,12 +66,11 @@
     <section id="home">
         <div class="container">
             <img src="img/moon.png" id="lua" />
-            <span id="logo">Lun<span class="green-word">e</span>s</span>
-            <a href="#" class="bt_green join-top">JOIN OUT WHITELIST</a>
+            <span class="hidden-md hidden-lg" id="logo">Lun<span class="green-word">e</span>s</span>
+            <a href="#" class="bt_green join-top hidden-md hidden-lg">JOIN OUT WHITELIST</a>
             
             <div class="row">
-                
-                <div class="col-xs-12 col-md-8">
+                <div class="col-xs-12 col-md-6">
                     <h3 style="margin-top:40px;">
                         A Lunes é uma plataforma que fornece um conjunto de 
                         soluções descentralizadas através do blockchain.
@@ -81,74 +81,78 @@
                         entregamos serviços e produtos que vão desde processos de pagamentos 
                         e captação de recursos, até registros de autenticidade.
                     </p>
-                </div>
-            
-                <div id="counter" class="col-xs-12 col-md-4">
-                    <span id="coin_counter">$ 11 765 537</span>
-                    <div id="loading_bar">
-                        <div id="loading_bar_green" style="width:30%;"></div>
-                    </div>
-                    <div id="base_counter">
-                        <div class="row" style="text-align:center;">
-                            <div class="col-xs-6">
-                                Pré-Ico<br>
-                                <span class="label label-success">Live</span>
+                
+                    <div id="counter" class="col-xs-12">
+                        <span id="coin_counter">$ 11 765 537</span>
+                        <div id="loading_bar">
+                            <div id="loading_bar_green" style="width:30%;"></div>
+                        </div>
+                        <div id="base_counter">
+                            <div class="row" style="text-align:center;">
+                                <div class="col-xs-6">
+                                    Pré-Ico<br>
+                                    <span class="label label-success">Live</span>
+                                </div>
+                                <div class="col-xs-6">
+                                    Ico
+                                </div>
                             </div>
-                            <div class="col-xs-6">
-                                Ico
+                            <!-- conter -->
+                            <div class="row" id="number">
+                                <div class="col-xs-3">
+                                    <div id="con_days"></div>
+                                    <span>Day</span>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div id="con_hours"></div>
+                                    <span>Time</span>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div id="con_min"></div>
+                                    <span>Minute</span>
+                                </div>
+                                <div class="col-xs-3">
+                                    <div id="con_sec"></div>
+                                    <span>Seconds</span>
+                                </div>
                             </div>
                         </div>
-                        <!-- conter -->
-                        <div class="row" id="number">
-                            <div class="col-xs-3">
-                                <div id="con_days"></div>
-                                <span>Day</span>
-                            </div>
-                            <div class="col-xs-3">
-                                <div id="con_hours"></div>
-                                <span>Time</span>
-                            </div>
-                            <div class="col-xs-3">
-                                <div id="con_min"></div>
-                                <span>Minute</span>
-                            </div>
-                            <div class="col-xs-3">
-                                <div id="con_sec"></div>
-                                <span>Seconds</span>
-                            </div>
+                        <div id="hard-cap">
+                            Hard cap
+                            <span>$ 100 000 000</span>
                         </div>
                     </div>
-                    <div id="hard-cap">
-                        Hard cap
-                        <span>$ 100 000 000</span>
+
+                    <!-- socials icons -->
+                    <div class="col-xs-8 col-xs-offset-2 text-center hidden-md hidden-lg" style="margin-top:20px;margin-bottom:20px;">
+                        <a href="https://www.facebook.com/lunesplatform/" target="_blank"><img src="img/face.png" width="40px"/></a>
+                        <a href="https://medium.com/@lunes.platform" target="_blank"><img src="img/medium.png" width="40px" /></a>
+                        <a href="https://t.me/LunesPlatformEN" target="_blank"><img src="img/telegram.png" width="40px" /></a>
+                        <a href="https://twitter.com/lunesplatform" target="_blank"><img src="img/twitter.png" width="40px" /></a>
+                    </div>
+
+                    <a href="#" class="bt_green join-top hidden-xs hidden-sm" style="float:left;">JOIN OUT WHITELIST</a>
+                </div>
+
+                <div class="col-xs-12 col-md-6">
+                    <h2>NOSSA<br>FILOSOFIA</h2>
+                    <div class="row">
+                        <div class="col-xs-7">
+                            <p>
+                                A missão do time Lunes é levar essa nova evolução da tecnologia 
+                                para toda a população mundial de forma eficaz, descomplicada e 
+                                acessível. Enxergamos o blockchain como uma resposta contra a 
+                                centralização de poder, devolvendo então a autonomia e liberdade 
+                                aos indivíduos.
+                            </p>
+                            <a href="#" class="bt_green hidden-xs" style="display:block; padding-left:20px; padding-right:20px;float:left;text-align:center;">WHITEPAPER</a>
+                        </div>
+                        <div class="col-xs-5 text-center">
+                            <img src="img/robo.png" id="robo" class="img-responsive" />
+                        </div>
                     </div>
                 </div>
-                <!-- socials icons -->
-                <div class="col-xs-8 col-xs-offset-2 text-center" style="margin-top:20px;margin-bottom:20px;">
-                    <a href="https://www.facebook.com/lunesplatform/" target="_blank"><img src="img/face.png" width="40px"/></a>
-                    <a href="https://medium.com/@lunes.platform" target="_blank"><img src="img/medium.png" width="40px" /></a>
-                    <a href="https://t.me/LunesPlatformEN" target="_blank"><img src="img/telegram.png" width="40px" /></a>
-                    <a href="https://twitter.com/lunesplatform" target="_blank"><img src="img/twitter.png" width="40px" /></a>
-                </div>
-            </div>
-
-            
-
-            <h2>NOSSA FILOSOFIA</h2>
-            <div class="row">
-                <div class="col-xs-7">
-                    <p>
-                        A missão do time Lunes é levar essa nova evolução da tecnologia 
-                        para toda a população mundial de forma eficaz, descomplicada e 
-                        acessível. Enxergamos o blockchain como uma resposta contra a 
-                        centralização de poder, devolvendo então a autonomia e liberdade 
-                        aos indivíduos.
-                    </p>
-                </div>
-                <div class="col-xs-5 text-center">
-                    <img src="img/robo.png" id="robo" class="img-responsive" />
-                </div>
-            </div>
+            </div> 
         </div>
     </section>
 
@@ -156,44 +160,42 @@
     <section id="lunes-wallet">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4">
-                    <span class="ball-border" id="ic_wallet_border">
+                <div class="col-xs-12 col-md-5">
+
+                    <span class="ball-border" id="ic_wallet_border" style="float:left;margin-right:30px;">
                         <span class="ball-pulse" id="ic_wallet_fill">
                             
                         </span>
                     </span>
-                </div>
-                <div class="col-xs-8">
                     <h3>CARTEIRA<br>LUNES</h3>
+                    <div style="clear:both;"></div>
+                
+                    <p>
+                        Use a primeira carteira multiserviços do mundo e guarde suas 
+                        criptomoedas com segurança. Oferecemos um ecossistema financeiro 
+                        inovador e inteligente, com funcionalidades exclusivas e design 
+                        moderno.
+                    </p>
+                    
+                    <div class="col-xs-6">
+                        <ul class="list-simple">
+                            <li>Compra de criptomoedas com cartão e boleto</li>
+                            <li>Pagamento de contas</li>
+                            <li>Envio de TED bancário</li>
+                            <li>Recarga de celular</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="list-simple">
+                            <li>Sistema de alerta de moedas</li>
+                            <li>Mercado de troca</li>
+                            <li>Armazenamento multi-moedas</li>
+                            <li>Gestão de Cartões</li>
+                        </ul>            
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                        <p>
-                            Use a primeira carteira multiserviços do mundo e guarde suas 
-                            criptomoedas com segurança. Oferecemos um ecossistema financeiro 
-                            inovador e inteligente, com funcionalidades exclusivas e design 
-                            moderno.
-                        </p>
-                </div>
-                <div class="col-xs-6">
-                    <ul class="list-simple">
-                        <li>Compra de criptomoedas com cartão e boleto</li>
-                        <li>Pagamento de contas</li>
-                        <li>Envio de TED bancário</li>
-                        <li>Recarga de celular</li>
-                    </ul>
-                </div>
-                <div class="col-xs-6">
-                    <ul class="list-simple">
-                        <li>Sistema de alerta de moedas</li>
-                        <li>Mercado de troca</li>
-                        <li>Armazenamento multi-moedas</li>
-                        <li>Gestão de Cartões</li>
-                    </ul>            
-                </div>
-                <div class="col-xs-12 col-md-4 text-center">
-                    <img src="img/ilust_lunes_wallet.png" class="img-responsive" />
+                <div class="col-xs-12 col-md-5 col-md-offset-2 text-center">
+                    <img src="img/ilust_lunes_wallet.png" class="img-responsive" width="100%" />
                 </div>
             </div>
             
@@ -204,39 +206,37 @@
     <section id="lunes-market">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4">
-                    <span class="ball-border" id="ic_market_border">
+                <div class="col-md-5 hidden-xs hidden-md text-center" style="margin-top:-50px;">
+                    <img src="img/ilust_lunes_market.png" class="img-responsive" width="100%" />
+                </div>
+                <div class="col-xs-12 col-md-5 col-md-offset-2">
+                    <span class="ball-border" id="ic_market_border" style="float:left;margin-right:30px;">
                         <span class="ball-pulse" id="ic_market_fill">
                             
                         </span>
                     </span>
-                </div>
-                <div class="col-xs-8">
                     <h3>LUNES<br>MARKET</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
+                    <div style="clear:both;"></div>
                     <p>
                         Compre e venda criptomoedas em uma exchange 
                         descentralizada! No Lunes Market, você tem total 
                         controle do seu dinheiro e ainda negocia diretamente 
                         com outros usuários em nosso blockchain.
                     </p>
+                    <div class="col-xs-6">
+                        <ul class="list-simple">
+                            <li>Não ficamos com seus ativos digitais</li>
+                            <li>Fees baixos</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="list-simple">
+                            <li>Negociação de tokens e criptomoedas</li>
+                            <li>Transações P2P</li>
+                        </ul>                
+                    </div>
                 </div>
-                <div class="col-xs-6">
-                    <ul class="list-simple">
-                        <li>Não ficamos com seus ativos digitais</li>
-                        <li>Fees baixos</li>
-                    </ul>
-                </div>
-                <div class="col-xs-6">
-                    <ul class="list-simple">
-                        <li>Negociação de tokens e criptomoedas</li>
-                        <li>Transações P2P</li>
-                    </ul>                
-                </div>
-                <div class="col-xs-12 col-md-4 text-center">
+                <div class="col-xs-12 hidden-md hidden-lg text-center">
                     <img src="img/ilust_lunes_market.png" class="img-responsive" />
                 </div>
             </div>
@@ -249,34 +249,30 @@
     <section id="lunes-card">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4">
-                    <span class="ball-border" id="ic_card_border">
+                <div class="col-xs-12 col-md-5">
+                    <span class="ball-border" id="ic_card_border" style="float:left;margin-right:30px;">
                         <span class="ball-pulse" id="ic_card_fill">
                             
                         </span>
                     </span>
-                </div>
-                <div class="col-xs-8">
                     <h3 style="margin-top:5px;">CARTÃO<br>PRÉ-PAGO<br>LUNES</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
+                    <div style="clear:both;"></div>
                     <p>
                         Adicione rapidamente créditos em Lunes ou Bitcoin! 
                         Conte com nosso avançado sistema de gestão de cartões 
                         para uso em comércios físicos e virtuais.
                     </p>
+                        
+                    <div class="col-xs-8">
+                        <ul class="list-simple">
+                            <li>Faça compras com Lunes e Bitcoin</li>
+                            <li>Ganhe descontos especiais</li>
+                            <li>Controle seus gastos pela Lunes Wallet</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-xs-8">
-                    <ul class="list-simple">
-                        <li>Faça compras com Lunes e Bitcoin</li>
-                        <li>Ganhe descontos especiais</li>
-                        <li>Controle seus gastos pela Lunes Wallet</li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-md-4 text-center">
-                    <img src="img/ilust_lunes_card.png" class="img-responsive" />
+                <div class="col-xs-12 col-md-5 col-md-offset-2 text-center">
+                    <img src="img/ilust_lunes_card.png" class="img-responsive" width="100%" />
                 </div>
             </div>
         </div>
@@ -286,33 +282,32 @@
     <section id="lunes-label">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4">
-                    <span class="ball-border" id="ic_label_border">
+                <div class="col-md-5 hidden-xs hidden-sm text-center">
+                    <img src="img/ilust_lunes_label.png" class="img-responsive" width="100%" />
+                </div>
+                <div class="col-xs-12 col-md-5 col-md-offset-2">
+                    <span class="ball-border" id="ic_label_border" style="float:left;margin-right:30px;">
                         <span class="ball-pulse" id="ic_label_fill">
                             
                         </span>
                     </span>
-                </div>
-                <div class="col-xs-8">
                     <h3>PRIVATE<br>LABEL</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
+                    <div style="clear:both;"></div>
                     <p>
                         Reduza custos e fidelize clientes! Estabeleça ou amplie 
                         a conexão de seu consumidor com seu negócio através de 
                         nosso cartão personalizável e flexível.
                     </p>
+                
+                    <div class="col-xs-8">
+                        <ul class="list-simple">
+                            <li>Fidelize seus clientes</li>
+                            <li>Aumente seus ganhos</li>
+                            <li>Diminua seus custos de transações</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-xs-8">
-                    <ul class="list-simple">
-                        <li>Fidelize seus clientes</li>
-                        <li>Aumente seus ganhos</li>
-                        <li>Diminua seus custos de transações</li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12 hidden-md hidden-lg text-center">
                     <img src="img/ilust_lunes_label.png" class="img-responsive" />
                 </div>
             </div>
@@ -323,19 +318,14 @@
     <section id="lunes-truth">
         <div class="container">
             <div class="row">
-                <div class="col-xs-4">
-                    <span class="ball-border" id="ic_truth_border">
+                <div class="col-xs-12 col-md-5">
+                    <span class="ball-border" id="ic_truth_border" style="float:left;margin-right:30px;">
                         <span class="ball-pulse" id="ic_truth_fill">
                             
                         </span>
                     </span>
-                </div>
-                <div class="col-xs-8">
                     <h3>LUNES<br>TRUTH</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
+                    <div style="clear:both;"></div>
                     <p>
                         Registre qualquer tipo de documento em um formato 
                         digital e garanta sua validade e imutabilidade! 
@@ -343,23 +333,24 @@
                         registros de autenticidade de forma rápida, segura e 
                         descentralizada.
                     </p>
+                    
+                    <div class="col-xs-6">
+                        <ul class="list-simple">
+                            <li>Sem filas</li>
+                            <li>Transparente</li>
+                            <li>Registro imutável</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <ul class="list-simple">
+                            <li>Descentralizado</li>
+                            <li>Autenticidade em poucos cliques</li>
+                            <li>Baixo custo</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-xs-6">
-                    <ul class="list-simple">
-                        <li>Sem filas</li>
-                        <li>Transparente</li>
-                        <li>Registro imutável</li>
-                    </ul>
-                </div>
-                <div class="col-xs-6">
-                    <ul class="list-simple">
-                        <li>Descentralizado</li>
-                        <li>Autenticidade em poucos cliques</li>
-                        <li>Baixo custo</li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-md-4 text-center">
-                    <img src="img/ilust_lunes_truth.png" class="img-responsive" />
+                <div class="col-xs-12 col-md-5 col-md-offset-2 text-center">
+                    <img src="img/ilust_lunes_truth.png" class="img-responsive" width="100%" />
                 </div>
             </div>
             
@@ -371,42 +362,40 @@
     <section id="lunes-point">
         <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <span class="ball-border" id="ic_point_border">
+            <div class="col-md-5 hidden-xs hidden-sm text-center">
+                <img src="img/ilust_lunes_point.png" class="img-responsive" width="100%"/>
+            </div>
+            <div class="col-xs-12 col-md-5 col-md-offset-2">
+                <span class="ball-border" id="ic_point_border" style="float:left;margin-right:30px;">
                     <span class="ball-pulse" id="ic_point_fill">
                         
                     </span>
                 </span>
-            </div>
-            <div class="col-xs-8">
                 <h3>STARTING<br>POINT</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
+                <div style="clear:both;"></div>
                 <p>
                     Crie sua própria ICO e capte recursos para seu projeto 
                     ou empresa! Utilize nosso inovador sistema em que a 
                     própria comunidade faz o processo de validação da ideia, 
                     que posteriormente é registrada em nosso blockchain.
                 </p>
+                <div class="col-xs-6">
+                    <ul class="list-simple">
+                        <li>Regulamentação de ICO descentralizada</li>
+                        <li>Avaliação da comunidade</li>
+                        <li>Ganhos para avaliadores da comunidade</li>
+                    </ul>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="list-simple">
+                        <li>Criação de tokens</li>
+                        <li>Scroll para ICOs</li>
+                        <li>Votações registradas no blockchain</li>
+                        <li>Avaliação de tokens e moedas para exchange</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-xs-6">
-                <ul class="list-simple">
-                    <li>Regulamentação de ICO descentralizada</li>
-                    <li>Avaliação da comunidade</li>
-                    <li>Ganhos para avaliadores da comunidade</li>
-                </ul>
-            </div>
-            <div class="col-xs-6">
-                <ul class="list-simple">
-                    <li>Criação de tokens</li>
-                    <li>Scroll para ICOs</li>
-                    <li>Votações registradas no blockchain</li>
-                    <li>Avaliação de tokens e moedas para exchange</li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-md-4 text-center">
+            <div class="col-xs-12 hidden-md hidden-lg text-center">
                 <img src="img/ilust_lunes_point.png" class="img-responsive" />
             </div>
         </div>
@@ -418,27 +407,22 @@
     <section id="lunes-contract">
         <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <span class="ball-border" id="ic_contract_border">
+            <div class="col-xs-12 col-md-5">
+                <span class="ball-border" id="ic_contract_border" style="float:left;margin-right:30px;">
                     <span class="ball-pulse" id="ic_contract_fill">
                         
                     </span>
                 </span>
-            </div>
-            <div class="col-xs-8">
                 <h3>CONTRATOS<br>INTELIGENTES</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
+                <div style="clear:both;"></div>
                 <p>
                     Crie seus contratos e valide-os sem a necessidade de 
                     terceiros. Conquiste independência e autonomia por meio da 
                     tecnologia blockchain!
                 </p>
             </div>
-            <div class="col-xs-12 col-md-4 text-center">
-                <img src="img/ilust_lunes_contract.png" class="img-responsive" />
+            <div class="col-xs-12 col-md-5 col-md-offset-2 text-center">
+                <img src="img/ilust_lunes_contract.png" class="img-responsive" width="100%" />
             </div>
         </div>
         </div>
@@ -448,40 +432,39 @@
     <section id="lunes-machine">
         <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <span class="ball-border" id="ic_machine_border">
+            <div class="col-md-5 hidden-xs hidden-sm text-center">
+                <img src="img/ilust_lunes_machine.png" class="img-responsive" width="100%" />
+            </div>
+            <div class="col-xs-12 col-md-5 col-md-offset-2">
+                <span class="ball-border" id="ic_machine_border" style="float:left;margin-right:30px;">
                     <span class="ball-pulse" id="ic_machine_fill">
                         
                     </span>
                 </span>
-            </div>
-            <div class="col-xs-8">
                 <h3>MAQUININHA<br>LUNES</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
+                <div style="clear:both;"></div>
                 <p>
                     Disfrute das melhores taxas do mercado! Um aparelho 
                     moederno, de baixo custo e modular. Receba pagamentos de 
                     forma tradicional ou por criptomoedas de qualquer lugar do 
                     Brasil.
                 </p>
+                
+                <div class="col-xs-6">
+                    <ul class="list-simple">
+                        <li>Receba criptomoedas ou moeda Fiat</li>
+                        <li>Saque em moeda Fiat</li>
+                        <li>Taxas mínimas</li>
+                    </ul>
+                </div>
+                <div class="col-xs-6">
+                    <ul class="list-simple">
+                        <li>Transações rápidas</li>
+                        <li>Máquina sem mensalidade</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-xs-6">
-                <ul class="list-simple">
-                    <li>Receba criptomoedas ou moeda Fiat</li>
-                    <li>Saque em moeda Fiat</li>
-                    <li>Taxas mínimas</li>
-                </ul>
-            </div>
-            <div class="col-xs-6">
-                <ul class="list-simple">
-                    <li>Transações rápidas</li>
-                    <li>Máquina sem mensalidade</li>
-                </ul>
-            </div>
-            <div class="col-xs-12 col-md-4 text-center">
+            <div class="col-xs-12 hidden-md hidden-lg text-center">
                 <img src="img/ilust_lunes_machine.png" class="img-responsive" />
             </div>
         </div>
@@ -493,19 +476,14 @@
     <section id="lunes-gateway">
         <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <span class="ball-border" id="ic_gateway_border">
+            <div class="col-xs-12 col-md-5">
+                <span class="ball-border" id="ic_gateway_border" style="float:left;margin-right:30px;">
                     <span class="ball-pulse" id="ic_gateway_fill">
                         
                     </span>
                 </span>
-            </div>
-            <div class="col-xs-8">
                 <h3>GATEWAY DE<br>PAGAMENTOS</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-8">
+                <div style="clear:both;"></div>
                 <p>
                     Aceite criptomoedas como forma de pagamento em seu 
                     e-commerce, app, game etc, recebendo em moeda fiat ou 
@@ -513,8 +491,8 @@
                     usando as moedas do futuro.
                 </p>
             </div>
-            <div class="col-xs-12 col-md-4 text-center">
-                <img src="img/ilust_lunes_gateway.png" class="img-responsive" />
+            <div class="col-xs-12 col-md-5 col-md-offset-2 text-center">
+                <img src="img/ilust_lunes_gateway.png" class="img-responsive" width="100%"/>
             </div>
         </div>
         
@@ -525,19 +503,17 @@
     <section id="lunes-lpos">
         <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <span class="ball-border" id="ic_pos_border">
+            <div class="col-md-5 hidden-xs hidden-md text-center">
+                <img src="img/ilust_lunes_pos.png" class="img-responsive" width="100%"/>
+            </div>
+            <div class="col-xs-12 col-md-5 col-md-offset-2">
+                <span class="ball-border" id="ic_pos_border" style="float:left;margin-right:30px;">
                     <span class="ball-pulse" id="ic_pos_fill">
                         
                     </span>
                 </span>
-            </div>
-            <div class="col-xs-8">
                 <h3 style="margin-top:35px;">LPoS</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
+                <div style="clear:both;"></div>
                 <p>
                     Tendo a partir de 5000 LNS e deixando sua carteira em stake, 
                     você pode executar o Lunes Node e garantir uma porcentagem das taxas 
@@ -547,7 +523,7 @@
                     participar da rede Lunes deixando suas moedas em leasing.
                 </p>
             </div>
-            <div class="col-xs-12 col-md-4 text-center">
+            <div class="col-xs-12 hidden-md hidden-lg text-center">
                 <img src="img/ilust_lunes_pos.png" class="img-responsive" />
             </div>
         </div>
@@ -559,19 +535,14 @@
     <section id="lunes-leasing">
         <div class="container">
         <div class="row">
-            <div class="col-xs-4">
-                <span class="ball-border" id="ic_leasing_border">
+            <div class="col-xs-12 col-md-5">
+                <span class="ball-border" id="ic_leasing_border" style="float:left;margin-right:30px;">
                     <span class="ball-pulse"id="ic_leasing_fill">
                         
                     </span>
                 </span>
-            </div>
-            <div class="col-xs-8">
                 <h3 style="margin-top:35px;">LEASING</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
+                <div style="clear:both;"></div>
                 <p>
                     Empreste seu poder de forjar aos mineradores e seja recompensado 
                     em até 5% ao ano! Para começar a ganhar uma parte das taxas de 
@@ -579,8 +550,8 @@
                     um nó minerador da rede para emprestar o poder de seus Lunes.
                 </p>
             </div>
-            <div class="col-xs-12 col-md-4 text-center">
-                <img src="img/ilust_lunes_leasing.png" class="img-responsive" />
+            <div class="col-xs-12 col-md-5 col-md-offset-2 text-center">
+                <img src="img/ilust_lunes_leasing.png" class="img-responsive" width="100%" />
             </div>
         </div>
         
@@ -590,149 +561,163 @@
     <!-- roadmap -->
     <section id="roadmap">
         <div class="container">
-        <h3 style="display:block; text-align:center; margin-bottom:20px;margin-top:40px;">Roadmap</h3>
+            <div class="row">
+                <div class="col-xs-12 col-md-4 col-md-offset-4">
+                    <h3 style="display:block; text-align:center; margin-bottom:20px;margin-top:40px;">Roadmap</h3>
 
-        <div class="roadmap-list">
-            <span class="roadmap-ball ativo">23</span>
-            <div class="roadmap-cont ativo">
-                <span class="ativo">Feb 11:59 AM</span>
-                <span>Lançamento da carteira BETA híbrida - Android</span>
-                <span>Github</span>
-            </div>
-        </div>
-
-        <div class="roadmap-list">
-            <span class="roadmap-ball">25</span>
-            <div class="roadmap-cont">
-                <span>Feb 11:59 AM - lançamento</span>
-                <span>Início da<br>Pré-ICO/ICO</span>
-                <span>Lançamento da carteira híbrida</span>
-            </div>
-        </div>
-
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q2<br>18</span>
-            <div class="roadmap-cont">
-                <span>Abril Após fim da ICO</span>
-                <span>Início das atividades</span>
-                <span>Lançamento mainnet</span>
-                <br>
-                <span>1- Registro de autenticidade (Site)</span>
-                <span>2- Blockexplorer especial para o registro</span>
-                <span>3- App de Registro de autenticidade</span>
-                <span>4- Explorer embutido</span>
-                <span>5- Mercado Lunes site</span>
-                <span>6- Mercado Lunes apps</span>
-            </div>
-        </div>
-
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q3<br>18</span>
-            <div class="roadmap-cont">
-                <span>Start Point - Auditoria descentralizada</span>
-                <br>
-                <span>1- Votação via blockchain</span>
-                <span>2- Critérios de voto e criação de ICO</span>
-                <span>3- Acompanhamento do processo</span>
-                <span>4- Processo de bonificação auditores</span>
-                <span>5- Criação de tokens</span>
-            </div>
-        </div>
-
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q4<br>18</span>
-            <div class="roadmap-cont">
-                <span>Lançamento da carteira híbrida</span>
-                <span>Win/Linux</span>
-                <br>
-                <span>Cartão Débito</span>
-                <span>Private Label</span>
-                <span>Lunes</span>
-                <br>
-                <span>Lançamento <br>do Gateway de<br>pagamento (Real)</span>
-                <br>
-                <span>Cartão pré-pago<br>Lunes</span>
-            </div>
-        </div>
-
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q1<br>19</span>
-            <div class="roadmap-cont">
-                <span>Troca em<br>moeda fiat - Lunes Market</span>
-            </div>
-        </div>
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball ativo">23</span>
+                        <div class="roadmap-cont ativo">
+                            <span class="ativo">Feb 11:59 AM</span>
+                            <span>Lançamento da carteira BETA híbrida - Android</span>
+                            <span>Github</span>
+                        </div>
+                    </div>
         
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q2<br>19</span>
-            <div class="roadmap-cont">
-                <span>Gestão de arquivos<br>CLoud registro de<br>autenticidade</span>
-            </div>
-        </div>
-
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q3<br>19</span>
-            <div class="roadmap-cont">
-                <span>Cartão de crédito<br>Lunes</span>
-            </div>
-        </div>
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball">25</span>
+                        <div class="roadmap-cont">
+                            <span>Feb 11:59 AM - lançamento</span>
+                            <span>Início da<br>Pré-ICO/ICO</span>
+                            <span>Lançamento da carteira híbrida</span>
+                        </div>
+                    </div>
         
-        <div class="roadmap-list">
-            <span class="roadmap-ball" >Q3<br>19</span>
-            <div class="roadmap-cont">
-                <span>Máquina de<br>cartão Lunes</span>
-                <br>
-                <span>Lançamento do Gateway<br>de pagamento<br>(Dólar e Euro)</span>
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q2<br>18</span>
+                        <div class="roadmap-cont">
+                            <span>Abril Após fim da ICO</span>
+                            <span>Início das atividades</span>
+                            <span>Lançamento mainnet</span>
+                            <br>
+                            <span>1- Registro de autenticidade (Site)</span>
+                            <span>2- Blockexplorer especial para o registro</span>
+                            <span>3- App de Registro de autenticidade</span>
+                            <span>4- Explorer embutido</span>
+                            <span>5- Mercado Lunes site</span>
+                            <span>6- Mercado Lunes apps</span>
+                        </div>
+                    </div>
+        
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q3<br>18</span>
+                        <div class="roadmap-cont">
+                            <span>Start Point - Auditoria descentralizada</span>
+                            <br>
+                            <span>1- Votação via blockchain</span>
+                            <span>2- Critérios de voto e criação de ICO</span>
+                            <span>3- Acompanhamento do processo</span>
+                            <span>4- Processo de bonificação auditores</span>
+                            <span>5- Criação de tokens</span>
+                        </div>
+                    </div>
+        
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q4<br>18</span>
+                        <div class="roadmap-cont">
+                            <span>Lançamento da carteira híbrida</span>
+                            <span>Win/Linux</span>
+                            <br>
+                            <span>Cartão Débito</span>
+                            <span>Private Label</span>
+                            <span>Lunes</span>
+                            <br>
+                            <span>Lançamento <br>do Gateway de<br>pagamento (Real)</span>
+                            <br>
+                            <span>Cartão pré-pago<br>Lunes</span>
+                        </div>
+                    </div>
+        
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q1<br>19</span>
+                        <div class="roadmap-cont">
+                            <span>Troca em<br>moeda fiat - Lunes Market</span>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q2<br>19</span>
+                        <div class="roadmap-cont">
+                            <span>Gestão de arquivos<br>CLoud registro de<br>autenticidade</span>
+                        </div>
+                    </div>
+        
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q3<br>19</span>
+                        <div class="roadmap-cont">
+                            <span>Cartão de crédito<br>Lunes</span>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-list">
+                        <span class="roadmap-ball" >Q3<br>19</span>
+                        <div class="roadmap-cont">
+                            <span>Máquina de<br>cartão Lunes</span>
+                            <br>
+                            <span>Lançamento do Gateway<br>de pagamento<br>(Dólar e Euro)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
     <!-- dist tokens -->
     <section id="lunes-ico">
         <div class="container">
-        <h2>Distribuição dos <span class="green-word">Tokens</span></h2>
-        <p>
-            Ao todo, 600 milhões de tokens serão distribuidos. Após o término 
-            da ICO, não haverá criação de novos tokens da Lunes.
-        </p>
-        <p>
-            Uma parte destes dispositivos será ofertada em processos de consolidação 
-            de parcerias, bonificação para equipe de desenvolvimento, para o caixa 
-            da empresa para investimentos futuros, premiação da comunidade nas redes 
-            sociais, somando uma porcentagem de 21%.
-        </p>
-        <p>
-            Os outros 79% estarão disponíveis para o processo de captação de 
-            recursos por meio da ICO.
-        </p>
-        <span style="opacity:.7;">Abaixo segue distribuição detalhada.</span>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h2>Distribuição dos <span class="green-word">Tokens</span></h2>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <p>
+                        Ao todo, 600 milhões de tokens serão distribuidos. Após o término 
+                        da ICO, não haverá criação de novos tokens da Lunes.
+                    </p>
+                    <p>
+                        Uma parte destes dispositivos será ofertada em processos de consolidação 
+                        de parcerias, bonificação para equipe de desenvolvimento, para o caixa 
+                        da empresa para investimentos futuros, premiação da comunidade nas redes 
+                        sociais, somando uma porcentagem de 21%.
+                    </p>
+                    <p>
+                        Os outros 79% estarão disponíveis para o processo de captação de 
+                        recursos por meio da ICO.
+                    </p>
+                    <span style="opacity:.7;">Abaixo segue distribuição detalhada.</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- pre ico -->
     <section id="" style="text-align:right;font-family: 'Offside', cursive;">
         <div class="container">
-        <h3 style="display:block;margin-bottom:40px;">Pré-ICO<span class="green-word" style="font-size:2em;display:block;margin-top:10px;">25 fev</span></h3>
-        <div class="row" style="background:url('img/icon_preico.png') no-repeat -10px 20px;">
-            <div class="col-xs-8 col-xs-offset-4">
-                <p style="border-bottom:solid 1px #4cd566;margin-bottom:10px;padding-bottom:10px;">
-                    <span class="label label-success" style="text-align:right;width:120px;margin-bottom:5px;">Fase 01</span><br>
-                    <span style="font-size:1.7em;">100 milhões</span><br />
-                    <span class="green-word">Tokens</span><br /><br />
-                    <span class="green-word" style="font-size:1.5em;">USD 0,01</span><br />
-                    <span class="green-word">+ 30% Bônus</span><br />
-                    <span style="font-family: 'Roboto';">Limite de 300 mil por investidor</span>
-                </p>
-                <p style="border-bottom:solid 1px #4cd566;margin-bottom:10px;padding-bottom:10px;">
-                    <span class="label label-success" style="text-align:right;width:120px;margin-bottom:5px;">Fase 02</span><br>
-                    <span style="font-size:1.7em;">110 milhões</span><br />
-                    <span class="green-word">Tokens</span><br /><br />
-                    <span class="green-word" style="font-size:1.5em;">USD 0,08</span><br />
-                    <span class="green-word">+ 20% Bônus</span><br />
-                    <span style="font-family: 'Roboto';">Limite de 5 milhões por investidor</span>
-                </p>
+            <div class="row" style="background:url('img/icon_preico.png') no-repeat -10px 20px;">
+                <div class="col-xs-12 col-md-4">
+                    <h3 style="display:block;margin-bottom:40px;">Pré-ICO<span class="green-word" style="font-size:2em;display:block;margin-top:10px;">25 fev</span></h3>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <p style="border-bottom:solid 1px #4cd566;margin-bottom:10px;padding-bottom:10px;">
+                        <span class="label label-success" style="text-align:right;width:120px;margin-bottom:5px;">Fase 01</span><br>
+                        <span style="font-size:1.7em;">100 milhões</span><br />
+                        <span class="green-word">Tokens</span><br /><br />
+                        <span class="green-word" style="font-size:1.5em;">USD 0,01</span><br />
+                        <span class="green-word">+ 30% Bônus</span><br />
+                        <span style="font-family: 'Roboto';">Limite de 300 mil por investidor</span>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <p style="border-bottom:solid 1px #4cd566;margin-bottom:10px;padding-bottom:10px;">
+                        <span class="label label-success" style="text-align:right;width:120px;margin-bottom:5px;">Fase 02</span><br>
+                        <span style="font-size:1.7em;">110 milhões</span><br />
+                        <span class="green-word">Tokens</span><br /><br />
+                        <span class="green-word" style="font-size:1.5em;">USD 0,08</span><br />
+                        <span class="green-word">+ 20% Bônus</span><br />
+                        <span style="font-family: 'Roboto';">Limite de 5 milhões por investidor</span>
+                    </p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -779,353 +764,378 @@
     <!-- dist resources -->
     <section>
         <div class="container">
-        <h3>Distribuição<br>dos <span class="green-word">Recursos</span></h3>
-        <p>
-            Os valores arrecadados no processo da ICO serão utilizados para ampliar 
-            o time de desenvolvimento, compra de máquinas de cartão do fabricante, 
-            adequações legais de adquirência de processos financeiros, estruturação de 
-            departamento de gestão financeira e contábil, suporte e atendimento, 
-            departamento jurídico, infraestrutura de servidores e marketing.
-        </p>
-        <p>
-            Para isso, buscamos sempre uma estrutura sólida e enxuta, prezando pela 
-            qualidade do time, planejamento, equipamentos e instalações para escolonar 
-            as atividades.
-        </p>
-
-        <div id="destino">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h3>Distribuição<br>dos <span class="green-word">Recursos</span></h3>
+                    <p>
+                        Os valores arrecadados no processo da ICO serão utilizados para ampliar 
+                        o time de desenvolvimento, compra de máquinas de cartão do fabricante, 
+                        adequações legais de adquirência de processos financeiros, estruturação de 
+                        departamento de gestão financeira e contábil, suporte e atendimento, 
+                        departamento jurídico, infraestrutura de servidores e marketing.
+                    </p>
+                    <p>
+                        Para isso, buscamos sempre uma estrutura sólida e enxuta, prezando pela 
+                        qualidade do time, planejamento, equipamentos e instalações para escolonar 
+                        as atividades.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div id="destino">
+                        <div class="row" id="indice">
+                            <div class="col-xs-4" style="padding-top:10px;">
+                                Destino
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="javascript:void();" id="tab_qte" class="ativo" onclick="showTab('qte')" >Quantidade (em Milhões)</a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="javascript:void();" id="tab_per" onclick="showTab('per')">Percentual (%)</a>
+                            </div>
+                        </div>
             
-            <div class="row" id="indice">
-                <div class="col-xs-4" style="padding-top:10px;">
-                    Destino
-                </div>
-                <div class="col-xs-4">
-                    <a href="javascript:void();" id="tab_qte" class="ativo" onclick="showTab('qte')" >Quantidade (em Milhões)</a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="javascript:void();" id="tab_per" onclick="showTab('per')">Percentual (%)</a>
-                </div>
-            </div>
-
-            <div class="row rows" id="qte">
-                <div class="col-xs-12">
-                    Fundo de reserva
-                    <span>102 Milhões</span>
-                    Parceiros Estratégicos
-                    <span>7 Milhões</span>
-                    Equipe de desenvolvimento
-                    <span>15 Milhões</span>
-                    Distribuição Gratuita em Redes Sociais
-                    <span>2 Milhões</span>
-                    Lote de distribuição da ICO
-                    <span>474 Milhões</span>
-                </div>
-            </div>
-
-            <div class="row rows" id="per" style="display:none;">
-                <div class="col-xs-12">
-                    Fundo de reserva
-                    <span>17%</span>
-                    Parceiros Estratégicos
-                    <span>1,16%</span>
-                    Equipe de desenvolvimento
-                    <span>2,5%</span>
-                    Distribuição Gratuita em Redes Sociais
-                    <span>0,34%</span>
-                    Lote de distribuição da ICO
-                    <span>79%</span>
+                        <div class="row rows" id="qte">
+                            <div class="col-xs-12">
+                                Fundo de reserva
+                                <span>102 Milhões</span>
+                                Parceiros Estratégicos
+                                <span>7 Milhões</span>
+                                Equipe de desenvolvimento
+                                <span>15 Milhões</span>
+                                Distribuição Gratuita em Redes Sociais
+                                <span>2 Milhões</span>
+                                Lote de distribuição da ICO
+                                <span>474 Milhões</span>
+                            </div>
+                        </div>
+            
+                        <div class="row rows" id="per" style="display:none;">
+                            <div class="col-xs-12">
+                                Fundo de reserva
+                                <span>17%</span>
+                                Parceiros Estratégicos
+                                <span>1,16%</span>
+                                Equipe de desenvolvimento
+                                <span>2,5%</span>
+                                Distribuição Gratuita em Redes Sociais
+                                <span>0,34%</span>
+                                Lote de distribuição da ICO
+                                <span>79%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
     <!-- buy tokens -->
     <section id="lunes-buy-tokens">
         <div class="container">
-        <h3>Onde comprar<br>os <span class="green-word">Tokens<br>Lunes?</span></h3>
-        <p>
-            Compre seus tokens Lunes através da nossa Wallet!
-            Disponível nas plataformas Android e aqui no site.
-        </p>
-        <a href="#" class="bt_green" style="padding-left:20px;padding-right:20px;text-align:center;max-width:200px;margin-top:30px;margin-bottom:30px;">COMPRAR</a>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <h3>Onde comprar<br>os <span class="green-word">Tokens<br>Lunes?</span></h3>
+                    <p>
+                        Compre seus tokens Lunes através da nossa Wallet!
+                        Disponível nas plataformas Android e aqui no site.
+                    </p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <a href="#" class="bt_green" style="padding-left:20px;padding-right:20px;text-align:center;max-width:200px;margin-top:30px;margin-bottom:30px;">COMPRAR</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- team -->
     <section id="lunes-time">
         <div class="container">
-        <h2>Time<span style="font-size:10px;margin-left:20px;">O futuro no presente.</span></h2>
-        
-        <ul id="slide_time">
-            <li data-thumb="img/time/thumb/Lucas_Magno.png" data-src="img/time/Lucas_Magno.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Lucas_Magno.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Lucas Cabral</h3>
-                        <h4>CEO/Fundador</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h2>Time<span style="font-size:10px;margin-left:20px;">O futuro no presente.</span></h2>
+    
+                    <ul id="slide_time">
+                        <li data-thumb="img/time/thumb/Lucas_Magno.png" data-src="img/time/Lucas_Magno.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Lucas_Magno.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Lucas Cabral</h3>
+                                    <h4>CEO/Fundador</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li data-thumb="img/time/thumb/Adriana_Santos.png" data-src="img/time/Adriana_Santos.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Adriana_Santos.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Adriana Santos</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
             
-            <li data-thumb="img/time/thumb/Adriana_Santos.png" data-src="img/time/Adriana_Santos.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Adriana_Santos.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Adriana Santos</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
+                        <li data-thumb="img/time/thumb/Alvaro_Votan.png" data-src="img/time/Alvaro_Votan.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Alvaro_Votan.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Álvaro Votan</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Damiao_Vieira.png" data-src="img/time/Damiao_Vieira.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Damiao_Vieira.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Damião Vieira</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Daniel_Laurindo.png" data-src="img/time/Daniel_Laurindo.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Daniel_Laurindo.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Daniel Laurindo</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Felipe_Matheus_Rosa.png" data-src="img/time/Felipe_Matheus_Rosa.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Felipe_Matheus_Rosa.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Felipe Matheus Rosa</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Felipe_Mendes.png" data-src="img/time/Felipe_Mendes.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Felipe_Mendes.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Felipe Mendes</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Felipe_Siqueira.png" data-src="img/time/Felipe_Siqueira.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Felipe_Siqueira.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Felipe Siqueira</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Jorge_Lenon_Araujo.png" data-src="img/time/Jorge_Lenon_Araujo.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Jorge_Lenon_Araujo.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Jorge Lenon Araujo</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--- -->
+                        <li data-thumb="img/time/thumb/Kleberthon_Grenzi_Hora.png" data-src="img/time/Kleberthon_Grenzi_Hora.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Kleberthon_Grenzi_Hora.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Kleberthon Grenzi Hora</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Luiz_Feitosa.png" data-src="img/time/Luiz_Feitosa.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Luiz_Feitosa.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Luiz Feitosa</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Luiz_Fernando_da_Silva.png" data-src="img/time/Luiz_Fernando_da_Silva.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Luiz_Fernando_da_Silva.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Luiz Fernando da Silva</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Marcos_Lima.png" data-src="img/time/Marcos_Lima.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Marcos_Lima.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Marcos Lima</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                        <li data-thumb="img/time/thumb/Wandyer_Silva.png" data-src="img/time/Wandyer_Silva.png">
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <img src="img/time/Wandyer_Silva.png" class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <h3>Wandyer Silva</h3>
+                                    <h4>Cargo/Funcao</h4>
+                                    <div class="social_bar">
+                                        <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
+                                        <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+            
+                    </ul>
                 </div>
-            </li>
+            </div>
+        </div>
+    </section>
 
-            <li data-thumb="img/time/thumb/Alvaro_Votan.png" data-src="img/time/Alvaro_Votan.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Alvaro_Votan.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Álvaro Votan</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
+    <!-- partners -->
+    <section id="lunes-parceiros">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-md-offset-2">
+                    <h2>Parceiros</h2>
+                    <p>[ SOON ]</p>
                 </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Damiao_Vieira.png" data-src="img/time/Damiao_Vieira.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Damiao_Vieira.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Damião Vieira</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Daniel_Laurindo.png" data-src="img/time/Daniel_Laurindo.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Daniel_Laurindo.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Daniel Laurindo</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Felipe_Matheus_Rosa.png" data-src="img/time/Felipe_Matheus_Rosa.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Felipe_Matheus_Rosa.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Felipe Matheus Rosa</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Felipe_Mendes.png" data-src="img/time/Felipe_Mendes.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Felipe_Mendes.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Felipe Mendes</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Felipe_Siqueira.png" data-src="img/time/Felipe_Siqueira.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Felipe_Siqueira.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Felipe Siqueira</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Jorge_Lenon_Araujo.png" data-src="img/time/Jorge_Lenon_Araujo.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Jorge_Lenon_Araujo.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Jorge Lenon Araujo</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <!--- -->
-            <li data-thumb="img/time/thumb/Kleberthon_Grenzi_Hora.png" data-src="img/time/Kleberthon_Grenzi_Hora.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Kleberthon_Grenzi_Hora.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Kleberthon Grenzi Hora</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Luiz_Feitosa.png" data-src="img/time/Luiz_Feitosa.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Luiz_Feitosa.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Luiz Feitosa</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Luiz_Fernando_da_Silva.png" data-src="img/time/Luiz_Fernando_da_Silva.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Luiz_Fernando_da_Silva.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Luiz Fernando da Silva</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Marcos_Lima.png" data-src="img/time/Marcos_Lima.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Marcos_Lima.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Marcos Lima</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li data-thumb="img/time/thumb/Wandyer_Silva.png" data-src="img/time/Wandyer_Silva.png">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <img src="img/time/Wandyer_Silva.png" class="img-responsive" />
-                    </div>
-                    <div class="col-xs-8">
-                        <h3>Wandyer Silva</h3>
-                        <h4>Cargo/Funcao</h4>
-                        <div class="social_bar">
-                            <a href="#" target="_blank"><img src="img/ic_time_face.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_linkedin.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_instagram.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_github.svg" /></a>
-                            <a href="#" target="_blank"><img src="img/ic_time_twitter.svg" /></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-        </ul>
-
+            </div>
         </div>
     </section>
 
