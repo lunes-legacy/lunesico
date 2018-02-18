@@ -12,11 +12,11 @@ html, body {
     overflow: hidden;
     overflow-y: auto;
     position: relative;
-}
-
-html, html a {
+    
     -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    -moz-osx-font-smoothing: grayscale;
+    /* -webkit-text-stroke: 0.45px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004); */
 }
 
 body {
@@ -65,6 +65,13 @@ header a{
 }
 header a:hover {
     color:#fff;
+}
+header #logo {
+    display:block;
+    text-align: center;
+    padding:10px;
+    font-size: 3em;
+    margin-bottom: 0px;
 }
 
 #navbar {
@@ -188,7 +195,7 @@ header a:hover {
 #counter #hard-cap {
     display: block;
     background-color: #544d8f;
-    max-width: 120px;
+    max-width: 160px;
     margin-left: auto;
     margin-right: auto;
     color: #4cd566;
@@ -213,7 +220,11 @@ header a:hover {
     height: 120px;
     border-radius: 100%;
     margin-bottom: 20px;
+
+    float:left;
+    margin-right:30px;
 }
+
 .ball-border .ball-pulse {
     display: block;
     background-color: #fff;
@@ -579,4 +590,31 @@ ul.lSGallery {
 	100% {
 		opacity: .2;
 	}
+}
+
+
+/* devices */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 100;
+    }
+    .at-right {
+        text-align: right;
+    }
+    .at-right .ball-border {
+        float: right;
+        margin-left: 30px;
+        margin-right: 0px;
+    }
+   
+    #navbar {
+        width: 100%;
+        max-width: 50%;
+        border-radius: 0px 0px 90px 0px;
+        padding-bottom: 40px;
+        box-shadow: 0px 0px 45px rgba(0,0,0,.5);
+        
+    }
 }

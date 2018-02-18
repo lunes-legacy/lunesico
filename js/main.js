@@ -1,3 +1,6 @@
+
+AOS.init();
+
 var toggleMenu = function(){
     $("#navbar").toggle('fast');
 }
