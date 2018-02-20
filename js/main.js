@@ -1,5 +1,5 @@
 
-AOS.init();
+//AOS.init();
 
 var toggleMenu = function(){
     $("#navbar").toggle('fast');
@@ -31,21 +31,17 @@ $("#navbar #cont a").click(function(){
 });
 
 $("#navbar #cont a").on('click', function(event) {
-    var target = this.hash;
+    // var target = this.hash;
 
-    event.preventDefault();
+    // event.preventDefault();
 
-    var navOffset = 130;
+    // var navOffset = 130;
     
-    // if(navOffset > 150){
-    //     navOffset = 52;
-    // }
-
-    return $('html, body').animate({
-        scrollTop: $(this.hash).offset().top - navOffset
-    }, 500, function() {
-        return window.history.pushState(null, null, target);
-    });
+    // return $('html, body').animate({
+    //     scrollTop: $(this.hash).offset().top - navOffset
+    // }, 500, function() {
+    //     return window.history.pushState(null, null, target);
+    // });
 });
 
 /* time counter */
