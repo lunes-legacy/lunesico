@@ -241,8 +241,6 @@ header #logo {
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    box-shadow: 0px -10px 20px #4cd566;
-    animation: pulse1 2s infinite;
 }
 .ball-border .ball-pulse img {
     margin-left: auto;
@@ -261,25 +259,218 @@ header #logo {
         -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
     }
 } */
-@keyframes pulse1 {
+@keyframes pulse_wallet {
     0% {
         /* -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4); */
-        box-shadow: 0px 0px 20px rgb(84, 77, 143, 0);
+        box-shadow: 0px 0px 20px rgb(170, 112, 246, 0);
     }
     25% {
         
-        box-shadow: 0px -5px 20px rgb(84, 77, 143, .5);
+        box-shadow: 0px -5px 20px rgb(170, 112, 246, .5);
     }
     50% {
         
-        box-shadow: 0px -10px 20px rgb(84, 77, 143, 1);
+        box-shadow: 0px -10px 20px rgb(170, 112, 246, 1);
     }
     75% {
         
-        box-shadow: 0px -5px 20px rgb(84, 77, 143, .5);
+        box-shadow: 0px -5px 20px rgb(170, 112, 246, .5);
     }
     100% {
-        box-shadow: 0px 0px 20px rgb(84, 77, 143, 0);
+        box-shadow: 0px 0px 20px rgb(170, 112, 246, 0);
+    }
+}
+
+@keyframes pulse_market {
+    0% {
+        /* -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4); */
+        box-shadow: 0px 0px 20px rgb(190, 232, 115, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(190, 232, 115, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(190, 232, 115, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(190, 232, 115, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(190, 232, 115, 0);
+    }
+}
+
+@keyframes pulse_card {
+    0% {
+        /* -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4); */
+        box-shadow: 0px 0px 20px rgb(96, 204, 192, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(96, 204, 192, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(96, 204, 192, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(96, 204, 192, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(96, 204, 192, 0);
+    }
+}
+
+@keyframes pulse_label {
+    0% {
+        /* -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4); */
+        box-shadow: 0px 0px 20px rgb(87, 183, 255, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(87, 183, 255, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(87, 183, 255, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(87, 183, 255, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(87, 183, 255, 0);
+    }
+}
+
+@keyframes pulse_truth {
+    0% {
+        /* -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4); */
+        box-shadow: 0px 0px 20px rgb(253, 198, 93, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(253, 198, 93, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(253, 198, 93, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(253, 198, 93, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(253, 198, 93, 0);
+    }
+}
+
+@keyframes pulse_point {
+    0% {
+        box-shadow: 0px 0px 20px rgb(133, 187, 56, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(133, 187, 56, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(133, 187, 56, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(133, 187, 56, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(133, 187, 56, 0);
+    }
+}
+
+@keyframes pulse_contract {
+    0% {
+        box-shadow: 0px 0px 20px rgb(237, 110, 119, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(237, 110, 119, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(237, 110, 119, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(237, 110, 119, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(237, 110, 119, 0);
+    }
+}
+
+@keyframes pulse_machine {
+    0% {
+        box-shadow: 0px 0px 20px rgb(227, 58, 130, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(227, 58, 130, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(227, 58, 130, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(227, 58, 130, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(227, 58, 130, 0);
+    }
+}
+
+@keyframes pulse_gateway {
+    0% {
+        box-shadow: 0px 0px 20px rgb(140, 86, 255, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(140, 86, 255, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(140, 86, 255, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(140, 86, 255, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(140, 86, 255, 0);
+    }
+}
+
+@keyframes pulse_pos {
+    0% {
+        box-shadow: 0px 0px 20px rgb(247, 113, 124, 0);
+    }
+    25% {
+        
+        box-shadow: 0px -5px 20px rgb(247, 113, 124, .5);
+    }
+    50% {
+        
+        box-shadow: 0px -10px 20px rgb(247, 113, 124, 1);
+    }
+    75% {
+        
+        box-shadow: 0px -5px 20px rgb(247, 113, 124, .5);
+    }
+    100% {
+        box-shadow: 0px 0px 20px rgb(247, 113, 124, 0);
     }
 }
 
@@ -292,8 +483,6 @@ header #logo {
     padding: 0px;
     margin: 0px;
 }
-
-
 
 .bt_green {
     /*background-color: #4cd566;*/
@@ -346,6 +535,9 @@ header #logo {
 #ic_wallet_fill {
     background: url('../img/ic_wallet.svg') no-repeat center center, linear-gradient(#E1AEDD, #AA70F6);
     background-color: #AA70F6;
+
+    box-shadow: 0px -10px 20px rgb(170, 112, 246);
+    animation: pulse_wallet 2s infinite;
 }
 
 
@@ -355,6 +547,9 @@ header #logo {
 #ic_market_fill {
     background: url('../img/ic_market.svg') no-repeat center center, linear-gradient(#5DE29D, #BEE873);
     background-color: #BEE873;
+
+    box-shadow: 0px -10px 20px rgb(190, 232, 115);
+    animation: pulse_market 2s infinite;
 }
 
 
@@ -364,6 +559,9 @@ header #logo {
 #ic_card_fill {
     background: url('../img/ic_card.svg') no-repeat center center, linear-gradient(#269BA3, #60CCC0);
     background-color: #60CCC0;
+
+    box-shadow: 0px -10px 20px rgb(96, 204, 192);
+    animation: pulse_card 2s infinite;
 }
 
 
@@ -373,6 +571,9 @@ header #logo {
 #ic_label_fill {
     background: url('../img/ic_label.svg') no-repeat center center, linear-gradient(#2DA1F8, #57B7FF);
     background-color: #57B7FF;
+
+    box-shadow: 0px -10px 20px rgb(87, 183, 255);
+    animation: pulse_label 2s infinite;
 }
 
 
@@ -382,6 +583,9 @@ header #logo {
 #ic_truth_fill {
     background: url('../img/ic_truth.svg') no-repeat center center, linear-gradient(#F99B2A, #FDC65D);
     background-color: #FDC65D;
+
+    box-shadow: 0px -10px 20px rgb(253, 198, 93);
+    animation: pulse_truth 2s infinite;
 }
 
 
@@ -391,6 +595,9 @@ header #logo {
 #ic_point_fill {
     background: url('../img/ic_tokens.svg') no-repeat center center, linear-gradient(#519C26, #85BB38);
     background-color: #85BB38;
+
+    box-shadow: 0px -10px 20px rgb(133, 187, 56);
+    animation: pulse_point 2s infinite;
 }
 
 
@@ -400,6 +607,9 @@ header #logo {
 #ic_contract_fill {
     background: url('../img/ic_contract.svg') no-repeat center center, linear-gradient(#FB9CD1, #ED6E77);
     background-color: #ED6E77;
+
+    box-shadow: 0px -10px 20px rgb(237, 110, 119);
+    animation: pulse_contract 2s infinite;
 }
 
 
@@ -409,6 +619,9 @@ header #logo {
 #ic_machine_fill {
     background: url('../img/ic_machine.svg') no-repeat center center, linear-gradient(#AB3CAC, #E33A82);
     background-color: #E33A82;
+
+    box-shadow: 0px -10px 20px rgb(227, 58, 130);
+    animation: pulse_machine 2s infinite;
 }
 
 
@@ -418,6 +631,9 @@ header #logo {
 #ic_gateway_fill {
     background: url('../img/ic_gateway.svg') no-repeat center center, linear-gradient(#32BEFD, #8C56FF);
     background-color: #8C56FF;
+
+    box-shadow: 0px -10px 20px rgb(140, 86, 255);
+    animation: pulse_gateway 2s infinite;
 }
 
 
@@ -427,6 +643,9 @@ header #logo {
 #ic_pos_fill {
     background: url('../img/ic_pos.svg') no-repeat center center, linear-gradient(#FF2E57, #F7717C);
     background-color: #F7717C;
+
+    box-shadow: 0px -10px 20px rgb(247, 113, 124);
+    animation: pulse_pos 2s infinite;
 }
 
 
@@ -436,6 +655,9 @@ header #logo {
 #ic_leasing_fill {
     background: url('../img/ic_leasing.svg') no-repeat center center, linear-gradient(#FF2E57, #F7717C);
     background-color: #F7717C;
+
+    box-shadow: 0px -10px 20px rgb(247, 113, 124);
+    animation: pulse_pos 2s infinite;
 }
 
 
@@ -456,15 +678,17 @@ header #logo {
     background: #4D3084;
     color:#7871b8;
     float:left;
-    margin-top:-10px;
+    margin-top:-5px;
     margin-left:-20px;
-    padding-top:15px;
+    padding-top:12px;
     border-radius: 50%;
-    line-height: 12px;
+    line-height: 13px;
+    font-size:12px;
 }
 .roadmap-list .roadmap-ball.ativo {
     background: #4cd566;
     box-shadow: 0px 5px 10px rgba(0,0,0,.1);
+    font-weight: 700;
 }
 .roadmap-list .roadmap-cont {
     border-left: solid 3px #544d8f;

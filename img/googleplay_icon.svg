@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Google Play</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect x="68.9278667" y="32" width="71.0059172" height="24" id="rect-1"></rect>
+    </defs>
+    <g id="Wallet-Lunes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-425.000000, -985.000000)">
+        <g id="Google-Play" transform="translate(409.000000, 973.000000)">
+            
+            <path d="M16,49.2637152 L16,14.7403058 C16,13.5355809 16.6984406,12.4942128 17.7119977,12 L37.6821408,31.9961212 L17.7039662,52 C16.6947493,51.5042845 16,50.4653329 16,49.2637152 Z M44.0177352,38.3396961 L22.1816563,50.9630792 L39.4032451,33.7192455 L44.0177352,38.3396961 Z M50.8052056,29.5817164 C51.531493,30.1383556 52,31.0154533 52,32.0020105 C52,32.9737429 51.5456901,33.839062 50.838062,34.3967166 L46.1998423,37.0781701 L41.1241465,31.9961212 L46.1963944,26.9172809 L50.8052056,29.5817164 Z M22.1944541,13.0418962 L44.0142873,25.6558361 L39.4032451,30.2727938 L22.1944541,13.0418962 Z" id="logo" fill="#4CD566" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
