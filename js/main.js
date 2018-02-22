@@ -44,6 +44,8 @@ $("#navbar #cont a").on('click', function(event) {
     // });
 });
 
+
+
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
@@ -63,6 +65,22 @@ setInterval(getTime, 1000);
 
 /* slide time */
 $(document).ready(function() {
+    //navbar shadow on scroll
+    var nav = $('#header'); // Change to nav div
+    var nav_class = 'lunes-nav-shadow'; // Change to class name
+    var threshold = 100; // Change to pixels scrolled
+
+    $(window).scroll(function () {
+        var distance = $(this).scrollTop();
+        if (distance > threshold) { // If scrolled past threshold
+            nav.addClass(nav_class); // Add class to nav
+        } else { // If user scrolls back to top
+            if (nav.hasClass(nav_class)) { // And if class has been added
+                nav.removeClass(nav_class); // Remove it
+            }
+        }
+    });
+
     $("#slide_time").lightSlider({
         gallery:true,
         item:1,

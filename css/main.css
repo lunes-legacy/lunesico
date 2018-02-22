@@ -50,7 +50,7 @@ section {
 }
 
 header {
-    background: linear-gradient(#4D3084, rgb(59, 24, 120, .7));
+    background: #3B1878;
     display:block;
     position: fixed;
     width: 100%;
@@ -58,6 +58,10 @@ header {
     margin: 0px;
     padding: 15px;
     margin-top: -8.5rem;
+    
+}
+.lunes-nav-shadow {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
 }
 
 header a{
@@ -185,7 +189,7 @@ header #logo {
     height: 8px;
 }
 #counter #base_counter {
-    background-color: #544d8f;
+    background-color: #4e2e7d;
     padding:20px;
     border-radius: 0px 0px 4px 4px;
 }
@@ -204,7 +208,7 @@ header #logo {
 }
 #counter #hard-cap {
     display: block;
-    background-color: #544d8f;
+    background-color: #4e2e7d;
     max-width: 160px;
     margin-left: auto;
     margin-right: auto;
@@ -848,14 +852,74 @@ ul.lSGallery {
 /* devices */
 @media only screen and (min-width: 768px) {
     body {
-        font-size: 16px;
-        line-height: 26px;
-        font-weight: 100;
+        font-size: 12px;
+        line-height: 22px;
+        
+        -webkit-font-smoothing: antialiased;
     }
-    /* p {
-        font-size: 14px;
-        line-height: 1.4em;
-    } */
+    footer {
+        
+        font-size: 1em;
+       
+    }
+    p {
+        letter-spacing:2px;
+    }
+    #counter #loading_bar {
+        display:block;
+        background-color: #fff;
+        height: 14px;
+    }
+    #counter #loading_bar_green {
+        display: block;
+        background-color: #4cd566;
+        height: 14px;
+    }
+    #lua {
+        display:block;
+        position: absolute;
+        right:0px;
+        margin-top:-100px;
+        margin-left:-100px;
+        animation: flashflash 8s infinite;
+    }
+    #counter #number {
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+        font-size:4em;
+        color:#4cd566;
+    }
+    #counter #number span {
+        font-size: .3em;
+        color:#fff;
+        display: block;
+        margin-top: 20px;
+    }
+
+    .margin-md {
+        margin-bottom:30px;
+    }
+    
+ 
+    .image-md {
+        position:absolute;
+        margin-left:-150px;
+        margin-top:-50px;
+        width:160%;
+    }
+    
+    #robo2 {
+     float:right;
+       width:200px;
+       margin-top:-100px;
+       margin-left:-50px;
+       animation: float 6s ease-in-out infinite;
+    }
+    .first-box {
+        margin-right:30px;
+    }
+
     .dist-ico-box {
         border-bottom:none;
         margin-bottom:10px;
@@ -884,6 +948,7 @@ ul.lSGallery {
     
     .list-simple li {
         padding-bottom:8px;
+        letter-spacing:2px;
     }
 
     .simple-title {
