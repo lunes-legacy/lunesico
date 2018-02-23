@@ -988,4 +988,123 @@ ul.lSGallery {
         margin-top:100px;
         margin-bottom:100px;
     }
+
+    #roadmap h3 {
+        font-size:48px;
+    }
+
+    .roadmap-list {
+        font-size:16px;
+        
+    }
+
+    .roadmap-list .roadmap-ball {
+        width:60px;
+        height: 60px;
+        text-align: center;
+        background: #4D3084;
+        color:#7871b8;
+        float:left;
+        margin-top:-20px;
+        margin-left:-30px;
+        padding-top:22px;
+        border-radius: 50%;
+        line-height: 13px;
+        font-size:16px;
+        font-family: 'Offside', cursive;
+    }
+    .roadmap-list .roadmap-ball.ativo {
+        background: #4cd566;
+        box-shadow: 0px 5px 10px rgba(0,0,0,.1);
+        font-weight: 700;
+        color: #fff;
+    }
+    .roadmap-list .roadmap-cont {
+        padding-bottom: 40px;
+    }
+    .roadmap-list .roadmap-cont.ativo {
+        border-left: solid 3px #4cd566;
+        color:#fff;
+    }
+    .roadmap-list .roadmap-cont span {
+        display:block;
+        padding-left:10px;
+        padding-right:10px;
+        padding-top:3px;
+        padding-bottom: 3px;
+    }
+    .roadmap-list .roadmap-cont >:first-child {
+        font-family: 'Offside', cursive;
+    }
+    /* .roadmap-list .roadmap-cont .ativo {
+        color: #4cd566;
+    } */
+
+    #lunes-ico h2 {
+        font-size:56px;
+        letter-spacing:5px;
+    }
+    /* #lunes-ico span.label, #sec-pre-ico span.label, #sec-ico span.label {
+        width:150px;
+    } */
+    #sec-pre-ico h3, #sec-ico h3 {
+        font-size:48px;
+        letter-spacing:5px;
+        margin-top:0px;
+    }
+
+    #dist-resources h3 {
+        font-size:56px;
+        letter-spacing:5px;
+        margin-bottom: 20px;
+    }
+    #dist-resources p {
+        padding-right: 30px;
+    }
+    #destino .rows span {
+        font-family: 'Offside', cursive;
+        font-size: 1.9em;
+        display:block;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        letter-spacing:3px;
+    }
+
+    #lunes-buy-tokens {
+        margin-top:200px;
+    }
+    #lunes-buy-tokens h3 {
+        margin-top: 0px;
+        font-size:56px;
+        letter-spacing:5px;
+    }
+    #lunes-buy-tokens .bt_green {
+        clear: both;
+        
+    }
+    .icon-link {
+        width:80px;
+        display: block;
+        float:left;
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+    #lunes-time h2, #lunes-parceiros h2 {
+        font-size:96px;
+        letter-spacing:5px;
+    }
+    #lunes-time .social_bar img {
+        width:60px;
+        height: 60px;
+    }
+    #lunes-time h3 {
+        font-size:64px;
+        letter-spacing:5px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    #lunes-time li h4 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+    }
 }
