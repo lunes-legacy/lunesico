@@ -503,6 +503,20 @@ header #logo {
     font-size: 1.3em;
     box-shadow: 0px 3px 5px rgba(0,0,0,.05);
 }
+.bt_green_none {
+    /*background-color: #4cd566;*/
+    background: linear-gradient(#77f38d, #4cd566);
+    border: solid 1px #77f38d;
+    text-decoration: none;
+    font-family: 'Offside', cursive;
+    color: #fff;
+    padding: 10px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    box-shadow: 0px 3px 5px rgba(0,0,0,.05);
+}
 .bt_green:hover {
     text-decoration: none;
     color:#fff;
