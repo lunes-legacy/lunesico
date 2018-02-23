@@ -848,6 +848,16 @@ ul.lSGallery {
     margin-bottom: 20px;
 }
 
+.label-ico {
+    background-color: #5cb85c;
+    border-radius: 3px;
+    font-size: 0.9em;
+    padding: 1px 5px;
+    margin-bottom: 10px;
+    margin-left: 60%;
+    text-align: right;
+    width: 40%;
+}
 
 /* devices */
 @media only screen and (min-width: 768px) {
@@ -927,6 +937,10 @@ ul.lSGallery {
     }
     .box-ico {
         background:url('../img/icon_preico.png') no-repeat right 20px;
+    }
+
+    .box-ico h3 {
+        text-align: left;
     }
 
     h2 {
@@ -1106,5 +1120,11 @@ ul.lSGallery {
     #lunes-time li h4 {
         font-family: 'Roboto', sans-serif;
         font-weight: 200;
+    }
+
+    .label-ico {
+        margin-left: 40%;
+        text-align: right;
+        width: 60%;
     }
 }
