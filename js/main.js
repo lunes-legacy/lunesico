@@ -54,6 +54,52 @@ function getTime(){
 
     var dif = new Date(diffMilissegundos);
 
+   
+    if (dif.getDate()>1) 
+    {
+        $("#put_s_day_en").html('Days');
+        $("#put_s_day_pt").html('Dias');
+    }  
+    else
+    {
+         $("#put_s_day_en").html('Day');
+         $("#put_s_day_pt").html('Dia');
+    }
+
+    if (dif.getHours()>1) 
+    {
+        $("#put_s_hour_en").html('Hours');
+        $("#put_s_hour_pt").html('Horas');
+    }  
+    else
+    {
+         $("#put_s_hour_en").html('Hour');
+         $("#put_s_hour_pt").html('Hora');
+    }
+
+    if (dif.getMinutes()>1) 
+    {
+        $("#put_s_min_en").html('Minutes');
+        $("#put_s_min_pt").html('Minutos');
+    }  
+    else
+    {
+         $("#put_s_min_en").html('Minute');
+         $("#put_s_min_pt").html('Minuto');
+    }
+
+    if (dif.getSeconds()>1) 
+    {
+        $("#put_s_sec_en").html('Seconds');
+        $("#put_s_sec_pt").html('Segundos');
+    }  
+    else
+    {
+         $("#put_s_sec_en").html('Second');
+         $("#put_s_sec_pt").html('Segundo');
+    }
+       
+    
     $("#con_days").html(dif.getDate());
     $("#con_hours").html(dif.getHours());
     $("#con_min").html(dif.getMinutes());
