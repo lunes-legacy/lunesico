@@ -54,7 +54,7 @@ header {
     display:block;
     position: fixed;
     width: 100%;
-    z-index: 999;
+    z-index: 998;
     margin: 0px;
     padding: 15px;
     margin-top: -8.5rem;
@@ -81,7 +81,7 @@ header #logo {
 #navbar {
     font-family: 'Offside', cursive;
     display:none;
-    position: absolute;
+    position: fixed;
     top:0px;
     left:0px;
     width: 100%;
@@ -89,6 +89,9 @@ header #logo {
     background-color: #4B2C82;
     border-radius: 0px 0px 45px 0px;
     padding-bottom: 40px;
+    z-index: 999;
+    overflow-y: auto;
+    max-height: 100%;
 }
 #navbar #top {
     font-size: 2em;
@@ -1011,7 +1014,8 @@ ul.lSGallery {
         border-radius: 0px 0px 90px 0px;
         padding-bottom: 40px;
         box-shadow: 0px 0px 45px rgba(0,0,0,.5);
-        
+        overflow-y: auto;
+        max-height: 100%;
     }
     section {
         margin-top:100px;
