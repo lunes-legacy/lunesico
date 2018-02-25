@@ -99,8 +99,14 @@ function getTime(){
          $("#put_s_sec_pt").html('Segundo');
     }
        
-    
-    $("#con_days").html(dif.getDate());
+    if (dif.getDate()>2) {
+         $("#con_days").html('0');
+    }else
+    {
+         $("#con_days").html(dif.getDate());
+    }
+
+   
     $("#con_hours").html(dif.getHours());
     $("#con_min").html(dif.getMinutes());
     $("#con_sec").html(dif.getSeconds());
