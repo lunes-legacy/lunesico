@@ -49,13 +49,16 @@ $("#navbar #cont a").on('click', function(event) {
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
-    var dataFim = new Date("02/26/2018 01:00:00");
+    var dataFim = new Date("02/25/2018 23:00:00");
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
+    var now_utc = new Date(dif.getUTCFullYear(), dif.getUTCMonth(), dif.getUTCDate(),  dif.getUTCHours(), dif.getUTCMinutes(), dif.getUTCSeconds());
 
 
-    if (dif.getDate()>1)
+     // $("#teste").html(now_utc);
+
+    if (now_utc.getDate()>1)
     {
         $("#put_s_day_en").html('Days');
         $("#put_s_day_pt").html('Dias');
@@ -66,7 +69,7 @@ function getTime(){
          $("#put_s_day_pt").html('Dia');
     }
 
-    if (dif.getHours()>1)
+    if (now_utc.getHours()>1)
     {
         $("#put_s_hour_en").html('Hours');
         $("#put_s_hour_pt").html('Horas');
@@ -77,7 +80,7 @@ function getTime(){
          $("#put_s_hour_pt").html('Hora');
     }
 
-    if (dif.getMinutes()>1)
+    if (now_utc.getMinutes()>1)
     {
         $("#put_s_min_en").html('Minutes');
         $("#put_s_min_pt").html('Minutos');
@@ -88,7 +91,7 @@ function getTime(){
          $("#put_s_min_pt").html('Minuto');
     }
 
-    if (dif.getSeconds()>1)
+    if (now_utc.getSeconds()>1)
     {
         $("#put_s_sec_en").html('Seconds');
         $("#put_s_sec_pt").html('Segundos');
@@ -99,8 +102,8 @@ function getTime(){
          $("#put_s_sec_pt").html('Segundo');
     }
 
-   if (dif.getDate()>1){
-    $("#con_days").html(dif.getDate());
+   if (now_utc.getDate()>1){
+    $("#con_days").html(now_utc.getDate());
    }
    else
    {
@@ -108,9 +111,9 @@ function getTime(){
    }
 
     
-    $("#con_hours").html(dif.getHours());
-    $("#con_min").html(dif.getMinutes());
-    $("#con_sec").html(dif.getSeconds());
+    $("#con_hours").html(now_utc.getHours());
+    $("#con_min").html(now_utc.getMinutes());
+    $("#con_sec").html(now_utc.getSeconds());
 
 }
 setInterval(getTime, 1000);
