@@ -49,7 +49,7 @@ $("#navbar #cont a").on('click', function(event) {
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
-    var dataFim = new Date("02/25/2018");
+    var dataFim = new Date("02/26/2018 01:00:00");
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
@@ -99,8 +99,15 @@ function getTime(){
          $("#put_s_sec_pt").html('Segundo');
     }
 
-
+   if (dif.getDate()>1){
     $("#con_days").html(dif.getDate());
+   }
+   else
+   {
+    $("#con_days").html('0');
+   }
+
+    
     $("#con_hours").html(dif.getHours());
     $("#con_min").html(dif.getMinutes());
     $("#con_sec").html(dif.getSeconds());

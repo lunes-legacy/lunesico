@@ -18,7 +18,10 @@
   },
   "homepage": "https://gitlab.com/lunes.team/lunesico#README",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
     "babel-core": "^6.26.0",
+    "babel-install": "2.1.0",
     "babel-preset-env": "^1.6.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.1",
