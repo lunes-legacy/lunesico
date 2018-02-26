@@ -135,7 +135,7 @@ function getTime(){
     $("#con_min").html(now_utc.getMinutes());
     $("#con_sec").html(now_utc.getSeconds());
 
-    document.getElementById("loading_bar_green").style.width = percBarra(24*17,diff_hours(dataFim,dataInicio)) + "%";
+    //document.getElementById("loading_bar_green").style.width = percBarra(24*17,diff_hours(dataFim,dataInicio)) + "%";
 }
 
 setInterval(getTime, 1000);
