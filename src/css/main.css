@@ -176,6 +176,17 @@ header #logo {
     margin-bottom: 10px;
     padding-right: 20px;
 }
+#counter #coin_sale {
+   
+}
+
+#counter #coin_sale_desc{
+    display: block;
+    text-align: left;
+    font-size: 1.3em;
+    margin-bottom: -25px;
+}
+
 #counter #loading_bar {
     display:block;
     background-color: #fff;

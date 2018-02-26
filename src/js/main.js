@@ -44,8 +44,45 @@ $("#navbar #cont a").on('click', function(event) {
     // });
 });
 
+function formatDisplayNumber(n, currency) {
+    return currency + " " + n.toFixed(0).replace(/./g, function(c, i, a) {
+        return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "." + c : c;
+    });
+}
 
 function updateSaldo(){
+
+    $.ajax({
+        url: "https://apiw.lunes.io/api/ico/phase", 
+        type: "POST",
+        success: function(result)
+        {
+           
+
+            var found_sale = $.grep(result, function(v) {
+                return v.sale_status === "active";
+            });
+
+            //console.log(Math.round(found_sale[0].global_limit));
+            //console.log(Math.round(found_sale[0].total_value));
+            //console.log(percBarra(found_sale[0].global_limit,found_sale[0].total_value));
+            var coin_sale = formatDisplayNumber(parseInt(found_sale[0].total_value), "");
+            var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+           
+            $("#coin_sale").html(coin_sale);
+            $("#coin_counter").html(coin_counter);
+            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,found_sale[0].total_value) + "%";
+        },
+          error: function (xhr, ajaxOptions, thrownError) {
+            //alert(xhr.status);
+            //alert(thrownError);
+            console.log(xhr.status);
+            console.log(thrownError);
+            $("#coin_counter").html('0');
+            document.getElementById("loading_bar_green").style.width = "0%";
+          }
+    });
+
     // $("#coin_counter").html('100.000.000');
 }
 
@@ -60,9 +97,10 @@ function diff_hours(dt2, dt1)
 
  function percBarra(total, atual)
  {   
-    var diff = (atual/total)-1;
+    var diff = (Math.round(atual)/Math.round(total));
     return   Math.abs(diff)*100;
  }
+
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
