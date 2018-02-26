@@ -66,8 +66,8 @@ function diff_hours(dt2, dt1)
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
-    //var dataFim = new Date("02/25/2018 23:00:00");
-    var dataFim = new Date("03/14/2018 23:59:59");
+    var dataFim = new Date("02/26/2018 23:00:00");
+    //var dataFim = new Date("03/14/2018 23:59:59");
      //var dataFim = new Date("03/14/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
