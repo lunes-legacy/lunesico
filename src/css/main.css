@@ -53,7 +53,7 @@ header {
     background: #3B1878;
     display:block;
     position: fixed;
-    width: 100%;
+    width: 98%;
     z-index: 999;
     margin: 0px;
     padding: 15px;
@@ -61,7 +61,7 @@ header {
 
 }
 .lunes-nav-shadow {
-    box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+    /*box-shadow: 0px 0px 10px rgba(0,0,0,.3);*/
 }
 
 header a{
@@ -84,7 +84,7 @@ header #logo {
     position: absolute;
     top:0px;
     left:0px;
-    width: 100%;
+    width: 102%;
     padding-left:0px;
     background-color: #4B2C82;
     border-radius: 0px 0px 45px 0px;
@@ -105,7 +105,7 @@ header #logo {
 }
 #navbar #cont a {
     padding-top:10px;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     color:#fff;
     text-decoration: none;
     display: block;
@@ -181,12 +181,12 @@ header #logo {
 #counter #loading_bar {
     display:block;
     background-color: #fff;
-    height: 8px;
+    height: 6px;
 }
 #counter #loading_bar_green {
     display: block;
     background-color: #4cd566;
-    height: 8px;
+    height: 6px;
 }
 #counter #base_counter {
     background-color: #4e2e7d;
@@ -893,12 +893,12 @@ ul.lSGallery {
     #counter #loading_bar {
         display:block;
         background-color: #fff;
-        height: 14px;
+        height: 6px;
     }
     #counter #loading_bar_green {
         display: block;
         background-color: #4cd566;
-        height: 14px;
+        height: 6px;
     }
     #lua {
         display:block;
@@ -1142,4 +1142,13 @@ ul.lSGallery {
         text-align: right;
         width: 60%;
     }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
 }

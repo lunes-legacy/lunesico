@@ -45,18 +45,38 @@ $("#navbar #cont a").on('click', function(event) {
 });
 
 
+function updateSaldo(){
+    // $("#coin_counter").html('100.000.000');
+}
 
+function diff_hours(dt2, dt1) 
+ {
+
+  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  diff /= (60 * 60);
+  return Math.abs(Math.round(diff));
+  
+ }
+
+ function percBarra(total, atual)
+ {   
+    var diff = (atual/total)-1;
+    return   Math.abs(diff)*100;
+ }
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
-    var dataFim = new Date("02/25/2018 23:00:00");
+    //var dataFim = new Date("02/25/2018 23:00:00");
+    var dataFim = new Date("03/14/2018 23:59:59");
+     //var dataFim = new Date("03/14/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
     var now_utc = new Date(dif.getUTCFullYear(), dif.getUTCMonth(), dif.getUTCDate(),  dif.getUTCHours(), dif.getUTCMinutes(), dif.getUTCSeconds());
 
-
-     // $("#teste").html(now_utc);
+    //console.log($("#loading_bar_green"));
+    //var x = Math.abs(dataFim - dataInicio) / 36e5;
+    //$("#teste").html(percBarra(24,diff_hours(dataFim,dataInicio)));
 
     if (now_utc.getDate()>1)
     {
@@ -115,9 +135,11 @@ function getTime(){
     $("#con_min").html(now_utc.getMinutes());
     $("#con_sec").html(now_utc.getSeconds());
 
+    document.getElementById("loading_bar_green").style.width = percBarra(24*17,diff_hours(dataFim,dataInicio)) + "%";
 }
-setInterval(getTime, 1000);
 
+setInterval(getTime, 1000);
+setInterval(updateSaldo, 60000);
 
 /* slide time */
 $(document).ready(function() {
@@ -151,4 +173,7 @@ $(document).ready(function() {
             });
         }
     });
+
+    getTime();
+    updateSaldo();
 });
