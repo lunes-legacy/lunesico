@@ -89,6 +89,7 @@ header #logo {
     padding-bottom: 40px;
     z-index: 999;
     overflow-y:auto;
+    max-height: 100%;
 }
 #navbar #top {
     font-size: 2em;
