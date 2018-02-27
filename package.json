@@ -1,0 +1,37 @@
+{
+  "name": "lunes-ico",
+  "version": "1.0.0",
+  "description": "Website da ICO Lunes",
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/lunes.team/lunesico.git"
+  },
+  "keywords": [],
+  "author": "Lunes Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/lunes.team/lunesico/issues"
+  },
+  "homepage": "https://gitlab.com/lunes.team/lunesico#README",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-core": "^6.26.0",
+    "babel-install": "2.1.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^4.0.0"
+  }
+}
