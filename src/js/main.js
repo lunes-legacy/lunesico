@@ -86,9 +86,9 @@ function updateSaldo(){
             
 
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
-           
+            //console.log(formatDisplayNumber(coin_sale,""));
             //Habilitar para preico
-            $("#coin_sale").html(coin_sale);
+            $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
             $("#coin_counter").html(coin_counter);
             document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
             
