@@ -83,13 +83,14 @@ function updateSaldo(){
                  coin_sale = formatDisplayNumber(parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value), "");
             };
            
+            
 
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
            
             //Habilitar para preico
             $("#coin_sale").html(coin_sale);
             $("#coin_counter").html(coin_counter);
-            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,found_sale[0].total_value) + "%";
+            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
             
 
         },
