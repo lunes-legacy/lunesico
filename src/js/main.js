@@ -118,8 +118,8 @@ function getTime(){
     var dataFim = new Date("02/27/2018 06:00:00");
 
     
-    //var dataFim = new Date("03/14/2018 23:59:59");
-     //var dataFim = new Date("03/14/2018 23:59:59");ICO
+    //var dataFim = new Date("03/14/2018 23:59:59");PREICO
+    //var dataFim = new Date("03/14/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
