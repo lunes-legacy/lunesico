@@ -129,7 +129,7 @@ function getTime(){
     //var dataFim = new Date("02/27/2018 06:00:00");
 
     
-    var dataFim = new Date("03/30/2018 23:59:59");
+    var dataFim = new Date("03/26/2018 23:59:59");
     //var dataFim = new Date("03/31/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
