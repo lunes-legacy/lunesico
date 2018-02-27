@@ -108,7 +108,7 @@ function diff_hours(dt2, dt1)
 function getTime(){
     var dataInicio = new Date();
     dataInicio = new Date(dataInicio.getUTCFullYear(), dataInicio.getUTCMonth(), dataInicio.getUTCDate(),  dataInicio.getUTCHours(), dataInicio.getUTCMinutes(), dataInicio.getUTCSeconds());
-    var dataFim = new Date("02/27/2018 02:00:00");
+    var dataFim = new Date("02/27/2018 06:00:00");
 
     
     //var dataFim = new Date("03/14/2018 23:59:59");
