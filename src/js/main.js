@@ -32,16 +32,20 @@ $("#navbar #cont a").click(function(){
 
 $("#navbar #cont a").on('click', function(event) {
     var target = this.hash;
+    var link = $(this).attr('href');
+    var initvar = link.substring(0,1);
+    
+    if(initvar=="#"){
+        event.preventDefault();
 
-    event.preventDefault();
+        var navOffset = 130;
 
-    var navOffset = 130;
-
-    return $('html, body').animate({
-        scrollTop: $(this.hash).offset().top - navOffset
-    }, 500, function() {
-        return window.history.pushState(null, null, target);
-    });
+        return $('html, body').animate({
+            scrollTop: $(this.hash).offset().top - navOffset
+        }, 500, function() {
+            return window.history.pushState(null, null, target);
+        });
+    }
 });
 
 function formatDisplayNumber(n, currency) {
