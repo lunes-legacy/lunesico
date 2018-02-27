@@ -70,16 +70,26 @@ function updateSaldo(){
                 return v.sale_status === "active";
             });
 
-            //console.log(Math.round(found_sale[0].global_limit));
+             var whitelist_sale = $.grep(result, function(v) {
+                return v.name === "Whitelist";
+            });
+
+            //console.log(result);
             //console.log(Math.round(found_sale[0].total_value));
             //console.log(percBarra(found_sale[0].global_limit,found_sale[0].total_value));
-            var coin_sale = formatDisplayNumber(parseInt(found_sale[0].total_value), "");
+            
+            var coin_sale = parseInt(whitelist_sale[0].total_value);
+            if (found_sale[0].total_value!=null) {
+                 coin_sale = formatDisplayNumber(parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value), "");
+            };
+           
+
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
            
             //Habilitar para preico
-            //$("#coin_sale").html(coin_sale);
-            //$("#coin_counter").html(coin_counter);
-            //document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,found_sale[0].total_value) + "%";
+            $("#coin_sale").html(coin_sale);
+            $("#coin_counter").html(coin_counter);
+            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,found_sale[0].total_value) + "%";
             
 
         },
@@ -115,11 +125,11 @@ function diff_hours(dt2, dt1)
 function getTime(){
     var dataInicio = new Date();
     dataInicio = new Date(dataInicio.getUTCFullYear(), dataInicio.getUTCMonth(), dataInicio.getUTCDate(),  dataInicio.getUTCHours(), dataInicio.getUTCMinutes(), dataInicio.getUTCSeconds());
-    var dataFim = new Date("02/27/2018 06:00:00");
+    //var dataFim = new Date("02/27/2018 06:00:00");
 
     
-    //var dataFim = new Date("03/14/2018 23:59:59");PREICO
-    //var dataFim = new Date("03/14/2018 23:59:59");ICO
+    var dataFim = new Date("03/14/2018 23:59:59");
+    //var dataFim = new Date("03/31/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
@@ -186,7 +196,6 @@ function getTime(){
     $("#con_min").html(now_utc.getMinutes());
     $("#con_sec").html(now_utc.getSeconds());
 
-    //document.getElementById("loading_bar_green").style.width = percBarra(24*17,diff_hours(dataFim,dataInicio)) + "%";
 }
 
 setInterval(getTime, 1000);
