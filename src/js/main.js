@@ -31,17 +31,24 @@ $("#navbar #cont a").click(function(){
 });
 
 $("#navbar #cont a").on('click', function(event) {
+    
     var target = this.hash;
+    var link = $(this).attr('href');
+    var initvar = link.substring(0,1);
 
-    event.preventDefault();
+    if(initvar=="#"){
+        event.preventDefault();
 
-    var navOffset = 130;
+        var navOffset = 130;
 
-    return $('html, body').animate({
-        scrollTop: $(this.hash).offset().top - navOffset
-    }, 500, function() {
-        return window.history.pushState(null, null, target);
-    });
+        return $('html, body').animate({
+            scrollTop: $(this.hash).offset().top - navOffset
+        }, 500, function() {
+            return window.history.pushState(null, null, target);
+        });
+    }
+
+
 });
 
 function formatDisplayNumber(n, currency) {
@@ -63,15 +70,29 @@ function updateSaldo(){
                 return v.sale_status === "active";
             });
 
-            //console.log(Math.round(found_sale[0].global_limit));
+             var whitelist_sale = $.grep(result, function(v) {
+                return v.name === "Whitelist";
+            });
+
+            //console.log(result);
             //console.log(Math.round(found_sale[0].total_value));
             //console.log(percBarra(found_sale[0].global_limit,found_sale[0].total_value));
-            var coin_sale = formatDisplayNumber(parseInt(found_sale[0].total_value), "");
-            var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+            
+            var coin_sale = parseInt(whitelist_sale[0].total_value);
+            if (found_sale[0].total_value!=null) {
+                 coin_sale = parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value);
+            };
            
-            $("#coin_sale").html(coin_sale);
+            
+
+            var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+            //console.log(formatDisplayNumber(coin_sale,""));
+            //Habilitar para preico
+            $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
             $("#coin_counter").html(coin_counter);
-            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,found_sale[0].total_value) + "%";
+            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
+            
+
         },
           error: function (xhr, ajaxOptions, thrownError) {
             //alert(xhr.status);
@@ -104,9 +125,12 @@ function diff_hours(dt2, dt1)
 /* time counter */
 function getTime(){
     var dataInicio = new Date();
-    var dataFim = new Date("02/26/2018 23:00:00");
-    //var dataFim = new Date("03/14/2018 23:59:59");
-     //var dataFim = new Date("03/14/2018 23:59:59");ICO
+    dataInicio = new Date(dataInicio.getUTCFullYear(), dataInicio.getUTCMonth(), dataInicio.getUTCDate(),  dataInicio.getUTCHours(), dataInicio.getUTCMinutes(), dataInicio.getUTCSeconds());
+    //var dataFim = new Date("02/27/2018 06:00:00");
+
+    
+    var dataFim = new Date("03/29/2018 23:59:59");
+    //var dataFim = new Date("03/31/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
@@ -173,7 +197,6 @@ function getTime(){
     $("#con_min").html(now_utc.getMinutes());
     $("#con_sec").html(now_utc.getSeconds());
 
-    //document.getElementById("loading_bar_green").style.width = percBarra(24*17,diff_hours(dataFim,dataInicio)) + "%";
 }
 
 setInterval(getTime, 1000);

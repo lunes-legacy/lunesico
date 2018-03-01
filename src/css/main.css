@@ -127,6 +127,17 @@ header #logo {
     margin-bottom: 40px;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.align-horizontal {
+    display: flex; 
+    align-items: center;
+}
+
 .join-top {
     max-width: 300px;
     text-align: center;
@@ -899,9 +910,7 @@ ul.lSGallery {
         -webkit-font-smoothing: antialiased;
     }
     footer {
-
         font-size: 1em;
-
     }
     p {
         letter-spacing:2px;
@@ -1160,6 +1169,12 @@ ul.lSGallery {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .align-horizontal {
+        display: block;
+    }
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   background-color: transparent;
@@ -1167,4 +1182,10 @@ ul.lSGallery {
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+.t {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
