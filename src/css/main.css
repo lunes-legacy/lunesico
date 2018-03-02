@@ -785,32 +785,6 @@ header #logo {
     margin-top: 5px;
 }
 
-footer {
-    background-color: #4B2C82;
-    font-size: .8em;
-    padding-top:20px;
-    padding-bottom: 20px;
-    padding-left:10px;
-    padding-right: 10px;
-    margin-top:40px;
-}
-footer .link {
-    display:block;
-    line-height: 1.2em;
-}
-footer .link a, footer a {
-    color:#fff;
-}
-footer a:hover {
-    color:#fff;
-    text-decoration: underline;
-}
-footer .bt_green {
-    padding: 5px;
-    font-size: 10px;
-    text-align:center;
-}
-
 
 ul.lSGallery {
     border-top: solid 3px #fff;
@@ -900,6 +874,52 @@ ul.lSGallery {
     width: 40%;
 }
 
+
+/* footer rodape style */
+footer {
+    background-color: #5e4094;
+    font-size: 12px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    letter-spacing: .15em;
+    line-height: 1.2em;
+}
+footer .link {
+    display: block;
+    
+}
+footer .link a, footer a {
+    color:#fff;
+}
+footer a:hover {
+    color:#fff;
+    text-decoration: underline;
+}
+footer .bt_green {
+    padding: 5px;
+    font-size: 10px;
+    text-align:center;
+}
+
+.footer-news {
+    background-color:#5e4094;padding-top:40px;padding-bottom:40px;margin-top:40px;
+}
+.footer-news input {
+    background: #3B1878;
+    width: 80%;
+    float:left;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+.footer-news button {
+    background: #4cd566;
+    color:#fff;
+    width:20%;
+    float:left;
+    border-radius: 0px 5px 5px 0px;
+}
+
+
 /* devices */
 @media only screen and (min-width: 768px) {
     body {
@@ -909,9 +929,9 @@ ul.lSGallery {
 
         -webkit-font-smoothing: antialiased;
     }
-    footer {
+    /* footer {
         font-size: 1em;
-    }
+    } */
     p {
         letter-spacing:2px;
     }
@@ -1172,6 +1192,15 @@ ul.lSGallery {
 @media only screen and (max-width: 768px) {
     .align-horizontal {
         display: block;
+    }
+
+    #counter #coin_counter {
+        text-align: center;
+    }
+    
+    #counter #coin_sale_desc{
+        text-align: center;
+        margin-bottom: 5px;
     }
 }
 
