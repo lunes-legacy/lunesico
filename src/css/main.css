@@ -819,6 +819,9 @@ ul.lSGallery {
     padding-top:40px;
 }
 
+.limitSize{
+    max-width: 75%;
+}
 /* animations */
 #robo {
     animation: float 6s ease-in-out infinite;
@@ -1164,7 +1167,7 @@ footer .bt_green {
         margin-bottom: 20px;
     }
     #lunes-time h2, #lunes-parceiros h2 {
-        font-size:96px;
+        /*font-size:96px;*/
         letter-spacing:5px;
     }
     #lunes-time .social_bar img {
