@@ -1219,11 +1219,11 @@ footer .bt_green {
     align-items: center;
 }
 
-nav .container-logo-lunes {
+nav #logo.container-logo-lunes {
     letter-spacing: -6px;
 }
 
-section .container-logo-lunes {
+section #logo.container-logo-lunes {
     letter-spacing: -8px;
 } 
 
