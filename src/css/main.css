@@ -123,7 +123,7 @@ header #logo {
     display:block;
     text-align: center;
     padding:30px;
-    font-size: 5em;
+    font-size: 4em;
     margin-bottom: 40px;
 }
 
@@ -1217,4 +1217,21 @@ footer .bt_green {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+nav .container-logo-lunes {
+    letter-spacing: -6px;
+}
+
+section .container-logo-lunes {
+    letter-spacing: -8px;
+} 
+
+footer .container-logo-lunes {
+    letter-spacing: -1px;
+}
+
+footer .logolunes {
+    font-size:22px;
+    font-family:'Offside', cursive;
 }
