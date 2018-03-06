@@ -164,6 +164,7 @@ header #logo {
     position: absolute;
     right:0px;
     animation: flashflash 8s infinite;
+    top: 45px;
 }
 
 #social-bar {
@@ -181,7 +182,7 @@ header #logo {
     float:right;
     position: absolute;
     right:0px;
-    margin-right: 150px;
+    margin-right: 50px;
 
 }
 
