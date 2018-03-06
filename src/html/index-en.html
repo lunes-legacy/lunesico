@@ -92,7 +92,7 @@
 
             </div>
             <div class="col-xs-2">
-                <a href="index-pt.html" id="bt-lang">PT</a>
+                <a href="index-pt.html" id="bt-lang" style="font-family: Offside,cursive;">PT</a>
             </div>
         </nav>
 
@@ -110,9 +110,15 @@
                 <img src="img/twitter.png" alt="twitter" width="30px" />
             </a>
         </div>
+
+         <div class="hidden-sm hidden-xs" id="link-bar">
+             <a href="https://ico.lunes.io/#!/login" class="bt_green hidden-xs" id="bt-link-bar" style="padding-bottom: 10px;padding-top: 10px;top: -10px;position: relative;">BUY TOKENS</a>
+           <a href="https://ico.lunes.io/#!/signup" id="bt-link-bar">Register</a>
+           <a href="https://ico.lunes.io/#!/login" id="bt-link-bar">Login</a>
+        </div>
     </header>
 
-    <section id="home">
+    <section id="home" style="margin-top: 0px;">
         <div class="container">
             <img src="img/moon.png" alt="moon" id="lua" />
             <!--<span class="hidden-md hidden-lg" id="logo">Lun
@@ -127,6 +133,11 @@
                 <span class="logolunes">s</span>
             </span>
 
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                 <h1  style="text-align: center;  font-size: 45px;color: #4cd566;font-weight: bold;">The largest blockchain project in Latin America</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <h3 style="margin-top:40px;" class="simple-title">
@@ -181,16 +192,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="hard-cap" style="top:25px; position:relative;">
+                         <div id="raised" style="top:25px; position:relative;">
+                            Raised
+                            <span id="raisedValue"></span>
+                        </div>
+                        <div id="hard-cap" style="top:25px;">
                             Soft cap
-                            <span>$ 10 960 000</span>
+                            <span id="teste"></span>
+                            <span>$ 10.960.000</span>
                         </div>
 
 
 
-                        <div style="padding-top: 40px;">
+                        <!-- <div style="padding-top: 40px;">
                             <a href="https://ico.lunes.io/#!/login" class="bt_green hidden-xs" style="display:block; padding-left:20px; padding-right:20px;float:left;text-align:center;">BUY TOKENS</a>
-                        </div>
+                        </div>-->
 
 
                     </div>
@@ -1091,9 +1107,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-8 col-md-offset-2">
-                    <h2>Team
-                        <span style="font-size:10px;margin-left:20px;">The future in the present.</span>
-                    </h2>
+                    <h2>Team</h2>
 
                     <ul id="slide_time">
                         <li data-thumb="img/time/thumb/Lucas_Magno.png" data-src="img/time/Lucas_Magno.png">

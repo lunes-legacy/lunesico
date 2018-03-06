@@ -45,8 +45,8 @@
         </div>
         <div id="cont">
             <a href="#home">Home</a>
-            <a href="https://ico.lunes.io/#!/signup">Cadastros</a>
-            <a href="https://ico.lunes.io/#!/login">Login</a>
+            <a href="https://ico.lunes.io/#!/signup">Cadastrar</a>
+            <a href="https://ico.lunes.io/#!/login">Entrar</a>
             <a href="#lunes-wallet">Carteira Lunes</a>
             <a href="#lunes-market">Lunes Market</a>
             <a href="#lunes-card">Cartão Pré-pago Lunes</a>
@@ -92,7 +92,7 @@
 
             </div>
             <div class="col-xs-2">
-                <a href="index-en.html" id="bt-lang">EN</a>
+                <a href="index-en.html" id="bt-lang" style="font-family: Offside,cursive;">EN</a>
 
             </div>
         </nav>
@@ -111,9 +111,16 @@
                 <img src="img/twitter.png" alt="twitter" width="30px" />
             </a>
         </div>
+
+         <div class="hidden-sm hidden-xs" id="link-bar">
+             <a href="https://ico.lunes.io/#!/login" class="bt_green hidden-xs" id="bt-link-bar" style="padding-bottom: 10px;padding-top: 10px;top: -10px;position: relative;">COMPRAR TOKENS</a>
+           <a href="https://ico.lunes.io/#!/signup" id="bt-link-bar">Cadatrar</a>
+           <a href="https://ico.lunes.io/#!/login" id="bt-link-bar">Entrar</a>
+        </div>
     </header>
 
-    <section id="home">
+    <section id="home" style="margin-top: 0px;">
+
         <div class="container">
             <img src="img/moon.png" alt="lua" id="lua" />
             <!--<span class="hidden-md hidden-lg" id="logo">Lun
@@ -128,6 +135,11 @@
                 <span class="logolunes">s</span>
             </span>
 
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                 <h1  style="text-align: center;  font-size: 45px;color: #4cd566;font-weight: bold;">O maior projeto de blockchain da América Latina</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12 col-md-6 ">
                     <h3 style="margin-top:40px;" class="simple-title">
@@ -184,15 +196,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="hard-cap" style="top:25px; position:relative;">
+                         <div id="raised" style="top:25px; position:relative;">
+                            Raised
+                            <span id="raisedValue"></span>
+                        </div>
+                        <div id="hard-cap" style="top:25px;">
                             Soft cap
                             <span id="teste"></span>
-                            <span>$ 10 960 000</span>
+                            <span>$ 10.960.000</span>
                         </div>
 
-                        <div style="padding-top: 40px;">
+                       <!-- <div style="padding-top: 40px;">
                             <a href="https://ico.lunes.io/#!/login" class="bt_green hidden-xs" style="display:block; padding-left:20px; padding-right:20px;float:left;text-align:center;">COMPRAR TOKENS</a>
-                        </div>
+                        </div>-->
                     </div>
 
                     <!-- socials icons -->
@@ -244,7 +260,7 @@
                                         <a href="https://lunes.io/pdf/Lunes-Whitepaper-en.pdf" target="_blank">Inglês</a>
                                     </li>
                                     <li>
-                                        <a href="https://lunes.io/pdf/Lunes-Whitepaper-id.pdf" target="_blank">Indiano</a>
+                                        <a href="https://lunes.io/pdf/Lunes-Whitepaper-id.pdf" target="_blank">Indonésio</a>
                                     </li>
                                     <li>
                                         <a href="https://lunes.io/pdf/Lunes-Whitepaper-it.pdf" target="_blank">Italiano</a>
@@ -1077,9 +1093,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-8 col-md-offset-2">
-                    <h2>Time
-                        <span style="font-size:10px;margin-left:20px;">O futuro no presente.</span>
-                    </h2>
+                    <h2>Time</h2>
 
                     <ul id="slide_time">
                         <li data-thumb="img/time/thumb/Lucas_Magno.png" data-src="img/time/Lucas_Magno.png">

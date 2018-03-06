@@ -90,6 +90,7 @@ function updateSaldo(){
             //Habilitar para preico
             $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
             $("#coin_counter").html(coin_counter);
+            $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
             document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
             
 

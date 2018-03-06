@@ -71,7 +71,7 @@ header #logo {
     display:block;
     text-align: center;
     padding:10px;
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: 0px;
 }
 
@@ -168,11 +168,33 @@ header #logo {
 
 #social-bar {
     margin-top:-30px;
+    float:left;
+    /*position: absolute;*/
+    right:0px;
+    /*margin-right: 150px;*/
+    margin-left: 90px;
+
+}
+
+#link-bar {
+    margin-top:-30px;
     float:right;
     position: absolute;
     right:0px;
     margin-right: 150px;
+
 }
+
+#bt-link-bar {
+    color: white;
+    font-size: 18px;
+    margin-top:0px;
+    margin-right: 45px;
+    display: block;
+    float:right;
+    font-family: Offside,cursive;
+}
+
 #social-bar a {
     margin:5px;
 }
@@ -234,6 +256,25 @@ header #logo {
     background-color: #4e2e7d;
     max-width: 160px;
     margin-left: auto;
+    color: #4cd566;
+    font-size: .8em;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: -40px;
+}
+
+#counter #hard-cap span {
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#counter #raised {
+    display: block;
+    background-color: #4e2e7d;
+    max-width: 160px;
+    
     margin-right: auto;
     color: #4cd566;
     font-size: .8em;
@@ -242,7 +283,8 @@ header #logo {
     border-radius: 4px;
     margin-top: -40px;
 }
-#counter #hard-cap span {
+
+#counter #raised span {
     display: block;
     color: #fff;
     font-size: 1.2em;
@@ -952,7 +994,7 @@ footer .bt_green {
         display:block;
         position: absolute;
         right:0px;
-        margin-top:-100px;
+        margin-top:-20px;
         margin-left:-100px;
         animation: flashflash 8s infinite;
     }
