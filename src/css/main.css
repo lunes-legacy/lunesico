@@ -134,7 +134,7 @@ header #logo {
 }
 
 .align-horizontal {
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
@@ -214,7 +214,7 @@ header #logo {
     padding-right: 20px;
 }
 #counter #coin_sale {
-   
+
 }
 
 #counter #coin_sale_desc{
@@ -275,7 +275,7 @@ header #logo {
     display: block;
     background-color: #4e2e7d;
     max-width: 160px;
-    
+
     margin-right: auto;
     color: #4cd566;
     font-size: .8em;
@@ -862,6 +862,40 @@ ul.lSGallery {
     padding-top:40px;
 }
 
+/* Advisors */
+/* .advisor {
+    border-bottom: 2px solid #FFF;
+} */
+
+.advisor .social_bar {
+    text-align: right;
+}
+
+.advisor .social_bar a:hover {
+    opacity: .3;
+}
+
+.advisor h3 {
+    display: block;
+    text-align: right;
+    padding: 0px;
+    margin-top: 30px;
+    font-size: 1.8em;
+}
+.advisor h4 {
+    display: block;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    color: #4cd566;
+}
+
+.advisor .social_bar img {
+    margin-top: 2rem;
+    width: 40px;
+    height: 40px;
+}
+
 .limitSize{
     max-width: 75%;
 }
@@ -932,7 +966,7 @@ footer {
 }
 footer .link {
     display: block;
-    
+
 }
 footer .link a, footer a {
     color:#fff;
@@ -1228,6 +1262,11 @@ footer .bt_green {
         font-weight: 200;
     }
 
+    #lunes-advisor h2, #lunes-parceiros h2 {
+        /*font-size:96px;*/
+        letter-spacing:5px;
+    }
+
     .label-ico {
         margin-left: 40%;
         text-align: right;
@@ -1243,7 +1282,7 @@ footer .bt_green {
     #counter #coin_counter {
         text-align: center;
     }
-    
+
     #counter #coin_sale_desc{
         text-align: center;
         margin-bottom: 5px;
@@ -1271,7 +1310,7 @@ nav #logo.container-logo-lunes {
 
 section #logo.container-logo-lunes {
     letter-spacing: -8px;
-} 
+}
 
 footer .container-logo-lunes {
     letter-spacing: -1px;
