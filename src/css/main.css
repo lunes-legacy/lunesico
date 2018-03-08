@@ -863,9 +863,15 @@ ul.lSGallery {
 }
 
 /* Advisors */
-/* .advisor {
-    border-bottom: 2px solid #FFF;
-} */
+.advisor .advisor-img img {
+    padding: 0;
+    margin-top: 5rem;
+    float: left;
+    display: block;
+    min-width: 150px;
+    max-width: 100%;
+    border-bottom: solid 3px #fff;
+}
 
 .advisor .social_bar {
     text-align: right;
@@ -880,7 +886,7 @@ ul.lSGallery {
     text-align: right;
     padding: 0px;
     margin-top: 30px;
-    font-size: 1.8em;
+    font-size: 1.2em;
 }
 .advisor h4 {
     display: block;
@@ -891,9 +897,9 @@ ul.lSGallery {
 }
 
 .advisor .social_bar img {
-    margin-top: 2rem;
-    width: 40px;
-    height: 40px;
+    margin-top: 3rem;
+    width: 2rem;
+    height: 2rem;
 }
 
 .limitSize{
@@ -1271,6 +1277,16 @@ footer .bt_green {
         margin-left: 40%;
         text-align: right;
         width: 60%;
+    }
+
+    .advisor .advisor-img img {
+        margin-top: 15rem;
+    }
+
+    .advisor .social_bar img {
+        margin-top: 7rem;
+        width: 3rem;
+        height: 3rem;
     }
 }
 
