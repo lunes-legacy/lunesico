@@ -164,7 +164,7 @@ header #logo {
     position: absolute;
     right:0px;
     animation: flashflash 8s infinite;
-    top: 45px;
+    top: 116px;
 }
 
 #social-bar {
@@ -1035,7 +1035,7 @@ footer .bt_green {
         display:block;
         position: absolute;
         right:0px;
-        margin-top:-20px;
+        margin-top:60px;
         margin-left:-100px;
         animation: flashflash 8s infinite;
     }
