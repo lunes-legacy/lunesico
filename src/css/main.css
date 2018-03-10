@@ -170,8 +170,8 @@ header #logo {
 #social-bar {
     margin-top:-30px;
     float:left;
-    /*position: absolute;*/
-    right:0px;
+    position: absolute;
+    left:0;
     /*margin-right: 150px;*/
     margin-left: 90px;
 
