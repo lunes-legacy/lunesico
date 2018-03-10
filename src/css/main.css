@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Offside');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
 
+:root {
+    --purple: #3b1878;
+    --darkPurple: #2f1261;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -193,10 +198,21 @@ header #logo {
     color: white;
     font-size: 18px;
     margin-top:0px;
-    margin-right: 30px;
+    margin-right: 10px;
     display: block;
     float:right;
     font-family: Offside,cursive;
+    text-decoration: none;
+}
+
+.bt-menu {
+    padding: 5px 10px;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.bt-menu:hover {
+    background-color: var(--darkPurple) !important;
 }
 
 .bt-buy {
