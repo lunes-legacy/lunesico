@@ -174,7 +174,10 @@ header #logo {
     left:0;
     /*margin-right: 150px;*/
     margin-left: 90px;
+}
 
+#social-bar a {
+    text-decoration: none;
 }
 
 #link-bar {
@@ -190,10 +193,17 @@ header #logo {
     color: white;
     font-size: 18px;
     margin-top:0px;
-    margin-right: 45px;
+    margin-right: 30px;
     display: block;
     float:right;
     font-family: Offside,cursive;
+}
+
+.bt-buy {
+    display:block;
+    text-align:center;
+    margin: 0 auto;
+    max-width: 250px;
 }
 
 #social-bar a {
