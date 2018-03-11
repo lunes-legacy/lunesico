@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Offside');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
 
+:root {
+    --purple: #3b1878;
+    --darkPurple: #2f1261;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -164,17 +169,20 @@ header #logo {
     position: absolute;
     right:0px;
     animation: flashflash 8s infinite;
-    top: 45px;
+    top: 116px;
 }
 
 #social-bar {
     margin-top:-30px;
     float:left;
-    /*position: absolute;*/
-    right:0px;
+    position: absolute;
+    left:0;
     /*margin-right: 150px;*/
     margin-left: 90px;
+}
 
+#social-bar a {
+    text-decoration: none;
 }
 
 #link-bar {
@@ -190,10 +198,28 @@ header #logo {
     color: white;
     font-size: 18px;
     margin-top:0px;
-    margin-right: 45px;
+    margin-right: 10px;
     display: block;
     float:right;
     font-family: Offside,cursive;
+    text-decoration: none;
+}
+
+.bt-menu {
+    padding: 5px 10px;
+    transition: all .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.bt-menu:hover {
+    background-color: var(--darkPurple) !important;
+}
+
+.bt-buy {
+    display:block;
+    text-align:center;
+    margin: 0 auto;
+    max-width: 250px;
 }
 
 #social-bar a {
@@ -1035,7 +1061,7 @@ footer .bt_green {
         display:block;
         position: absolute;
         right:0px;
-        margin-top:-20px;
+        margin-top:60px;
         margin-left:-100px;
         animation: flashflash 8s infinite;
     }
