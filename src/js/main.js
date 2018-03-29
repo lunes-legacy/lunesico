@@ -1,5 +1,6 @@
 
 //AOS.init();
+var endDate='';
 
 var toggleMenu = function(){
     $("#navbar").toggle('fast');
@@ -84,7 +85,7 @@ function updateSaldo(){
             };
 
 
-
+            endDate = found_sale[0].end_datetime;
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
             //console.log(formatDisplayNumber(coin_sale,""));
             //Habilitar para preico
@@ -130,18 +131,22 @@ function getTime(){
     //var dataFim = new Date("02/27/2018 06:00:00");
 
 
-    var dataFim = new Date("03/29/2018 23:59:59");
+    //var dataFim = new Date("03/31/2018 00:00:00");
+    var dataFim = new Date(endDate);
+  //console.log(dataFim);
+      dataFim = new Date(dataFim.getUTCFullYear(), dataFim.getUTCMonth(), dataFim.getUTCDate(),  dataFim.getUTCHours(), dataFim.getUTCMinutes(), dataFim.getUTCSeconds());
+
     //var dataFim = new Date("03/31/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
 
     var dif = new Date(diffMilissegundos);
     var now_utc = new Date(dif.getUTCFullYear(), dif.getUTCMonth(), dif.getUTCDate(),  dif.getUTCHours(), dif.getUTCMinutes(), dif.getUTCSeconds());
-
-    //console.log($("#loading_bar_green"));
+    //now_utc =dif;
+    //console.log(dataFim);
     //var x = Math.abs(dataFim - dataInicio) / 36e5;
     //$("#teste").html(percBarra(24,diff_hours(dataFim,dataInicio)));
 
-    if (now_utc.getDate()>1)
+    if (now_utc.getUTCDate()>1)
     {
         $("#put_s_day_en").html('Days');
         $("#put_s_day_pt").html('Dias');
@@ -152,7 +157,7 @@ function getTime(){
          $("#put_s_day_pt").html('Dia');
     }
 
-    if (now_utc.getHours()>1)
+    if (now_utc.getUTCHours()>1)
     {
         $("#put_s_hour_en").html('Hours');
         $("#put_s_hour_pt").html('Horas');
@@ -163,7 +168,7 @@ function getTime(){
          $("#put_s_hour_pt").html('Hora');
     }
 
-    if (now_utc.getMinutes()>1)
+    if (now_utc.getUTCMinutes()>1)
     {
         $("#put_s_min_en").html('Minutes');
         $("#put_s_min_pt").html('Minutos');
@@ -174,7 +179,7 @@ function getTime(){
          $("#put_s_min_pt").html('Minuto');
     }
 
-    if (now_utc.getSeconds()>1)
+    if (now_utc.getUTCSeconds()>1)
     {
         $("#put_s_sec_en").html('Seconds');
         $("#put_s_sec_pt").html('Segundos');
@@ -185,18 +190,20 @@ function getTime(){
          $("#put_s_sec_pt").html('Segundo');
     }
 
-   if (now_utc.getDate()>1){
-    $("#con_days").html(now_utc.getDate());
+
+
+   if (now_utc.getUTCDate()>0){
+     $("#con_days").html(now_utc.getUTCDate()-1);
    }
    else
    {
-    $("#con_days").html('0');
+     $("#con_days").html('0');
    }
 
 
-    $("#con_hours").html(now_utc.getHours());
-    $("#con_min").html(now_utc.getMinutes());
-    $("#con_sec").html(now_utc.getSeconds());
+    $("#con_hours").html(now_utc.getUTCHours()+1);
+    $("#con_min").html(now_utc.getUTCMinutes());
+    $("#con_sec").html(now_utc.getUTCSeconds());
 
 }
 
