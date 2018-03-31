@@ -98,7 +98,7 @@ function updateSaldo(){
 */
 
     var coin_counter = 100000000;
-    var coin_sale = 81992023;
+    var coin_sale = 82319105;
 
     $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
     $("#coin_counter").html(coin_counter);
