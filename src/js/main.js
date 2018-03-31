@@ -131,10 +131,10 @@ function getTime(){
     //var dataFim = new Date("02/27/2018 06:00:00");
 
 
-    //var dataFim = new Date("03/31/2018 00:00:00");
-    var dataFim = new Date(endDate);
+    var dataFim = new Date("03/31/2018 02:00:00");
+    //var dataFim = new Date(endDate);
   //console.log(dataFim);
-      dataFim = new Date(dataFim.getUTCFullYear(), dataFim.getUTCMonth(), dataFim.getUTCDate(),  dataFim.getUTCHours(), dataFim.getUTCMinutes(), dataFim.getUTCSeconds());
+    //  dataFim = new Date(dataFim.getUTCFullYear(), dataFim.getUTCMonth(), dataFim.getUTCDate(),  dataFim.getUTCHours(), dataFim.getUTCMinutes(), dataFim.getUTCSeconds());
 
     //var dataFim = new Date("03/31/2018 23:59:59");ICO
     var diffMilissegundos = dataFim - dataInicio;
@@ -201,7 +201,7 @@ function getTime(){
    }
 
 
-    $("#con_hours").html(now_utc.getUTCHours()+1);
+    $("#con_hours").html(now_utc.getUTCHours());
     $("#con_min").html(now_utc.getUTCMinutes());
     $("#con_sec").html(now_utc.getUTCSeconds());
 
