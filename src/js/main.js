@@ -60,13 +60,11 @@ function formatDisplayNumber(n, currency) {
 
 function updateSaldo(){
 
-    $.ajax({
+  /*  $.ajax({
         url: "https://apiw.lunes.io/api/ico/phase",
         type: "POST",
         success: function(result)
         {
-
-
             var found_sale = $.grep(result, function(v) {
                 return v.sale_status === "active";
             });
@@ -75,26 +73,18 @@ function updateSaldo(){
                 return v.name === "Whitelist";
             });
 
-            //console.log(result);
-            //console.log(Math.round(found_sale[0].total_value));
-            //console.log(percBarra(found_sale[0].global_limit,found_sale[0].total_value));
-
             var coin_sale = parseInt(whitelist_sale[0].total_value);
             if (found_sale[0].total_value!=null) {
                  coin_sale = parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value);
             };
 
-
             endDate = found_sale[0].end_datetime;
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
-            //console.log(formatDisplayNumber(coin_sale,""));
-            //Habilitar para preico
+         
             $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
             $("#coin_counter").html(coin_counter);
             $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
             document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
-
-
         },
           error: function (xhr, ajaxOptions, thrownError) {
             //alert(xhr.status);
@@ -105,6 +95,15 @@ function updateSaldo(){
             document.getElementById("loading_bar_green").style.width = "0%";
           }
     });
+*/
+
+    var coin_counter = 100000000;
+    var coin_sale = 81992023;
+
+    $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
+    $("#coin_counter").html(coin_counter);
+    $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
+    document.getElementById("loading_bar_green").style.width = percBarra(coin_counter,coin_sale) + "%";
 
     // $("#coin_counter").html('100.000.000');
 }
