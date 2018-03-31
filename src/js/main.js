@@ -201,7 +201,7 @@ function getTime(){
    }
 
 
-    $("#con_hours").html(now_utc.getUTCHours());
+    $("#con_hours").html(now_utc.getUTCHours()+1);
     $("#con_min").html(now_utc.getUTCMinutes());
     $("#con_sec").html(now_utc.getUTCSeconds());
 
