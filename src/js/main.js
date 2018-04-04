@@ -1,6 +1,6 @@
 
 //AOS.init();
-var endDate='';
+var endDate = '';
 
 var toggleMenu = function(){
     $("#navbar").toggle('fast');
@@ -48,8 +48,6 @@ $("#navbar #cont a").on('click', function(event) {
             return window.history.pushState(null, null, target);
         });
     }
-
-
 });
 
 function formatDisplayNumber(n, currency) {
@@ -59,8 +57,7 @@ function formatDisplayNumber(n, currency) {
 }
 
 function updateSaldo(){
-
-  /*  $.ajax({
+   /* $.ajax({
         url: "https://apiw.lunes.io/api/ico/phase",
         type: "POST",
         success: function(result)
@@ -80,7 +77,7 @@ function updateSaldo(){
 
             endDate = found_sale[0].end_datetime;
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
-         
+
             $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
             $("#coin_counter").html(coin_counter);
             $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
@@ -94,8 +91,7 @@ function updateSaldo(){
             $("#coin_counter").html('0');
             document.getElementById("loading_bar_green").style.width = "0%";
           }
-    });
-*/
+    }); */
 
     var coin_counter = 100000000;
     var coin_sale = 82319105;
@@ -123,97 +119,57 @@ function diff_hours(dt2, dt1)
     return   Math.abs(diff)*100;
  }
 
-/* time counter */
-function getTime(){
-    var dataInicio = new Date();
-    dataInicio = new Date(dataInicio.getUTCFullYear(), dataInicio.getUTCMonth(), dataInicio.getUTCDate(),  dataInicio.getUTCHours(), dataInicio.getUTCMinutes(), dataInicio.getUTCSeconds());
-    //var dataFim = new Date("02/27/2018 06:00:00");
+// Valores iniciais do contador
+document.querySelector('#con_days').innerHTML = 0;
+document.querySelector('#con_hours').innerHTML = 0;
+document.querySelector('#con_min').innerHTML = 0;
+document.querySelector('#con_sec').innerHTML = 0;
 
+$("#put_s_day_en").html('Days');
+$("#put_s_day_pt").html('Dias');
 
-    //var dataFim = new Date("03/31/2018 00:00:00");
-    var dataFim = new Date(endDate);
-  //console.log(dataFim);
-      dataFim = new Date(dataFim.getUTCFullYear(), dataFim.getUTCMonth(), dataFim.getUTCDate(),  dataFim.getUTCHours(), dataFim.getUTCMinutes(), dataFim.getUTCSeconds());
+$("#put_s_hour_en").html('Hours');
+$("#put_s_hour_pt").html('Horas');
 
-    //var dataFim = new Date("03/31/2018 23:59:59");ICO
-    var diffMilissegundos = dataFim - dataInicio;
+$("#put_s_min_en").html('Minutes');
+$("#put_s_min_pt").html('Minutos');
 
-    var dif = new Date(diffMilissegundos);
-    var now_utc = new Date(dif.getUTCFullYear(), dif.getUTCMonth(), dif.getUTCDate(),  dif.getUTCHours(), dif.getUTCMinutes(), dif.getUTCSeconds());
-    //now_utc =dif;
-    //console.log(dataFim);
-    //var x = Math.abs(dataFim - dataInicio) / 36e5;
-    //$("#teste").html(percBarra(24,diff_hours(dataFim,dataInicio)));
+$("#put_s_sec_en").html('Seconds');
+$("#put_s_sec_pt").html('Segundos');
 
-    if (now_utc.getUTCDate()>1)
-    {
-        $("#put_s_day_en").html('Days');
-        $("#put_s_day_pt").html('Dias');
-    }
-    else
-    {
-         $("#put_s_day_en").html('Day');
-         $("#put_s_day_pt").html('Dia');
-    }
+// Contador
+function getTime() {
+    const event = new Date(endDate);
+    const current = new Date().getTime();
+    let duration = moment.duration(event - current, 'milliseconds');
 
-    if (now_utc.getUTCHours()>1)
-    {
-        $("#put_s_hour_en").html('Hours');
-        $("#put_s_hour_pt").html('Horas');
-    }
-    else
-    {
-         $("#put_s_hour_en").html('Hour');
-         $("#put_s_hour_pt").html('Hora');
-    }
+    // document.querySelector('#con_days').innerHTML = duration.months();
 
-    if (now_utc.getUTCMinutes()>1)
-    {
-        $("#put_s_min_en").html('Minutes');
-        $("#put_s_min_pt").html('Minutos');
-    }
-    else
-    {
-         $("#put_s_min_en").html('Minute');
-         $("#put_s_min_pt").html('Minuto');
-    }
+    setInterval(function() {
+        duration = moment.duration(duration - 1000, 'milliseconds');
 
-    if (now_utc.getUTCSeconds()>1)
-    {
-        $("#put_s_sec_en").html('Seconds');
-        $("#put_s_sec_pt").html('Segundos');
-    }
-    else
-    {
-         $("#put_s_sec_en").html('Second');
-         $("#put_s_sec_pt").html('Segundo');
-    }
+        document.querySelector('#con_days').innerHTML = duration.days();
+        document.querySelector('#con_hours').innerHTML = duration.hours();
+        document.querySelector('#con_min').innerHTML = duration.minutes();
+        document.querySelector('#con_sec').innerHTML = duration.seconds();
 
+        if (duration.days() < 1) {
+            $("#put_s_day_en").html('Day');
+            $("#put_s_day_pt").html('Dia');
+        }
 
+        if (duration.hours() < 1) {
+            $("#put_s_hour_en").html('Hour');
+            $("#put_s_hour_pt").html('Hora');
+        }
 
-  // if (now_utc.getUTCDate()>0){
-  //   $("#con_days").html(now_utc.getUTCDate()-1);
-  // }
-  // else
-  // {
-   //  $("#con_days").html('0');
-   //}
-
-
-   // $("#con_hours").html(now_utc.getUTCHours()+1);
-   // $("#con_min").html(now_utc.getUTCMinutes());
-   // $("#con_sec").html(now_utc.getUTCSeconds());
-
-
-    $("#con_days").html('0');
-    $("#con_hours").html('0');
-    $("#con_min").html('0');
-    $("#con_sec").html('0');
-
-
+        if (duration.minutes() < 1) {
+            $("#put_s_min_en").html('Minute');
+            $("#put_s_min_pt").html('Minuto');
+        }
+    }, 1000);
 }
 
-setInterval(getTime, 1000);
 setInterval(updateSaldo, 60000);
 
 /* slide time */
@@ -249,6 +205,7 @@ $(document).ready(function() {
         }
     });
 
-    getTime();
+    // Descomentar para iniciar o contador
+    // getTime();
     updateSaldo();
 });
