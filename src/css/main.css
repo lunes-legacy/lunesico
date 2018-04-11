@@ -29,7 +29,6 @@ body {
     line-height: 20px;
     font-weight: 100;
     background-color: #3B1878;
-
     min-height: 75rem;
     padding-top: 8.5rem;
 }
@@ -48,6 +47,22 @@ h3 {
     line-height: 1.2em;
 }
 
+hr{
+    background-color: #4cd566;    
+    height: 1px;
+    border: 0px;
+}
+
+.linha-vertical {
+    height: 300px;/*Altura da linha*/
+    border-left: 1px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    float: left;
+    margin-top: -100px;
+    color: #4cd566;
+    display: block;
+  }
+
+
 section {
     margin-top: 40px;
 }
@@ -55,15 +70,11 @@ header {
     background: #3B1878;
     display:block;
     position: fixed;
-    width: 98%;
+    width: 100%;
     z-index: 998;
     margin: 0px;
     padding: 15px;
     margin-top: -8.5rem;
-
-}
-.lunes-nav-shadow {
-    /*box-shadow: 0px 0px 10px rgba(0,0,0,.3);*/
 }
 
 header a{
@@ -77,7 +88,7 @@ header #logo {
     text-align: center;
     padding:10px;
     font-size: 4em;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
 }
 
 #navbar {
@@ -157,11 +168,11 @@ header #logo {
     display: block;
     float:left;
 }
-#bt-lang {
-    margin-top:15px;
-    margin-right: 15px;
+#bt-lang img{
     display: block;
     float:right;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 #lua {
@@ -173,12 +184,13 @@ header #logo {
 }
 
 #social-bar {
-    margin-top:-30px;
+    margin-top:-47px;
     float:left;
     position: absolute;
     left:0;
     /*margin-right: 150px;*/
     margin-left: 90px;
+    padding-bottom: 15px;
 }
 
 #social-bar a {
@@ -197,7 +209,7 @@ header #logo {
 #bt-link-bar {
     color: white;
     font-size: 18px;
-    margin-top:0px;
+    margin-top:-15px;
     margin-right: 10px;
     display: block;
     float:right;
@@ -960,30 +972,43 @@ ul.lSGallery {
 }
 
 
-.dist-ico-box {
-    border-bottom:solid 1px #4cd566;
-    margin-bottom:10px;
-    padding-bottom:10px;
-}
+/*
 .box-pre-ico {
     background:url('../img/icon_preico.png') no-repeat -10px 20px;
-}
+}*/
+
 .box-ico {
-    background:url('../img/icon_preico.png') no-repeat -10px 20px;
+    /*background:url('../img/icon_preico.png') no-repeat -10px 20px;*/
+    display: block;
+    margin-top: 150px;
 }
 .banner-sponsor {
     margin-bottom: 20px;
 }
 
-.label-ico {
+.label-ico, .label-pre-ico {
     background-color: #5cb85c;
     border-radius: 3px;
     font-size: 0.9em;
     padding: 1px 5px;
     margin-bottom: 10px;
-    margin-left: 60%;
     text-align: right;
-    width: 40%;
+    width: 50%;
+}
+
+.label-pre-ico{
+    margin-left:50%;
+}
+
+.label-ico{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.ico-phase-description{
+    text-align:right;
+    padding-right:25%;
+
 }
 
 
@@ -1104,15 +1129,17 @@ footer .bt_green {
 
     .dist-ico-box {
         border-bottom:none;
-        margin-bottom:10px;
-        padding-bottom:10px;
     }
     .box-ico {
-        background:url('../img/icon_preico.png') no-repeat right 20px;
+        /*background:url('../img/icon_preico.png') no-repeat right 20px;*/
     }
 
     .box-ico h3 {
         text-align: left;
+    }
+
+    .box-ico h4{
+        text-align: center;
     }
 
     h2 {
@@ -1161,6 +1188,8 @@ footer .bt_green {
         margin-left: 30px;
         margin-right: 0px;
     }
+
+    
 
     #navbar {
         width: 100%;
@@ -1239,6 +1268,7 @@ footer .bt_green {
         margin-top:0px;
     }
 
+
     #dist-resources h3 {
         font-size:56px;
         letter-spacing:5px;
@@ -1299,12 +1329,7 @@ footer .bt_green {
         letter-spacing:5px;
     }
 
-    .label-ico {
-        margin-left: 40%;
-        text-align: right;
-        width: 60%;
-    }
-
+    
     .advisor .advisor-img img {
         margin-top: 15rem;
     }
@@ -1329,6 +1354,14 @@ footer .bt_green {
         text-align: center;
         margin-bottom: 5px;
     }
+    .label-ico-last-phase{
+        padding-right:20%;
+    }
+
+    .align-paragraph p{
+        text-align: center;
+    }
+
 }
 
 ::-webkit-scrollbar {
@@ -1362,3 +1395,15 @@ footer .logolunes {
     font-size:22px;
     font-family:'Offside', cursive;
 }
+
+/* teste menu java*/
+
+  
+  .header-shadow{
+    background: #3B1878;
+    box-shadow: 
+       inset 11px 0px 1rem -16px rgba(0,0,0,.5),
+       inset -11px 0px 1rem -16px rgba(0,0,0,.5),
+       0 8px 18px -4px rgba(0,0,0,.4); 
+    transition: all .25s ease-in;
+  }
