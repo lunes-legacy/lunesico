@@ -28,6 +28,7 @@ $("#navbar #cont a").click(function(){
     $(this).addClass("ativo");
 });
 
+
 $("#navbar #cont a").on('click', function(event) {
 
     var target = this.hash;
@@ -52,6 +53,22 @@ function formatDisplayNumber(n, currency) {
         return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "." + c : c;
     });
 }
+
+//navbar shadow on scroll
+var nav = $('.header'); // Change to nav div
+    var nav_class = 'header-shadow'; // Change to class name
+    var threshold = 100; // Change to pixels scrolled
+
+    $(window).scroll(function () {
+        var distance = $(this).scrollTop();
+        if (distance > threshold) { // If scrolled past threshold
+            nav.addClass(nav_class); // Add class to nav
+        } else { // If user scrolls back to top
+            if (nav.hasClass(nav_class)) { // And if class has been added
+                nav.removeClass(nav_class); // Remove it
+            }
+        }
+    });
 
 let endDate = '';
 
