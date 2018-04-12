@@ -116,6 +116,7 @@ header #logo {
 #navbar #top a {
     display:block;
     float:right;
+    color: #4cd566
 }
 #navbar #cont {
     padding-left: 20px;
@@ -1203,9 +1204,8 @@ footer .bt_green {
     
 
     #navbar {
-        width: 100%;
-        max-width: 50%;
-        border-radius: 0px 0px 90px 0px;
+        width: 20%;
+        border-radius: 0px 0px 0px 0px;
         padding-bottom: 40px;
         box-shadow: 0px 0px 45px rgba(0,0,0,.5);
 
@@ -1391,11 +1391,11 @@ footer .bt_green {
 }
 
 nav #logo.container-logo-lunes {
-    letter-spacing: -6px;
+    letter-spacing: -10px;
 }
 
 section #logo.container-logo-lunes {
-    letter-spacing: -8px;
+    letter-spacing: -10px;
 }
 
 footer .container-logo-lunes {
