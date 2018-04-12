@@ -221,6 +221,21 @@ $(document).ready(function() {
         }
     });
 
+    $("#slide_advisor").lightSlider({
+        gallery:true,
+        item:1,
+        loop:true,
+        thumbItem:9,
+        slideMargin:0,
+        enableDrag: true,
+        currentPagerPosition:'left',
+        onSliderLoad: function(el) {
+            el.lightGallery({
+                selector: '#slide_advisor .lslide'
+            });
+        }
+    });
+
     // Chama a função que faz o update o saldo e inicia o contador
     updateSaldo();
 });

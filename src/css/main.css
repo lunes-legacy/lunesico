@@ -867,28 +867,28 @@ header #logo {
 }
 
 
-ul.lSGallery {
+#lunes-time ul.lSGallery {
     border-top: solid 3px #fff;
     padding-top:10px;
 }
-#slide_time .lslide .social_bar {
+#slide_time .lslide .social_bar, #slide_advisor .lslide .social_bar {
     text-align: right;
 }
-#slide_time .lslide .social_bar a {
+#slide_time .lslide .social_bar a, #slide_advisor .lslide .social_bar a {
     float:right;
     margin: 5px;
 }
-#slide_time .lslide .social_bar a:hover {
+#slide_time .lslide .social_bar a:hover, #slide_advisor .lslide .social_bar a:hover {
     opacity: .3;
 }
-#slide_time .lslide h3 {
+#slide_time .lslide h3, #slide_advisor .lslide h3 {
     display: block;
     text-align: right;
     padding: 0px;
     margin: 0px;
     font-size: 1.8em;
 }
-#slide_time .lslide h4 {
+#slide_time .lslide h4, #slide_advisor .lslide h4 {
     display: block;
     text-align: right;
     padding: 0px;
@@ -896,7 +896,18 @@ ul.lSGallery {
     margin-top:-5px;
     color: #4cd566;
 }
-#slide_time .lslide .img-responsive {
+#slide_advisor .lslide p {
+    display: block;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+    clear: both;
+    float:right;
+}
+#slide_advisor .lslide {
+    border-bottom: solid 3px #fff;
+}
+#slide_time .lslide .img-responsive, #slide_advisor .lslide .img-responsive {
     padding-top:40px;
 }
 
@@ -910,7 +921,7 @@ ul.lSGallery {
     max-width: 100%;
     border-bottom: solid 3px #fff;
 }
-
+/* 
 .advisor .social_bar {
     text-align: right;
 }
@@ -938,7 +949,7 @@ ul.lSGallery {
     margin-top: 3rem;
     width: 2rem;
     height: 2rem;
-}
+} */
 
 .limitSize{
     max-width: 75%;
@@ -1169,14 +1180,14 @@ footer .bt_green {
         margin-bottom: 30px;
     }
 
-    #slide_time .lslide h3 {
+    #slide_time .lslide h3, #slide_advisor .lslide h3 {
         display: block;
         text-align: right;
         padding: 0px;
         margin-top: 100px;
         font-size: 2.5em;
     }
-    #slide_time .lslide h4 {
+    #slide_time .lslide h4, #slide_advisor .lslide h4 {
         font-size: 2em;
     }
 
@@ -1309,17 +1320,17 @@ footer .bt_green {
         /*font-size:96px;*/
         letter-spacing:5px;
     }
-    #lunes-time .social_bar img {
+    #lunes-time .social_bar img, #lunes-advisor .social_bar img {
         width:60px;
         height: 60px;
     }
-    #lunes-time h3 {
+    #lunes-time h3, #lunes-advisor h3 {
         font-size:64px;
         letter-spacing:5px;
         display: block;
         margin-bottom: 10px;
     }
-    #lunes-time li h4 {
+    #lunes-time li h4, #lunes-advisor li h4 {
         font-family: 'Roboto', sans-serif;
         font-weight: 200;
     }
@@ -1330,7 +1341,7 @@ footer .bt_green {
     }
 
     
-    .advisor .advisor-img img {
+    /* .advisor .advisor-img img {
         margin-top: 15rem;
     }
 
@@ -1338,7 +1349,7 @@ footer .bt_green {
         margin-top: 7rem;
         width: 3rem;
         height: 3rem;
-    }
+    } */
 }
 
 @media only screen and (max-width: 768px) {
