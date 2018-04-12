@@ -141,15 +141,19 @@ document.querySelector('#con_sec').innerHTML = 0;
 
 $("#put_s_day_en").html('Days');
 $("#put_s_day_pt").html('Dias');
+$("#put_s_day_fr").html('Jours');
 
 $("#put_s_hour_en").html('Hours');
 $("#put_s_hour_pt").html('Horas');
+$("#put_s_hour_fr").html('Heures');
 
 $("#put_s_min_en").html('Minutes');
 $("#put_s_min_pt").html('Minutos');
+$("#put_s_min_fr").html('Minutes');
 
 $("#put_s_sec_en").html('Seconds');
 $("#put_s_sec_pt").html('Segundos');
+$("#put_s_sec_fr").html('Seconds');
 
 // Contador
 function getDateTime(endDate) {

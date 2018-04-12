@@ -168,12 +168,6 @@ header #logo {
     display: block;
     float:left;
 }
-#bt-lang img{
-    display: block;
-    float:right;
-    margin-top: 10px;
-    margin-left: 15px;
-}
 
 #lua {
     display:block;
@@ -630,6 +624,17 @@ header #logo {
 }
 
 
+
+
+
+#bt-lang img{
+    display: block;
+    float:right;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
 .green-word {
     color: #4cd566;
 }
@@ -793,6 +798,8 @@ header #logo {
     margin-left:30px;
     margin-right: 30px;
 }
+
+
 .roadmap-list .roadmap-ball {
     width:40px;
     height: 40px;
@@ -1220,13 +1227,14 @@ footer .bt_green {
         background: #4D3084;
         color:#7871b8;
         float:left;
-        margin-top:-20px;
+        margin-top:-15px;
         margin-left:-30px;
-        padding-top:22px;
+        padding-top:20px;
         border-radius: 50%;
         line-height: 13px;
         font-size:16px;
         font-family: 'Offside', cursive;
+        line-height: 15px;
     }
     .roadmap-list .roadmap-ball.ativo {
         background: #4cd566;
