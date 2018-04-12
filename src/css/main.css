@@ -1067,7 +1067,21 @@ footer .bt_green {
     float:left;
     border-radius: 0px 5px 5px 0px;
 }
-
+.text-form {
+    font-weight: 600;
+}
+.email1 {
+    margin-right:31px;
+}
+.email2 {
+    margin-right:62px;
+}
+.email4 {
+    margin-right:33px;
+}
+.email3 {
+    margin-right:37px;
+}
 
 /* devices */
 @media only screen and (min-width: 768px) {
@@ -1142,6 +1156,9 @@ footer .bt_green {
     .dist-ico-box {
         border-bottom:none;
     }
+    .dist-preico-box {
+        margin-right:75px;
+    }
     .box-ico {
         /*background:url('../img/icon_preico.png') no-repeat right 20px;*/
     }
@@ -1177,7 +1194,7 @@ footer .bt_green {
     }
 
     .simple-title {
-        font-size: 20px;
+        font-size: 19px;
         margin-bottom: 30px;
     }
 
