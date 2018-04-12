@@ -1,7 +1,4 @@
-
 //AOS.init();
-var endDate = '';
-
 var toggleMenu = function(){
     $("#navbar").toggle('fast');
 }
@@ -56,42 +53,47 @@ function formatDisplayNumber(n, currency) {
     });
 }
 
-function updateSaldo(){
-   /* $.ajax({
-        url: "https://apiw.lunes.io/api/ico/phase",
-        type: "POST",
-        success: function(result)
-        {
-            var found_sale = $.grep(result, function(v) {
-                return v.sale_status === "active";
-            });
+let endDate = '';
 
-             var whitelist_sale = $.grep(result, function(v) {
-                return v.name === "Whitelist";
-            });
+function updateSaldo() {
+    // $.ajax({
+    //     url: 'https://apiw.lunes.io/api/ico/phase',
+    //     type: 'POST',
+    //     success: function(result) {
+    //         var found_sale = $.grep(result, function(v) {
+    //             return v.sale_status === "active";
+    //         });
 
-            var coin_sale = parseInt(whitelist_sale[0].total_value);
-            if (found_sale[0].total_value!=null) {
-                 coin_sale = parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value);
-            };
+    //         var whitelist_sale = $.grep(result, function(v) {
+    //             return v.name === "Whitelist";
+    //         });
 
-            endDate = found_sale[0].end_datetime;
-            var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+    //         var coin_sale = parseInt(whitelist_sale[0].total_value);
+    //         if (found_sale[0].total_value != null) {
+    //             coin_sale = parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value);
+    //         };
 
-            $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
-            $("#coin_counter").html(coin_counter);
-            $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
-            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
-        },
-          error: function (xhr, ajaxOptions, thrownError) {
-            //alert(xhr.status);
-            //alert(thrownError);
-            console.log(xhr.status);
-            console.log(thrownError);
-            $("#coin_counter").html('0');
-            document.getElementById("loading_bar_green").style.width = "0%";
-          }
-    }); */
+    //         endDate = found_sale[0].end_datetime;
+    //         var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+
+    //         $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
+    //         $("#coin_counter").html(coin_counter);
+    //         $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
+    //         document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
+
+    //         // Chama a função que inicia o contador
+    //         getDateTime(endDate);
+
+    //     },
+    //     error: function (xhr, ajaxOptions, thrownError) {
+    //         //alert(xhr.status);
+    //         //alert(thrownError);
+    //         // console.log(xhr.status);
+    //         // console.log(thrownError);
+    //         $("#coin_counter").html('0');
+    //         document.getElementById("loading_bar_green").style.width = "0%";
+    //     }
+    // });
 
     var coin_counter = 100000000;
     var coin_sale = 82319105;
@@ -100,24 +102,19 @@ function updateSaldo(){
     $("#coin_counter").html(coin_counter);
     $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
     document.getElementById("loading_bar_green").style.width = percBarra(coin_counter,coin_sale) + "%";
-
     // $("#coin_counter").html('100.000.000');
 }
 
-function diff_hours(dt2, dt1)
- {
+function diff_hours(dt2, dt1) {
+    var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+    diff /= (60 * 60);
+    return Math.abs(Math.round(diff));
+}
 
-  var diff =(dt2.getTime() - dt1.getTime()) / 1000;
-  diff /= (60 * 60);
-  return Math.abs(Math.round(diff));
-
- }
-
- function percBarra(total, atual)
- {
+function percBarra(total, atual) {
     var diff = (Math.round(atual)/Math.round(total));
     return   Math.abs(diff)*100;
- }
+}
 
 // Valores iniciais do contador
 document.querySelector('#con_days').innerHTML = 0;
@@ -138,9 +135,11 @@ $("#put_s_sec_en").html('Seconds');
 $("#put_s_sec_pt").html('Segundos');
 
 // Contador
-function getTime() {
-    const event = new Date(endDate);
-    const current = new Date().getTime();
+function getDateTime(endDate) {
+    const event = new Date(endDate).getTime();
+    let current = new Date();
+    current = current.getTime() - (current.getTimezoneOffset() * 60000);
+
     let duration = moment.duration(event - current, 'milliseconds');
 
     // document.querySelector('#con_days').innerHTML = duration.months();
@@ -170,7 +169,7 @@ function getTime() {
     }, 1000);
 }
 
-setInterval(updateSaldo, 60000);
+// setInterval(updateSaldo, 60000);
 
 /* slide time */
 $(document).ready(function() {
@@ -205,7 +204,6 @@ $(document).ready(function() {
         }
     });
 
-    // Descomentar para iniciar o contador
-    // getTime();
+    // Chama a função que faz o update o saldo e inicia o contador
     updateSaldo();
 });
