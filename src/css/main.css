@@ -351,6 +351,7 @@ header #logo {
     height: 100%;
     border-radius: 100%;
 }
+
 .ball-border .ball-pulse img {
     margin-left: auto;
     margin-right: auto;
@@ -1486,4 +1487,26 @@ footer .logolunes {
     margin-left:-300px;
     border-radius: 10px;
     box-shadow: 0px 10px 15px rgba(0,0,0,.3);
+}
+
+
+#slide_products_index .cycle-slide div{
+    transition: .5s;
+
+    border:solid 2px #fff;
+    
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: block;
+    
+    margin-right:10px;
+    background: linear-gradient(#4B2C82, #3B1878);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px ;
+}
+#slide_products_index .cycle-slide-active div { 
+    border:solid 2px #4cd566;
+    background-size: 40px ;
 }

@@ -249,6 +249,18 @@ $(document).ready(function() {
 
     // Chama a função que faz o update o saldo e inicia o contador
     updateSaldo();
+
+
+    // slide de produtos/servicos
+    var slide_products = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+        // advance the other slideshow
+        slideshows.not(this).cycle('goto', opts.currSlide);
+    });
+    
+    $('#slide_products_index .cycle-slide').click(function(){
+        var index = $('#slide_products_index').data('cycle.API').getSlideIndex(this);
+        slide_products.cycle('goto', index);
+    });
 });
 
 
