@@ -73,7 +73,7 @@ header {
     width: 100%;
     z-index: 998;
     margin: 0px;
-    padding: 15px;
+    padding-top: 15px;
     margin-top: -8.5rem;
 }
 
@@ -623,17 +623,85 @@ header #logo {
     box-shadow: 0px 5px 10px rgba(0,0,0,.2);
 }
 
+/*open bt languagem*/
+
+/*animation language-menu*/
+@-webkit-keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0);
+      visibility: visible;
+      opacity: 0.1;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      -webkit-transform: translate3d(0, -50%, 0);
+      transform: translate3d(0, -50%, 0);
+      visibility: visible;
+      opacity: 0.1;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
 
 
 
 
-#bt-lang img{
-    display: block;
-    float:right;
-    margin-top: 10px;
-    margin-left: 15px;
+
+.bt_language, .bt_language_down{
+    /*background-color: #4cd566;    #3B1878;*/
+    background-color:#3B1878;
+    text-decoration: none;
+    border:0px;
+    color:white;    
+    min-width: 60px;  
+
+    margin-top:-15px;
+    text-align: center;    
 }
 
+.bt_language_down{
+    margin-top:15px;
+}
+
+.bt_language_down li a:hover{
+    background-color: #3b1878;    
+}
+
+.bt_language_down{
+    padding-bottom: 15px;
+}
+
+.bt_language li{
+    padding:0px;
+    background-color: #3b1878;   
+}
+
+.bt_language_down img, .bt_language_down img:hover{
+    width: 25px;
+    height: 25px;
+}
+
+
+.language-menu-down-animation{
+    -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+  animation-duration: 320ms;
+}
+
+/*closed bt languagem*/
 
 .green-word {
     color: #4cd566;
@@ -818,12 +886,14 @@ header #logo {
     background: #4cd566;
     box-shadow: 0px 5px 10px rgba(0,0,0,.1);
     font-weight: 700;
+    color: white;
 }
 .roadmap-list .roadmap-cont {
     border-left: solid 3px #544d8f;
     padding-left:40px;
     margin-bottom:15px;
     color:#7871b8;
+
 }
 .roadmap-list .roadmap-cont.ativo {
     border-left: solid 3px #4cd566;
