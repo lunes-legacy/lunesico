@@ -998,6 +998,17 @@ header #logo {
     margin-bottom: 20px;
 }
 
+.banner-sponsor img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.banner-sponsor:hover img {
+    -webkit-filter: none;
+    filter: none;
+}
+
 .label-ico, .label-pre-ico {
     background-color: #5cb85c;
     border-radius: 3px;
@@ -1435,3 +1446,44 @@ footer .logolunes {
        0 8px 18px -4px rgba(0,0,0,.4); 
     transition: all .25s ease-in;
   }
+
+
+#up_screen {
+    background-color: #4cd566;
+    color: #fff;
+    box-shadow: 0px 5px 10px #3B1878;
+    text-decoration: none;
+    text-align: center;
+    width:40px;
+    height:40px;
+    padding-top:10px;
+    position:fixed;
+    left:100%;
+    top:100%;
+    border-radius: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+
+    display: none;
+}
+
+#up_screen:hover {
+    color: #4cd566;
+    background-color: #fff;
+}
+
+.splash {
+    display:none;
+    background-color:#fff;
+    color: #4B2C82;
+    padding: 30px;
+    width:100%;
+    max-width: 600px;
+    z-index: 999;
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    margin-left:-300px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,.3);
+}
