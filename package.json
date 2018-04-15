@@ -32,7 +32,6 @@
     "gulp-watch": "^5.0.0"
   },
   "dependencies": {
- 
     "gulp-htmlmin": "^4.0.0",
     "moment": "^2.22.0"
   }
