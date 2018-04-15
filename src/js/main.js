@@ -261,6 +261,12 @@ $(document).ready(function() {
         var index = $('#slide_products_index').data('cycle.API').getSlideIndex(this);
         slide_products.cycle('goto', index);
     });
+
+    // mobile
+    $('#slide_products_index_mobile .cycle-slide').click(function(){
+        var index = $('#slide_products_index_mobile').data('cycle.API').getSlideIndex(this);
+        slide_products.cycle('goto', index);
+    });
 });
 
 

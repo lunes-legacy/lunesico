@@ -1490,10 +1490,9 @@ footer .logolunes {
 }
 
 
-#slide_products_index .cycle-slide div{
-    transition: .5s;
 
-    border:solid 2px #fff;
+#slide_products_index .cycle-slide div, #slide_products_index_mobile .cycle-slide div{
+    transition: .5s;
     
     width: 80px;
     height: 80px;
@@ -1504,9 +1503,10 @@ footer .logolunes {
     background: linear-gradient(#4B2C82, #3B1878);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 20px ;
+
+    background-size: 80px;
+    
 }
-#slide_products_index .cycle-slide-active div { 
-    border:solid 2px #4cd566;
-    background-size: 40px ;
+#slide_products_index .cycle-slide-active div, #slide_products_index_mobile .cycle-slide-active div {
+    background-size: 100px ;
 }
