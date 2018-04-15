@@ -171,7 +171,7 @@ function getDateTime(endDate) {
     setInterval(function() {
         duration = moment.duration(duration - 1000, 'milliseconds');
 
-        document.querySelector('#con_days').innerHTML = duration.days() + 30;
+        document.querySelector('#con_days').innerHTML = Math.floor(duration.asDays());
         document.querySelector('#con_hours').innerHTML = duration.hours();
         document.querySelector('#con_min').innerHTML = duration.minutes();
         document.querySelector('#con_sec').innerHTML = duration.seconds();
