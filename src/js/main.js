@@ -89,16 +89,14 @@ function updateSaldo() {
             });
 
             var coin_sale = parseInt(found_sale[0].total_value);
-            if (found_sale[0].total_value != null) {
-                coin_sale = parseInt(found_sale[0].total_value) + parseInt(found_sale[0].total_value);
-            };
 
             endDate = found_sale[0].end_datetime;
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+            const total_raised = Math.floor(parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value));
 
             $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
             $("#coin_counter").html(coin_counter);
-            $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale * parseFloat(found_sale[0].price_value), ""));
+            $("#raisedValue").html('$ ' + formatDisplayNumber(total_raised, ""));
             document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit, coin_sale) + "%";
 
             // Chama a função que inicia o contador
@@ -114,10 +112,10 @@ function updateSaldo() {
         }
     });
 
-    $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
-    $("#coin_counter").html(coin_counter);
-    $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
-    document.getElementById("loading_bar_green").style.width = percBarra(coin_counter,coin_sale) + "%";
+    $("#coin_sale").html(formatDisplayNumber(0, ""));
+    $("#coin_counter").html(0);
+    $("#raisedValue").html('$ ' + formatDisplayNumber(0, ""));
+    document.getElementById("loading_bar_green").style.width = "0%";
     // $("#coin_counter").html('100.000.000');
 }
 
@@ -162,7 +160,10 @@ $("#put_s_sec_ar").html('ثواني');
 function getDateTime(endDate) {
     const event = new Date(endDate).getTime();
     let current = new Date();
-    current = current.getTime() - (current.getTimezoneOffset() * 60000);
+    current = current.getTime();
+
+    // Caso dê problema no contador no último dia, utilizar o código abaixo
+    // current = current.getTime() - (current.getTimezoneOffset() * 60000);
 
     let duration = moment.duration(event - current, 'milliseconds');
 
