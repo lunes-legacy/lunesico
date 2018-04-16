@@ -92,9 +92,12 @@ function updateSaldo() {
 
             endDate = found_sale[0].end_datetime;
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
-            const total_raised = Math.floor(parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value));
 
-            $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
+            const pre_ico_value = 823910;
+            const current_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
+            const total_raised = Math.floor(pre_ico_value + current_value);
+
+            $("#coin_sale").html(formatDisplayNumber(coin_sale, ""));
             $("#coin_counter").html(coin_counter);
             $("#raisedValue").html('$ ' + formatDisplayNumber(total_raised, ""));
             document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit, coin_sale) + "%";
