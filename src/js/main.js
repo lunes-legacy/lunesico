@@ -93,13 +93,13 @@ function updateSaldo() {
             endDate = found_sale[0].end_datetime;
             var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
 
-            const pre_ico_value = 823910;
-            const current_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
-            const total_raised = Math.floor(pre_ico_value + current_value);
+            const total_fiat_value = Math.floor(parseFloat(found_sale[0].total_fiat_value));
+            const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
 
             $("#coin_sale").html(formatDisplayNumber(coin_sale, ""));
             $("#coin_counter").html(coin_counter);
-            $("#raisedValue").html('$ ' + formatDisplayNumber(total_raised, ""));
+            $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
+            $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ""));
             document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit, coin_sale) + "%";
 
             // Chama a função que inicia o contador
@@ -118,6 +118,7 @@ function updateSaldo() {
     $("#coin_sale").html(formatDisplayNumber(0, ""));
     $("#coin_counter").html(0);
     $("#raisedValue").html('$ ' + formatDisplayNumber(0, ""));
+    $("#totalValue").html('$ ' + formatDisplayNumber(0, ""));
     document.getElementById("loading_bar_green").style.width = "0%";
     // $("#coin_counter").html('100.000.000');
 }
