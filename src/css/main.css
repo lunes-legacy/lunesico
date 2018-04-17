@@ -53,6 +53,14 @@ hr{
     border: 0px;
 }
 
+.product-header{  /*alinhamento dos h3 no idioma hindi*/
+    line-height: 4em;
+}
+
+.product-header2{   
+    line-height: 3em;
+}
+
 .linha-vertical {
     height: 300px;/*Altura da linha*/
     border-left: 1px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
@@ -169,6 +177,8 @@ header #logo {
     display: block;
     float:left;
 }
+
+
 
 #lua {
     display:block;
@@ -987,6 +997,7 @@ header #logo {
 }
 #slide_time .lslide .img-responsive, #slide_advisor .lslide .img-responsive {
     padding-top:40px;
+
 }
 
 /* Advisors */
@@ -1160,6 +1171,19 @@ footer .bt_green {
     margin-right:37px;
 }
 
+.email-edit1{
+    margin-right:47px;
+}
+.email-edit2{
+    text-align: left;
+}
+.email-edit3{
+    margin:30px;
+}
+.email-edit4{
+    text-align: left;
+}
+
 /* devices */
 @media only screen and (min-width: 768px) {
     body {
@@ -1169,6 +1193,8 @@ footer .bt_green {
 
         -webkit-font-smoothing: antialiased;
     }
+
+    
     /* footer {
         font-size: 1em;
     } */
@@ -1226,6 +1252,24 @@ footer .bt_green {
        margin-left:-20px;
        animation: float 6s ease-in-out infinite;
     }
+
+    .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
+        animation: float 6s ease-in-out infinite;
+        width: 80%;
+    }
+
+    .icon-float2 { /* fragmentos flutuando :) */
+        animation: float 5s ease-in-out infinite;
+    }
+
+    .icon-float3 { /* fragmentos flutuando de forma diferente */
+        animation: float 4s ease-in-out infinite;
+    }
+
+    .icon-float4 { /* fragmentos flutuando de forma diferente */
+        animation: float 3s ease-in-out infinite;
+    }
+
     .first-box {
         margin-right:30px;
     }
