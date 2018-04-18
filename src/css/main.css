@@ -48,7 +48,7 @@ h3 {
 }
 
 hr{
-    background-color: #4cd566;    
+    background-color: #4cd566;
     height: 1px;
     border: 0px;
 }
@@ -236,9 +236,10 @@ header #logo {
 /* counter */
 #counter {
     font-family: 'Offside', cursive;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 #counter #coin_counter {
     display: block;
     text-align: right;
@@ -246,6 +247,7 @@ header #logo {
     margin-bottom: 10px;
     padding-right: 20px;
 }
+
 #counter #coin_sale {
 
 }
@@ -262,16 +264,18 @@ header #logo {
     background-color: #fff;
     height: 6px;
 }
+
 #counter #loading_bar_green {
     display: block;
     background-color: #4cd566;
     height: 6px;
 }
+
 #counter #base_counter {
     background-color: #4e2e7d;
-    padding:20px;
-    border-radius: 0px 0px 4px 4px;
+    padding: 20px;
 }
+
 #counter #number {
     margin-top: 30px;
     display: block;
@@ -279,23 +283,29 @@ header #logo {
     font-size:3em;
     color:#4cd566;
 }
+
 #counter #number span {
     font-size: .2em;
     color:#fff;
     display: block;
     margin-top: 20px;
 }
+
+#counter .values {
+    margin: 0;
+}
+
 #counter #hard-cap {
     display: block;
     background-color: #4e2e7d;
-    max-width: 160px;
-    margin-left: auto;
+    /* max-width: 100px; */
+    /* margin-left: auto; */
     color: #4cd566;
     font-size: .8em;
     text-align: center;
     padding: 10px;
-    border-radius: 4px;
-    margin-top: -40px;
+    border-bottom-right-radius: 4px;
+    /* margin-top: -40px; */
 }
 
 #counter #hard-cap span {
@@ -307,18 +317,38 @@ header #logo {
 #counter #raised {
     display: block;
     background-color: #4e2e7d;
-    max-width: 160px;
+    /* max-width: 100px; */
 
-    margin-right: auto;
+    /* margin-right: auto; */
     color: #4cd566;
     font-size: .8em;
     text-align: center;
     padding: 10px;
-    border-radius: 4px;
-    margin-top: -40px;
+    border-bottom-left-radius: 4px;
+    /* margin-top: -40px; */
 }
 
 #counter #raised span {
+    display: block;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#counter #totalFiat {
+    display: block;
+    background-color: #4e2e7d;
+    /* max-width: 100px; */
+
+    /* margin: 0 auto; */
+    color: #4cd566;
+    font-size: .8em;
+    text-align: center;
+    padding: 10px;
+    /* border-radius: 4px; */
+    /* margin-top: -40px; */
+}
+
+#counter #totalFiat span {
     display: block;
     color: #fff;
     font-size: 1.2em;
@@ -634,14 +664,14 @@ header #logo {
       visibility: visible;
       opacity: 0.1;
     }
-  
+
     to {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
       opacity: 1;
     }
   }
-  
+
   @keyframes slideInDown {
     from {
       -webkit-transform: translate3d(0, -50%, 0);
@@ -649,7 +679,7 @@ header #logo {
       visibility: visible;
       opacity: 0.1;
     }
-  
+
     to {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0);
@@ -666,11 +696,11 @@ header #logo {
     background-color:#3B1878;
     text-decoration: none;
     border:0px;
-    color:white;    
-    min-width: 60px;  
+    color:white;
+    min-width: 60px;
 
     margin-top:-15px;
-    text-align: center;    
+    text-align: center;
 }
 
 .bt_language_down{
@@ -678,7 +708,7 @@ header #logo {
 }
 
 .bt_language_down li a:hover{
-    background-color: #3b1878;    
+    background-color: #3b1878;
 }
 
 .bt_language_down{
@@ -687,7 +717,7 @@ header #logo {
 
 .bt_language li{
     padding:0px;
-    background-color: #3b1878;   
+    background-color: #3b1878;
 }
 
 .bt_language_down img, .bt_language_down img:hover{
@@ -999,7 +1029,7 @@ header #logo {
     max-width: 100%;
     border-bottom: solid 3px #fff;
 }
-/* 
+/*
 .advisor .social_bar {
     text-align: right;
 }
@@ -1295,7 +1325,7 @@ footer .bt_green {
         margin-right: 0px;
     }
 
-    
+
 
     #navbar {
         width: 20%;
@@ -1435,7 +1465,7 @@ footer .bt_green {
         letter-spacing:5px;
     }
 
-    
+
     /* .advisor .advisor-img img {
         margin-top: 15rem;
     }
@@ -1504,12 +1534,12 @@ footer .logolunes {
 
 /* teste menu java*/
 
-  
+
   .header-shadow{
     background: #3B1878;
-    box-shadow: 
+    box-shadow:
        inset 11px 0px 1rem -16px rgba(0,0,0,.5),
        inset -11px 0px 1rem -16px rgba(0,0,0,.5),
-       0 8px 18px -4px rgba(0,0,0,.4); 
+       0 8px 18px -4px rgba(0,0,0,.4);
     transition: all .25s ease-in;
   }
