@@ -63,10 +63,14 @@ var nav = $('.header'); // Change to nav div
         var distance = $(this).scrollTop();
         if (distance > threshold) { // If scrolled past threshold
             nav.addClass(nav_class); // Add class to nav
+            // to show bt up screen
+            $("#up_screen").show();
         } else { // If user scrolls back to top
             if (nav.hasClass(nav_class)) { // And if class has been added
                 nav.removeClass(nav_class); // Remove it
             }
+            // to hiden bt up screen
+            $("#up_screen").hide();
         }
     });
 
@@ -256,6 +260,62 @@ $(document).ready(function() {
         }
     });
 
+    // button scroll up
+    $("#up_screen").click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+
+    });
     // Chama a função que faz o update o saldo e inicia o contador
     updateSaldo();
 });
+
+// splash ao tentar sair da pag
+var close_splash1 = false;
+
+function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+addEvent(window,"load",function(e) {
+    addEvent(document, "mouseout", function(e) {
+        e = e ? e : window.event;
+        var from = e.relatedTarget || e.toElement;
+        if (!from || from.nodeName == "HTML") {
+            if(!close_splash1){
+                
+                var userData = localStorage.getItem('lunes.accessToken')
+                console.log (userData);
+                if (!userData){
+                    $("#splash_exit").show();
+                }
+            }
+        }
+    });
+});
+
+// se ja abriu uma vez, nao abra novamente
+function closeSplash1(){
+    $('#splash_exit').hide();
+    close_splash1 = true;
+}
+
+
+// splash ao ficar X tempo no site
+setTimeout(function(){ 
+    var userData = localStorage.getItem('lunes.accessToken')
+    console.log (userData);
+    if (!userData){
+        $('#splash_buy').show();
+    }
+}, 60000);
+
+
+function closeSplash2(){
+    $('#splash_buy').hide();
+}

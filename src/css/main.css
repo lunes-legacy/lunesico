@@ -360,6 +360,13 @@ header #logo {
     margin-right: auto;
 }
 
+@media only screen and (max-width:990px){
+    .ball-border{
+        width: 90px;
+        height: 90px;
+
+    }
+}
 /*
 @-webkit-keyframes pulse1 {
     0% {
@@ -612,6 +619,31 @@ header #logo {
     font-size: 1.3em;
     box-shadow: 0px 3px 5px rgba(0,0,0,.05);
 }
+
+.bt_green_splash{
+    /*background-color: #4cd566;*/
+    background: linear-gradient(#4B2C82,#3B1878);
+    border: solid 1px #3b1878;
+    text-decoration: none;
+    font-family: 'Offside', cursive;
+    color: #fff;
+    display:block;
+    padding: 10px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    font-size: 1.3em;
+    box-shadow: 0px 3px 5px rgba(0,0,0,.05);
+}
+
+.bt_green_splash:hover {
+    text-decoration: none;
+    color:#fff;
+
+    background: linear-gradient(#4B2C82,#3B1878);
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+}
+
 .bt_green_none {
     /*background-color: #4cd566;*/
     background: linear-gradient(#77f38d, #4cd566);
@@ -667,9 +699,11 @@ header #logo {
     }
   }
 
-
-
-
+  /*animation fixed circle */
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+  
 
 .bt_language, .bt_language_down{
     /*background-color: #4cd566;    #3B1878;*/
@@ -677,7 +711,7 @@ header #logo {
     text-decoration: none;
     border:0px;
     color:white;    
-    min-width: 60px;  
+    min-width: 55px;  
 
     margin-top:-15px;
     text-align: center;    
@@ -1086,6 +1120,16 @@ header #logo {
     margin-bottom: 20px;
 }
 
+.banner-sponsor img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.banner-sponsor:hover img {
+    -webkit-filter: none;
+    filter: none;
+}
 .label-ico, .label-pre-ico {
     background-color: #5cb85c;
     border-radius: 3px;
@@ -1184,6 +1228,10 @@ footer .bt_green {
     text-align: left;
 }
 
+
+
+
+
 /* devices */
 @media only screen and (min-width: 768px) {
     body {
@@ -1251,23 +1299,6 @@ footer .bt_green {
 
        margin-left:-20px;
        animation: float 6s ease-in-out infinite;
-    }
-
-    .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
-        animation: float 6s ease-in-out infinite;
-        width: 80%;
-    }
-
-    .icon-float2 { /* fragmentos flutuando :) */
-        animation: float 5s ease-in-out infinite;
-    }
-
-    .icon-float3 { /* fragmentos flutuando de forma diferente */
-        animation: float 4s ease-in-out infinite;
-    }
-
-    .icon-float4 { /* fragmentos flutuando de forma diferente */
-        animation: float 3s ease-in-out infinite;
     }
 
     .first-box {
@@ -1480,6 +1511,7 @@ footer .bt_green {
     }
 
     
+
     /* .advisor .advisor-img img {
         margin-top: 15rem;
     }
@@ -1491,28 +1523,7 @@ footer .bt_green {
     } */
 }
 
-@media only screen and (max-width: 768px) {
-    .align-horizontal {
-        display: block;
-    }
 
-    #counter #coin_counter {
-        text-align: center;
-    }
-
-    #counter #coin_sale_desc{
-        text-align: center;
-        margin-bottom: 5px;
-    }
-    .label-ico-last-phase{
-        padding-right:20%;
-    }
-
-    .align-paragraph p{
-        text-align: center;
-    }
-
-}
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -1549,7 +1560,7 @@ footer .logolunes {
 /* teste menu java*/
 
   
-  .header-shadow{
+.header-shadow{
     background: #3B1878;
     box-shadow: 
        inset 11px 0px 1rem -16px rgba(0,0,0,.5),
@@ -1557,3 +1568,331 @@ footer .logolunes {
        0 8px 18px -4px rgba(0,0,0,.4); 
     transition: all .25s ease-in;
   }
+
+#up_screen {
+    background-color: #4cd566;
+    color: #fff;
+    box-shadow: 0px 5px 10px #3B1878;
+    text-decoration: none;
+    text-align: center;
+    width:40px;
+    height:40px;
+    padding-top:10px;
+    position:fixed;
+    left:100%;
+    top:100%;
+    border-radius: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+
+    display: none;
+}
+
+#up_screen:hover {
+    color: #4cd566;
+    background-color: #fff;
+}
+
+.splash {
+    display:none;
+    /*background-color:#fff;*/
+    background-color:#4cd566;
+    color: #4B2C82;
+    padding: 30px;
+    width:100%;
+    max-width: 600px;
+    z-index: 999;
+    position: fixed;
+    left: 50%;
+    top: 50px;
+    margin-left:-300px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(0,0,0,.3);
+}
+
+
+
+.icon-float-size-max{ /* o maior tamanho que tem*/
+    width: 110% !important;
+    
+}
+
+.icon-float { /* imagens dos tópicos dos produtos flutuando :) */
+    animation: float 6s ease-in-out infinite;
+}
+
+.icon-float2 { /* fragmentos flutuando :) */
+    animation: float 5s ease-in-out infinite;    
+    margin-left:12%;
+    width: 25%;
+    float: left;
+}
+
+.icon-float3 { /* fragmentos flutuando de forma diferente */
+    animation: float 4s ease-in-out infinite;    
+    margin-left:10%;
+    width: 10%;
+    float: left;
+}
+
+.icon-float4 { /* fragmentos flutuando de forma diferente */
+    animation: float 3s ease-in-out infinite;    
+    margin-left:5%;
+    width: 15%;
+    float: left;
+}
+
+
+/*Daq p baixo é a secção de icones e suas formatações individuais*/
+
+.icon-rotate{  /* rotação elipse fixa*/
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;    
+    position: relative;
+}
+
+.icon-rotate-truth{
+    position: relative;
+    top:90px;
+}
+
+.icon-align-wallet{
+    position: relative;
+    margin-left:10%;
+    margin-top:-80%;
+    margin-bottom: 1%;
+    width: 70%;
+}
+.icon-align-market{
+    position: relative;
+    margin-left:5%;
+    margin-top:-90%;
+    margin-bottom: 1%;
+    width: 90%;
+}
+.icon-align-card{
+    position: relative;
+    margin-left:10%;
+    margin-top:-90%;,
+    margin-bottom: 1%;
+    width: 80%;
+}
+.icon-align-label{
+    position: relative;
+    margin-left: 10%;
+    margin-top:-90%;
+    margin-bottom: 1%;
+    width: 70%;
+}
+.icon-align-truth{
+    position: relative;
+    margin-left:5%;
+    margin-top:-90%;
+    margin-bottom: 1%;
+    width: 90%;
+}
+.icon-align-point{
+    position: relative;
+    margin-left:5%;
+    margin-top:-80%;
+    margin-bottom: 1%;
+    width: 90%;
+}
+.icon-align-contracts{
+    position: relative;
+    margin-left:5%;
+    margin-top:-90%;
+    margin-bottom: 1%;
+    width: 90%;
+}
+.icon-align-machine{
+    position: relative;
+    margin-left: 15%;
+    margin-top:-80%;
+    margin-bottom: 1%;
+    width: 70%
+}
+
+.icon-align-lpos{
+    position: relative;
+    margin-left: 5%; 
+    margin-top:-90%;  
+    margin-bottom: 1%;
+    width: 80% 
+}
+.icon-align-gateway{
+    position: relative;
+    margin-left:5%;
+    margin-top:-90%;
+    margin-bottom: 1%;
+    width: 90%;
+}
+.icon-align-leasing{
+    position: relative;
+    margin-left:0px;
+    margin-top:-90%;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+@media only screen and (min-width:768px) and (max-width:768px){
+    .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .icon-float2 { /* fragmentos flutuando :) */
+        animation: float 5s ease-in-out infinite;    
+        margin-left:12%;
+        width: 15%;
+        float: left;
+    }
+    
+    .icon-float3 { /* fragmentos flutuando de forma diferente */
+        animation: float 4s ease-in-out infinite;    
+        margin-left:10%;
+        width: 5%;
+        float: left;
+    }
+    
+    .icon-float4 { /* fragmentos flutuando de forma diferente */
+        animation: float 3s ease-in-out infinite;    
+        margin-left:5%;
+        width: 8%;
+        float: left;
+
+    }
+    
+    
+    /*Daq p baixo é a secção de icones e suas formatações individuais*/
+    
+    .icon-rotate{  /* rotação elipse fixa*/
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+    }
+    
+    .icon-rotate-truth{
+        position: relative;
+        top:90px;
+    }
+    
+    .icon-align-wallet{
+        position: relative;
+        margin-left:10%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 40%;
+    }
+    .icon-align-market{
+        position: relative;
+        margin-left:5%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 50%;
+    }
+    .icon-align-card{
+        position: relative;
+        margin-left:10%;
+        margin-top:-50%;,
+        margin-bottom: 1%;
+        width: 40%;
+    }
+    .icon-align-label{
+        position: relative;
+        margin-left: 10%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 40%;
+    }
+    .icon-align-truth{
+        position: relative;
+        margin-left:5%;
+        margin-top:-45%;
+        margin-bottom: 1%;
+        width: 40%;
+    }
+    .icon-align-point{
+        position: relative;
+        margin-left:5%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 50%;
+    }
+    .icon-align-contracts{
+        position: relative;
+        margin-left:5%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 50%;
+    }
+    .icon-align-machine{
+        position: relative;
+        margin-left: 10%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 40%
+    }
+    
+    .icon-align-lpos{
+        position: relative;
+        margin-left: 10%; 
+        margin-top:-50%;  
+        margin-bottom: 1%;
+        width: 40% 
+    }
+    .icon-align-gateway{
+        position: relative;
+        margin-left:5%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 50%;
+    }
+    .icon-align-leasing{
+        position: relative;
+        margin-left:5%;
+        margin-top:-50%;
+        margin-bottom: 1%;
+        width: 50%;
+    }
+}
+
+.align-paragraph p{
+    padding-left: 4em;
+    text-align: left;
+    margin-top: 1em;
+    border-bottom: 1px;
+}
+.align-data-ico{
+    font-size: 0.7em;
+    margin-right: -30px;
+}
+@media only screen and (max-width: 768px) {  /* ok */
+    .align-horizontal {
+        display: block;
+    }
+
+    #counter #coin_counter {
+        text-align: center;
+    }
+
+    #counter #coin_sale_desc{
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .label-ico-last-phase{
+        padding-right:20%;
+    }
+
+    .align-paragraph p{
+        text-align: center;
+        padding: 0px;
+    }
+
+    .align-data-ico{
+        margin-right: 0px;
+    }
+   
+
+}
