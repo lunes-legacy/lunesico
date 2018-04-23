@@ -195,12 +195,15 @@ header #logo {
     left:0;
     /*margin-right: 150px;*/
     margin-left: 90px;
-    padding-bottom: 15px;
+    padding-bottom: 15px; 
 }
+
 
 #social-bar a {
     text-decoration: none;
+
 }
+
 
 #link-bar {
     margin-top:-30px;
@@ -711,8 +714,7 @@ header #logo {
     text-decoration: none;
     border:0px;
     color:white;    
-    min-width: 55px;  
-
+    min-width: 55px;
     margin-top:-15px;
     text-align: center;    
 }
@@ -821,6 +823,7 @@ header #logo {
     border-color: #FDC65D;
 }
 #ic_truth_fill {
+
     background: url('../img/ic_truth.svg') no-repeat center center, linear-gradient(#F99B2A, #FDC65D);
     background-color: #FDC65D;
 
@@ -1081,6 +1084,7 @@ header #logo {
 #robo {
     animation: float 6s ease-in-out infinite;
 }
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -1299,6 +1303,7 @@ footer .bt_green {
 
        margin-left:-20px;
        animation: float 6s ease-in-out infinite;
+       margin-top:-10%;
     }
 
     .first-box {
@@ -1652,9 +1657,50 @@ footer .logolunes {
     position: relative;
 }
 
-.icon-rotate-truth{
+.icon-rotate2{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;    
+    position: relative;
+    margin-top: -93%;
+
+}
+
+.icon-rotate3{
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;    
+    position: relative;
+    margin-top: -93%;
+
+}
+
+.icon-rotate-truth{    
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;    
     position: relative;
     top:90px;
+}
+
+.icon-rotate-truth2{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;    
+    position: relative;
+    margin-top: -93%;
+    top:90px;
+
+}
+
+.icon-rotate-truth3{
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8s linear infinite;
+    animation:spin 8s linear infinite;    
+    position: relative;
+    margin-top: -93%;
+    top:90px;
+
 }
 
 .icon-align-wallet{
@@ -1676,7 +1722,7 @@ footer .logolunes {
     margin-left:10%;
     margin-top:-90%;,
     margin-bottom: 1%;
-    width: 80%;
+    width: 75%;
 }
 .icon-align-label{
     position: relative;
@@ -1702,9 +1748,9 @@ footer .logolunes {
 .icon-align-contracts{
     position: relative;
     margin-left:5%;
-    margin-top:-90%;
+    margin-top:-85%;
     margin-bottom: 1%;
-    width: 90%;
+    width: 85%;
 }
 .icon-align-machine{
     position: relative;
@@ -1724,7 +1770,7 @@ footer .logolunes {
 .icon-align-gateway{
     position: relative;
     margin-left:5%;
-    margin-top:-90%;
+    margin-top:-85%;
     margin-bottom: 1%;
     width: 90%;
 }
@@ -1734,128 +1780,6 @@ footer .logolunes {
     margin-top:-90%;
     margin-bottom: 1%;
     width: 100%;
-}
-
-@media only screen and (min-width:768px) and (max-width:768px){
-    .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
-        animation: float 6s ease-in-out infinite;
-    }
-    
-    .icon-float2 { /* fragmentos flutuando :) */
-        animation: float 5s ease-in-out infinite;    
-        margin-left:12%;
-        width: 15%;
-        float: left;
-    }
-    
-    .icon-float3 { /* fragmentos flutuando de forma diferente */
-        animation: float 4s ease-in-out infinite;    
-        margin-left:10%;
-        width: 5%;
-        float: left;
-    }
-    
-    .icon-float4 { /* fragmentos flutuando de forma diferente */
-        animation: float 3s ease-in-out infinite;    
-        margin-left:5%;
-        width: 8%;
-        float: left;
-
-    }
-    
-    
-    /*Daq p baixo é a secção de icones e suas formatações individuais*/
-    
-    .icon-rotate{  /* rotação elipse fixa*/
-        -webkit-animation:spin 10s linear infinite;
-        -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
-        position: relative;
-    }
-    
-    .icon-rotate-truth{
-        position: relative;
-        top:90px;
-    }
-    
-    .icon-align-wallet{
-        position: relative;
-        margin-left:10%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 40%;
-    }
-    .icon-align-market{
-        position: relative;
-        margin-left:5%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 50%;
-    }
-    .icon-align-card{
-        position: relative;
-        margin-left:10%;
-        margin-top:-50%;,
-        margin-bottom: 1%;
-        width: 40%;
-    }
-    .icon-align-label{
-        position: relative;
-        margin-left: 10%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 40%;
-    }
-    .icon-align-truth{
-        position: relative;
-        margin-left:5%;
-        margin-top:-45%;
-        margin-bottom: 1%;
-        width: 40%;
-    }
-    .icon-align-point{
-        position: relative;
-        margin-left:5%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 50%;
-    }
-    .icon-align-contracts{
-        position: relative;
-        margin-left:5%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 50%;
-    }
-    .icon-align-machine{
-        position: relative;
-        margin-left: 10%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 40%
-    }
-    
-    .icon-align-lpos{
-        position: relative;
-        margin-left: 10%; 
-        margin-top:-50%;  
-        margin-bottom: 1%;
-        width: 40% 
-    }
-    .icon-align-gateway{
-        position: relative;
-        margin-left:5%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 50%;
-    }
-    .icon-align-leasing{
-        position: relative;
-        margin-left:5%;
-        margin-top:-50%;
-        margin-bottom: 1%;
-        width: 50%;
-    }
 }
 
 .align-paragraph p{
@@ -1868,7 +1792,252 @@ footer .logolunes {
     font-size: 0.7em;
     margin-right: -30px;
 }
-@media only screen and (max-width: 768px) {  /* ok */
+@media only screen and (min-width:768px) and (max-width:768px){
+    .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
+        animation: float 6s ease-in-out infinite;
+    }
+    
+    .icon-float2 { /* fragmentos flutuando :) */
+        animation: float 5s ease-in-out infinite;    
+        margin-left:12%;
+        width: 20%;
+        float: left;
+    }
+    
+    .icon-float3 { /* fragmentos flutuando de forma diferente */
+        animation: float 4s ease-in-out infinite;    
+        margin-left:10%;
+        width: 10%;
+        float: left;
+    }
+    
+    .icon-float4 { /* fragmentos flutuando de forma diferente */
+        animation: float 3s ease-in-out infinite;    
+        margin-left:5%;
+        width: 13%;
+        float: left;
+
+    }
+
+    
+    /*Daq p baixo é a secção de icones e suas formatações individuais*/
+    
+    .icon-rotate{  /* rotação elipse fixa*/
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+    }
+    
+    .icon-rotate-truth{    
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+        top:90px;
+    }
+    
+    .icon-rotate-truth2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:90px;
+    
+    }
+    
+    .icon-rotate-truth3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:90px;
+    
+    }
+    
+    .icon-align-wallet{
+        position: relative;
+        margin-left:12%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 70%;
+    }
+    .icon-align-market{
+        position: relative;
+        margin-left:0%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 100%;
+    }
+    .icon-align-card{
+        position: relative;
+        margin-left:10%;
+        margin-top:-90%;,
+        margin-bottom: 1%;
+        width: 80%;
+    }
+    .icon-align-label{
+        position: relative;
+        margin-left: 10%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 80%;
+    }
+    .icon-align-truth{
+        position: relative;
+        margin-left:5%;
+        margin-top:-75%;
+        margin-bottom: 1%;
+        width: 80%;
+    }
+    .icon-align-point{
+        position: relative;
+        margin-left:5%;
+        margin-top:-75%;
+        margin-bottom: 1%;
+        width: 80%;
+    }
+    .icon-align-contracts{
+        position: relative;
+        margin-left:10%;
+        margin-top:-80%;
+        margin-bottom: 1%;
+        width: 80%;
+    }
+    .icon-align-machine{
+        position: relative;
+        margin-left: 20%;
+        margin-top:-80%;
+        margin-bottom: 1%;
+        width: 60%
+    }
+    
+    .icon-align-lpos{
+        position: relative;
+        margin-left: 15%; 
+        margin-top:-85%;  
+        margin-bottom: 1%;
+        width: 70% 
+    }
+    .icon-align-gateway{
+        position: relative;
+        margin-left:10%;
+        margin-top:-85%;
+        margin-bottom: 1%;
+        width: 80%;
+    }
+    .icon-align-leasing{
+        position: relative;
+        margin-left:0%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 100%;
+    }
+}
+@media only screen and (min-width:426px) and (max-width: 767px) {  /* ok */
+    .icon-rotate2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+    
+    .icon-rotate3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+
+    .icon-rotate-truth{    
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+        top:90px;
+    }
+    
+    .icon-rotate-truth2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:90px;
+    
+    }
+
+    
+    
+    .icon-rotate-truth3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:90px;
+    
+    }
+
+
+}
+@media only screen and (max-width:425px){
+    .icon-rotate{  /* rotação elipse fixa*/
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+    }
+    
+    .icon-rotate2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+    
+    .icon-rotate3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+    .icon-rotate-truth{    
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+        top:50px;
+    }
+    
+    .icon-rotate-truth2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:50px;    
+    }
+    
+    .icon-rotate-truth3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:50px;    
+    }
+
     .align-horizontal {
         display: block;
     }
@@ -1893,6 +2062,80 @@ footer .logolunes {
     .align-data-ico{
         margin-right: 0px;
     }
-   
+}
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .icon-rotate2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+    
+    .icon-rotate3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+    
+}
+@media only screen and (min-width:1024px) and (max-width:1199px){
+    .icon-rotate2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
+    
+    .icon-rotate3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+    
+    }
 
+    .icon-rotate-truth{    
+        -webkit-animation:spin 10s linear infinite;
+        -moz-animation:spin 10s linear infinite;
+        animation:spin 10s linear infinite;    
+        position: relative;
+        top:90px;
+    }
+    
+    .icon-rotate-truth2{
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:90px;
+    
+    }
+
+    
+    
+    .icon-rotate-truth3{
+        -webkit-animation:spin 8s linear infinite;
+        -moz-animation:spin 8s linear infinite;
+        animation:spin 8s linear infinite;    
+        position: relative;
+        margin-top: -100%;
+        top:90px;
+    
+    }
+}
+@media only screen and (min-width:415px) and (max-width:1040px){
+    
+    #robo{
+        margin-top:-100px;
+        max-width: 85%;
+    }
 }
