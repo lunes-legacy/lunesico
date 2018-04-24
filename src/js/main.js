@@ -63,10 +63,14 @@ var nav = $('.header'); // Change to nav div
         var distance = $(this).scrollTop();
         if (distance > threshold) { // If scrolled past threshold
             nav.addClass(nav_class); // Add class to nav
+            // to show bt up screen
+            $("#up_screen").show();
         } else { // If user scrolls back to top
             if (nav.hasClass(nav_class)) { // And if class has been added
                 nav.removeClass(nav_class); // Remove it
             }
+            // to hiden bt up screen
+            $("#up_screen").hide();
         }
     });
 
@@ -143,22 +147,30 @@ document.querySelector('#con_sec').innerHTML = 0;
 $("#put_s_day_en").html('Days');
 $("#put_s_day_pt").html('Dias');
 $("#put_s_day_fr").html('Jours');
-$("#put_s_day_ar").html('أيام');
+$("#put_s_day_ar").html('أيام'); 
+$("#put_s_day_hi").html('दिन'); 
+$("#put_s_day_es").html('Días'); 
 
 $("#put_s_hour_en").html('Hours');
 $("#put_s_hour_pt").html('Horas');
 $("#put_s_hour_fr").html('Heures');
 $("#put_s_hour_ar").html('ساعات');
+$("#put_s_hour_hi").html('घंटे');
+$("#put_s_hour_es").html('Horas');
 
 $("#put_s_min_en").html('Minutes');
 $("#put_s_min_pt").html('Minutos');
 $("#put_s_min_fr").html('Minutes');
 $("#put_s_min_ar").html('دقائق');
+$("#put_s_min_hi").html('मिनट');
+$("#put_s_min_es").html('Minutos');
 
 $("#put_s_sec_en").html('Seconds');
 $("#put_s_sec_pt").html('Segundos');
 $("#put_s_sec_fr").html('Seconds');
 $("#put_s_sec_ar").html('ثواني');
+$("#put_s_sec_hi").html('सेकंड');
+$("#put_s_sec_es").html('Segundos');
 
 // Contador
 function getDateTime(endDate) {
@@ -248,6 +260,62 @@ $(document).ready(function() {
         }
     });
 
+    // button scroll up
+    $("#up_screen").click(function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+
+    });
     // Chama a função que faz o update o saldo e inicia o contador
     updateSaldo();
 });
+
+// splash ao tentar sair da pag
+var close_splash1 = false;
+
+function addEvent(obj, evt, fn) {
+    if (obj.addEventListener) {
+        obj.addEventListener(evt, fn, false);
+    }
+    else if (obj.attachEvent) {
+        obj.attachEvent("on" + evt, fn);
+    }
+}
+addEvent(window,"load",function(e) {
+    addEvent(document, "mouseout", function(e) {
+        e = e ? e : window.event;
+        var from = e.relatedTarget || e.toElement;
+        if (!from || from.nodeName == "HTML") {
+            if(!close_splash1){
+                
+                var userData = localStorage.getItem('lunes.accessToken')
+                console.log (userData);
+                if (!userData){
+                    $("#splash_exit").show();
+                }
+            }
+        }
+    });
+});
+
+// se ja abriu uma vez, nao abra novamente
+function closeSplash1(){
+    $('#splash_exit').hide();
+    close_splash1 = true;
+}
+
+
+// splash ao ficar X tempo no site
+setTimeout(function(){ 
+    var userData = localStorage.getItem('lunes.accessToken')
+    console.log (userData);
+    if (!userData){
+        $('#splash_buy').show();
+    }
+}, 60000);
+
+
+function closeSplash2(){
+    $('#splash_buy').hide();
+}
