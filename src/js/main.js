@@ -76,61 +76,54 @@ var nav = $('.header'); // Change to nav div
 
 $("#language-button").click(function(){
     var languageMenu = $('#language-menu');
-    console.log(languageMenu);
-    languageMenu.addClass('language-menu-down-animation'); // Add class to nav 
+    languageMenu.addClass('language-menu-down-animation'); // Add class to nav
 
-    
+
 });
 
 let endDate = '';
 
 function updateSaldo() {
-    // $.ajax({
-    //     url: 'https://apiw.lunes.io/api/ico/phase',
-    //     type: 'POST',
-    //     success: function(result) {
-    //         var found_sale = $.grep(result, function(v) {
-    //             return v.sale_status === "active";
-    //         });
+    $.ajax({
+        url: 'https://apiw.lunes.io/api/ico/phase',
+        type: 'POST',
+        success: function(result) {
+            var found_sale = $.grep(result, function(v) {
+                return v.sale_status === "active";
+            });
 
-    //         var whitelist_sale = $.grep(result, function(v) {
-    //             return v.name === "Whitelist";
-    //         });
+            var coin_sale = parseInt(found_sale[0].total_value);
 
-    //         var coin_sale = parseInt(whitelist_sale[0].total_value);
-    //         if (found_sale[0].total_value != null) {
-    //             coin_sale = parseInt(found_sale[0].total_value) + parseInt(whitelist_sale[0].total_value);
-    //         };
+            endDate = found_sale[0].end_datetime;
+            var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
 
-    //         endDate = found_sale[0].end_datetime;
-    //         var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+            const total_fiat_value = Math.floor(parseFloat(found_sale[0].total_fiat_value));
+            const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
 
-    //         $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
-    //         $("#coin_counter").html(coin_counter);
-    //         $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
-    //         document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit,coin_sale) + "%";
+            $("#coin_sale").html(formatDisplayNumber(coin_sale, ""));
+            $("#coin_counter").html(coin_counter);
+            $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
+            $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ""));
+            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit, coin_sale) + "%";
 
-    //         // Chama a função que inicia o contador
-    //         getDateTime(endDate);
+            // Chama a função que inicia o contador
+            getDateTime(endDate);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            //alert(xhr.status);
+            //alert(thrownError);
+            // console.log(xhr.status);
+            // console.log(thrownError);
+            $("#coin_counter").html('0');
+            document.getElementById("loading_bar_green").style.width = "0%";
+        }
+    });
 
-    //     },
-    //     error: function (xhr, ajaxOptions, thrownError) {
-    //         //alert(xhr.status);
-    //         //alert(thrownError);
-    //         // console.log(xhr.status);
-    //         // console.log(thrownError);
-    //         $("#coin_counter").html('0');
-    //         document.getElementById("loading_bar_green").style.width = "0%";
-    //     }
-    // });
-
-    var coin_counter = 100000000;
-    var coin_sale = 82319105;
-
-    $("#coin_sale").html(formatDisplayNumber(coin_sale,""));
-    $("#coin_counter").html(coin_counter);
-    $("#raisedValue").html('$ ' + formatDisplayNumber(coin_sale*0.01,""));
-    document.getElementById("loading_bar_green").style.width = percBarra(coin_counter,coin_sale) + "%";
+    $("#coin_sale").html(formatDisplayNumber(0, ""));
+    $("#coin_counter").html(0);
+    $("#raisedValue").html('$ ' + formatDisplayNumber(0, ""));
+    $("#totalValue").html('$ ' + formatDisplayNumber(0, ""));
+    document.getElementById("loading_bar_green").style.width = "0%";
     // $("#coin_counter").html('100.000.000');
 }
 
@@ -183,7 +176,10 @@ $("#put_s_sec_es").html('Segundos');
 function getDateTime(endDate) {
     const event = new Date(endDate).getTime();
     let current = new Date();
-    current = current.getTime() - (current.getTimezoneOffset() * 60000);
+    current = current.getTime();
+
+    // Caso dê problema no contador no último dia, utilizar o código abaixo
+    // current = current.getTime() - (current.getTimezoneOffset() * 60000);
 
     let duration = moment.duration(event - current, 'milliseconds');
 
@@ -192,7 +188,7 @@ function getDateTime(endDate) {
     setInterval(function() {
         duration = moment.duration(duration - 1000, 'milliseconds');
 
-        document.querySelector('#con_days').innerHTML = duration.days();
+        document.querySelector('#con_days').innerHTML = Math.floor(duration.asDays());
         document.querySelector('#con_hours').innerHTML = duration.hours();
         document.querySelector('#con_min').innerHTML = duration.minutes();
         document.querySelector('#con_sec').innerHTML = duration.seconds();
@@ -246,7 +242,7 @@ $(document).ready(function() {
             el.lightGallery({
                 selector: '#slide_time .lslide'
             });
-        }
+       gulp }
     });
 
     $("#slide_advisor").lightSlider({
