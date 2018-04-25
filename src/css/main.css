@@ -184,9 +184,11 @@ header #logo {
 #lua {
     display:block;
     position: absolute;
-    right:0px;
+    margin-right:50px;
     animation: flashflash 8s infinite;
     top: 116px;
+    width: 180px;
+    height: 180px;
 }
 
 #social-bar {
@@ -1203,7 +1205,6 @@ footer {
 }
 footer .link {
     display: block;
-
 }
 footer .link a, footer a {
     color:#fff;
@@ -1218,6 +1219,12 @@ footer .bt_green {
     text-align:center;
 }
 
+@media only screen and (min-width:1200px){
+    footer .icon-msg {
+        display: block;
+        background: 10px;
+    }
+}
 .footer-news {
     background-color:#5e4094;padding-top:40px;padding-bottom:40px;margin-top:40px;
 }
@@ -1699,9 +1706,9 @@ footer .logolunes {
 }
 
 .icon-rotate2{
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;    
+    -webkit-animation:spin 6s linear infinite;
+    -moz-animation:spin 6s linear infinite;
+    animation:spin 6s linear infinite;    
     position: relative;
     margin-top: -93%;
 
@@ -1979,9 +1986,9 @@ footer .logolunes {
 }
 @media only screen and (min-width:426px) and (max-width: 767px) {  /* ok */
     .icon-rotate2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
+        -webkit-animation:spin 6s linear infinite;
+        -moz-animation:spin 6s linear infinite;
+        animation:spin 6s linear infinite;    
         position: relative;
         margin-top: -100%;
     
@@ -2037,9 +2044,9 @@ footer .logolunes {
     }
     
     .icon-rotate2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
+        -webkit-animation:spin 6s linear infinite;
+        -moz-animation:spin 6s linear infinite;
+        animation:spin 6s linear infinite;    
         position: relative;
         margin-top: -100%;
     
@@ -2099,9 +2106,9 @@ footer .logolunes {
 }
 @media only screen and (min-width:768px) and (max-width:1023px){
     .icon-rotate2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
+        -webkit-animation:spin 6s linear infinite;
+        -moz-animation:spin 6s linear infinite;
+        animation:spin 6s linear infinite;    
         position: relative;
         margin-top: -100%;
     
@@ -2119,9 +2126,9 @@ footer .logolunes {
 }
 @media only screen and (min-width:1024px) and (max-width:1199px){
     .icon-rotate2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
+        -webkit-animation:spin 6s linear infinite;
+        -moz-animation:spin 6s linear infinite;
+        animation:spin 6s linear infinite;    
         position: relative;
         margin-top: -100%;
     
