@@ -654,6 +654,7 @@ header #logo {
     border-radius: 5px;
     font-size: 1.3em;
     box-shadow: 0px 3px 5px rgba(0,0,0,.05);
+    margin-bottom: 15px;
 }
 
 .bt_green_splash{
@@ -1219,12 +1220,7 @@ footer .bt_green {
     text-align:center;
 }
 
-@media only screen and (min-width:1200px){
-    footer .icon-msg {
-        display: block;
-        background: 10px;
-    }
-}
+
 .footer-news {
     background-color:#5e4094;padding-top:40px;padding-bottom:40px;margin-top:40px;
 }
@@ -1241,6 +1237,13 @@ footer .bt_green {
     width:20%;
     float:left;
     border-radius: 0px 5px 5px 0px;
+}
+@media only screen and (max-width:550px){
+    .footer-news input {  width: 60%; }
+    .footer-news button{  width: 40%; }    
+}
+@media only screen and (max-width:767px){
+    .footer-align{  text-align: center; }
 }
 .text-form {
     font-weight: 600;
@@ -1840,8 +1843,8 @@ footer .logolunes {
     font-size: 0.7em;
     margin-right: -30px;
 }
-@media only screen and (min-width:768px) and (max-width:768px){
-    .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
+@media only screen and (width:768px) {
+    .icon-float { /* imagens dos tópicos dos produtos flutuando */
         animation: float 6s ease-in-out infinite;
     }
     
@@ -1885,26 +1888,11 @@ footer .logolunes {
         top:90px;
     }
     
-    .icon-rotate-truth2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
-        position: relative;
+    .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
         top:90px;
     
     }
-    
-    .icon-rotate-truth3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-        top:90px;
-    
-    }
-    
     .icon-align-wallet{
         position: relative;
         margin-left:12%;
@@ -1919,28 +1907,14 @@ footer .logolunes {
         margin-bottom: 1%;
         width: 100%;
     }
-    .icon-align-card{
+    .icon-align-card, .icon-align-label{
         position: relative;
         margin-left:10%;
         margin-top:-90%;
         margin-bottom: 1%;
         width: 80%;
     }
-    .icon-align-label{
-        position: relative;
-        margin-left: 10%;
-        margin-top:-90%;
-        margin-bottom: 1%;
-        width: 80%;
-    }
-    .icon-align-truth{
-        position: relative;
-        margin-left:5%;
-        margin-top:-75%;
-        margin-bottom: 1%;
-        width: 80%;
-    }
-    .icon-align-point{
+    .icon-align-truth, .icon-align-point{
         position: relative;
         margin-left:5%;
         margin-top:-75%;
@@ -1984,108 +1958,107 @@ footer .logolunes {
         width: 100%;
     }
 }
-@media only screen and (min-width:426px) and (max-width: 767px) {  /* ok */
-    .icon-rotate2{
-        -webkit-animation:spin 6s linear infinite;
-        -moz-animation:spin 6s linear infinite;
-        animation:spin 6s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-    
-    }
-    
-    .icon-rotate3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-    
+@media only screen and (min-width:426px) and (max-width: 767px) {  
+    .icon-rotate2, .icon-rotate3{
+        margin-top: -100%;    
     }
 
-    .icon-rotate-truth{    
-        -webkit-animation:spin 10s linear infinite;
-        -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
-        position: relative;
+    .icon-rotate-truth{
         top:90px;
     }
     
-    .icon-rotate-truth2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
-        position: relative;
+    .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
         top:90px;
     
     }
-
-    
-    
-    .icon-rotate-truth3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-        top:90px;
-    
-    }
-
-
 }
 @media only screen and (max-width:425px){
-    .icon-rotate{  /* rotação elipse fixa*/
-        -webkit-animation:spin 10s linear infinite;
-        -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
-        position: relative;
-    }
     
-    .icon-rotate2{
-        -webkit-animation:spin 6s linear infinite;
-        -moz-animation:spin 6s linear infinite;
-        animation:spin 6s linear infinite;    
-        position: relative;
+    .icon-rotate2, .icon-rotate3{
         margin-top: -100%;
     
     }
-    
-    .icon-rotate3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-    
-    }
-    .icon-rotate-truth{    
-        -webkit-animation:spin 10s linear infinite;
-        -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
-        position: relative;
-        top:50px;
+    .icon-rotate-truth{
+        top:100px;
     }
     
-    .icon-rotate-truth2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
-        position: relative;
+    .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
-        top:50px;    
-    }
-    
-    .icon-rotate-truth3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-        top:50px;    
+        top:100px;    
     }
 
+    .icon-align-wallet{
+        position: relative;
+        margin-left:13%;
+        margin-top:-80%;
+        margin-bottom: 1%;
+        width: 70%;
+    }
+    .icon-align-market{
+        position: relative;
+        margin-left:5%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 90%;
+    }
+    .icon-align-card{
+        position: relative;
+        margin-left:13%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 75%;
+    }
+    .icon-align-label{
+        position: relative;
+        margin-left: 15%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 70%;
+    }
+    .icon-align-truth{
+        position: relative;
+        margin-left:5%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 90%;
+    }
+    .icon-align-point{
+        position: relative;
+        margin-left:5%;
+        margin-top:-80%;
+        margin-bottom: 1%;
+        width: 90%;
+    }
+    .icon-align-contracts{
+        position: relative;
+        margin-left:8%;
+        margin-top:-85%;
+        margin-bottom: 1%;
+        width: 85%;
+    }
+    .icon-align-machine{
+        position: relative;
+        margin-left: 15%;
+        margin-top:-80%;
+        margin-bottom: 1%;
+        width: 70%
+    }
+    
+    .icon-align-lpos{
+        position: relative;
+        margin-left: 8%; 
+        margin-top:-90%;  
+        margin-bottom: 1%;
+        width: 80% 
+    }
+    .icon-align-gateway{
+        position: relative;
+        margin-left:5%;
+        margin-top:-90%;
+        margin-bottom: 1%;
+        width: 90%;
+    }
     .align-horizontal {
         display: block;
     }
@@ -2101,76 +2074,30 @@ footer .logolunes {
     .label-ico-last-phase{
         padding-right:20%;
     }
-
-
 }
 @media only screen and (min-width:768px) and (max-width:1023px){
-    .icon-rotate2{
-        -webkit-animation:spin 6s linear infinite;
-        -moz-animation:spin 6s linear infinite;
-        animation:spin 6s linear infinite;    
-        position: relative;
+    .icon-rotate2, .icon-rotate3{
         margin-top: -100%;
     
     }
-    
-    .icon-rotate3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-    
+    .icon-rotate-truth2, .icon-rotate-truth3{
+        margin-top:-100%;
     }
     
 }
 @media only screen and (min-width:1024px) and (max-width:1199px){
-    .icon-rotate2{
-        -webkit-animation:spin 6s linear infinite;
-        -moz-animation:spin 6s linear infinite;
-        animation:spin 6s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-    
-    }
-    
-    .icon-rotate3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
+    .icon-rotate2, .icon-rotate3{  
         margin-top: -100%;
     
     }
 
-    .icon-rotate-truth{    
-        -webkit-animation:spin 10s linear infinite;
-        -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
-        position: relative;
+    .icon-rotate-truth{
         top:90px;
     }
     
-    .icon-rotate-truth2{
-        -webkit-animation:spin 4s linear infinite;
-        -moz-animation:spin 4s linear infinite;
-        animation:spin 4s linear infinite;    
-        position: relative;
+    .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
-        top:90px;
-    
-    }
-
-    
-    
-    .icon-rotate-truth3{
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;    
-        position: relative;
-        margin-top: -100%;
-        top:90px;
-    
+        top:90px;    
     }
 }
 @media only screen and (min-width:415px) and (max-width:1040px){
@@ -2188,5 +2115,8 @@ footer .logolunes {
 
     .align-data-ico{
         margin-right: 0px;
+    }
+    .align-horizontal{
+        margin-top: 20px;
     }
 }
