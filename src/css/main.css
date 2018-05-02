@@ -16,10 +16,13 @@ html, body {
     overflow: hidden;
     overflow-y: auto;
     position: relative;
+
     /* -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
     /* -webkit-text-stroke: 0.45px;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.004); */
+
+
 }
 
 body {
@@ -30,8 +33,16 @@ body {
     font-weight: 100;
     background-color: #3B1878;
     min-height: 75rem;
-    padding-top: 8.5rem;
-    
+    padding-top: 8.5rem;   
+}
+@media only screen and (min-width:1440px){
+    body{
+    background-image: url('../img/img-float/vetor-globo.webp');
+    background-repeat: no-repeat;
+    background-position-y: 450px;
+    background-position-x: -340px;
+    background-size: 35%;
+    }
 }
 
 h1, h2, h3, h4 {
@@ -64,7 +75,7 @@ hr{
 
 .linha-vertical {
     height: 300px;/*Altura da linha*/
-    border-left: 1px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
+    border-right: 1px solid;/* Adiciona borda esquerda na div como ser fosse uma linha.*/
     float: left;
     margin-top: -100px;
     color: #4cd566;
@@ -162,6 +173,10 @@ header #logo {
 .align-horizontal {
     display: flex;
     align-items: center;
+}
+
+.col-md-4{        
+    padding-right:10px !important;
 }
 
 .join-top {
@@ -1029,6 +1044,16 @@ header #logo {
     border-top: solid 3px #fff;
     padding-top:10px;
 }
+
+#lunes-advisors-carousel ul.lSPager {
+    margin: auto;
+}
+
+.lSSlideOuter .lSPager.lSGallery{
+    margin: auto !important;
+    padding-top:10px;
+}
+
 #slide_time .lslide .social_bar, #slide_advisor .lslide .social_bar {
     text-align: right;
 }
@@ -1169,6 +1194,8 @@ header #logo {
     -webkit-filter: none;
     filter: none;
 }
+
+
 .label-ico, .label-pre-ico {
     background-color: #5cb85c;
     border-radius: 3px;
@@ -1348,13 +1375,14 @@ footer .bt_green {
        animation: float 6s ease-in-out infinite;
        margin-top:-10%;
     }
-
+    
     .first-box {
         margin-right:30px;
     }
 
     .dist-ico-box {
         border-bottom:none;
+        padding-right:0px;
     }
     .dist-preico-box {
         margin-right:75px;
@@ -1499,6 +1527,8 @@ footer .bt_green {
     /* #lunes-ico span.label, #sec-pre-ico span.label, #sec-ico span.label {
         width:150px;
     } */
+    
+    
     #sec-pre-ico h3, #sec-ico h3 {
         font-size:48px;
         letter-spacing:5px;
@@ -1566,7 +1596,6 @@ footer .bt_green {
         letter-spacing:5px;
     }
     
-
     
 
     /* .advisor .advisor-img img {
@@ -2120,3 +2149,6 @@ footer .logolunes {
         margin-top: 20px;
     }
 }
+
+
+
