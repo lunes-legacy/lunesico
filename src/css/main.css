@@ -1653,7 +1653,7 @@ footer .logolunes {
        inset -11px 0px 1rem -16px rgba(0,0,0,.5),
        0 8px 18px -4px rgba(0,0,0,.4);
     transition: all .25s ease-in;
-  }
+}
 
 #up_screen {
     background-color: #4cd566;
