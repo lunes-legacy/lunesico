@@ -33,7 +33,7 @@ body {
     font-weight: 100;
     background-color: #3B1878;
     min-height: 75rem;
-    padding-top: 8.5rem;   
+    padding-top: 8.5rem;
 }
 @media only screen and (min-width:1440px){
     body{
@@ -69,7 +69,7 @@ hr{
     line-height: 4em;
 }
 
-.product-header2{   
+.product-header2{
     line-height: 3em;
 }
 
@@ -175,7 +175,7 @@ header #logo {
     align-items: center;
 }
 
-.col-md-4{        
+.col-md-4{
     padding-right:10px !important;
 }
 
@@ -213,7 +213,7 @@ header #logo {
     left:0;
     /*margin-right: 150px;*/
     margin-left: 90px;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
 }
 
 
@@ -279,8 +279,18 @@ header #logo {
     padding-right: 20px;
 }
 
-#counter #coin_sale {
+#counter .phases {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
 
+#counter .phases > .active {
+    font-size: 1.7rem;
+}
+
+#counter .phases > .disabled {
+    opacity: 0.5;
 }
 
 #counter #coin_sale_desc{
@@ -355,7 +365,7 @@ header #logo {
     font-size: .8em;
     text-align: center;
     padding: 10px;
-    border-bottom-left-radius: 4px;
+    /* border-bottom-left-radius: 4px; */
     /* margin-top: -40px; */
 }
 
@@ -377,6 +387,7 @@ header #logo {
     padding: 10px;
     /* border-radius: 4px; */
     /* margin-top: -40px; */
+    border-bottom-left-radius: 4px;
 }
 
 #counter #totalFiat span {
@@ -755,14 +766,14 @@ header #logo {
   @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
   @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
   @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-  
+
 
 .bt_language, .bt_language_down{
     /*background-color: #4cd566;    #3B1878;*/
     background-color:#3B1878;
     text-decoration: none;
     border:0px;
-    color:white;    
+    color:white;
     min-width: 55px;
     margin-top:-15px;
     text-align: center;
@@ -803,6 +814,9 @@ header #logo {
     color: #4cd566;
 }
 
+.gray-word {
+    color: #bdbdbd;
+}
 
 .input-wrapper {
     margin-left: auto;
@@ -1093,7 +1107,7 @@ header #logo {
 #slide_time .lslide .img-responsive , #slide_advisor .lslide .img-responsive  {
     padding-top:40px;
 }
- 
+
 
 
 
@@ -1267,7 +1281,7 @@ footer .bt_green {
 }
 @media only screen and (max-width:550px){
     .footer-news input {  width: 60%; }
-    .footer-news button{  width: 40%; }    
+    .footer-news button{  width: 40%; }
 }
 @media only screen and (max-width:767px){
     .footer-align{  text-align: center; }
@@ -1316,7 +1330,7 @@ footer .bt_green {
         -webkit-font-smoothing: antialiased;
     }
 
-    
+
     /* footer {
         font-size: 1em;
     } */
@@ -1375,7 +1389,7 @@ footer .bt_green {
        animation: float 6s ease-in-out infinite;
        margin-top:-10%;
     }
-    
+
     .first-box {
         margin-right:30px;
     }
@@ -1527,8 +1541,8 @@ footer .bt_green {
     /* #lunes-ico span.label, #sec-pre-ico span.label, #sec-ico span.label {
         width:150px;
     } */
-    
-    
+
+
     #sec-pre-ico h3, #sec-ico h3 {
         font-size:48px;
         letter-spacing:5px;
@@ -1595,8 +1609,8 @@ footer .bt_green {
         /*font-size:96px;*/
         letter-spacing:5px;
     }
-    
-    
+
+
 
     /* .advisor .advisor-img img {
         margin-top: 15rem;
@@ -1645,7 +1659,7 @@ footer .logolunes {
 
 /* teste menu java*/
 
-  
+
 .header-shadow{
     background: #3B1878;
     box-shadow:
@@ -1695,11 +1709,9 @@ footer .logolunes {
     box-shadow: 0px 10px 15px rgba(0,0,0,.3);
 }
 
-
-
 .icon-float-size-max{ /* o maior tamanho que tem*/
     width: 110% !important;
-    
+
 }
 
 .icon-float { /* imagens dos tópicos dos produtos flutuando :) */
@@ -1707,21 +1719,21 @@ footer .logolunes {
 }
 
 .icon-float2 { /* fragmentos flutuando :) */
-    animation: float 5s ease-in-out infinite;    
+    animation: float 5s ease-in-out infinite;
     margin-left:12%;
     width: 25%;
     float: left;
 }
 
 .icon-float3 { /* fragmentos flutuando de forma diferente */
-    animation: float 4s ease-in-out infinite;    
+    animation: float 4s ease-in-out infinite;
     margin-left:10%;
     width: 10%;
     float: left;
 }
 
 .icon-float4 { /* fragmentos flutuando de forma diferente */
-    animation: float 3s ease-in-out infinite;    
+    animation: float 3s ease-in-out infinite;
     margin-left:5%;
     width: 15%;
     float: left;
@@ -1733,14 +1745,14 @@ footer .logolunes {
 .icon-rotate{  /* rotação elipse fixa*/
     -webkit-animation:spin 10s linear infinite;
     -moz-animation:spin 10s linear infinite;
-    animation:spin 10s linear infinite;    
+    animation:spin 10s linear infinite;
     position: relative;
 }
 
 .icon-rotate2{
     -webkit-animation:spin 6s linear infinite;
     -moz-animation:spin 6s linear infinite;
-    animation:spin 6s linear infinite;    
+    animation:spin 6s linear infinite;
     position: relative;
     margin-top: -93%;
 
@@ -1749,16 +1761,16 @@ footer .logolunes {
 .icon-rotate3{
     -webkit-animation:spin 8s linear infinite;
     -moz-animation:spin 8s linear infinite;
-    animation:spin 8s linear infinite;    
+    animation:spin 8s linear infinite;
     position: relative;
     margin-top: -93%;
 
 }
 
-.icon-rotate-truth{    
+.icon-rotate-truth{
     -webkit-animation:spin 10s linear infinite;
     -moz-animation:spin 10s linear infinite;
-    animation:spin 10s linear infinite;    
+    animation:spin 10s linear infinite;
     position: relative;
     top:90px;
 }
@@ -1766,7 +1778,7 @@ footer .logolunes {
 .icon-rotate-truth2{
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;    
+    animation:spin 4s linear infinite;
     position: relative;
     margin-top: -93%;
     top:90px;
@@ -1776,7 +1788,7 @@ footer .logolunes {
 .icon-rotate-truth3{
     -webkit-animation:spin 8s linear infinite;
     -moz-animation:spin 8s linear infinite;
-    animation:spin 8s linear infinite;    
+    animation:spin 8s linear infinite;
     position: relative;
     margin-top: -93%;
     top:90px;
@@ -1842,10 +1854,10 @@ footer .logolunes {
 
 .icon-align-lpos{
     position: relative;
-    margin-left: 5%; 
-    margin-top:-90%;  
+    margin-left: 5%;
+    margin-top:-90%;
     margin-bottom: 1%;
-    width: 80% 
+    width: 80%
 }
 .icon-align-gateway{
     position: relative;
@@ -1876,51 +1888,51 @@ footer .logolunes {
     .icon-float { /* imagens dos tópicos dos produtos flutuando */
         animation: float 6s ease-in-out infinite;
     }
-    
+
     .icon-float2 { /* fragmentos flutuando :) */
-        animation: float 5s ease-in-out infinite;    
+        animation: float 5s ease-in-out infinite;
         margin-left:12%;
         width: 20%;
         float: left;
     }
-    
+
     .icon-float3 { /* fragmentos flutuando de forma diferente */
-        animation: float 4s ease-in-out infinite;    
+        animation: float 4s ease-in-out infinite;
         margin-left:10%;
         width: 10%;
         float: left;
     }
-    
+
     .icon-float4 { /* fragmentos flutuando de forma diferente */
-        animation: float 3s ease-in-out infinite;    
+        animation: float 3s ease-in-out infinite;
         margin-left:5%;
         width: 13%;
         float: left;
 
     }
 
-    
+
     /*Daq p baixo é a secção de icones e suas formatações individuais*/
-    
+
     .icon-rotate{  /* rotação elipse fixa*/
         -webkit-animation:spin 10s linear infinite;
         -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
+        animation:spin 10s linear infinite;
         position: relative;
     }
-    
-    .icon-rotate-truth{    
+
+    .icon-rotate-truth{
         -webkit-animation:spin 10s linear infinite;
         -moz-animation:spin 10s linear infinite;
-        animation:spin 10s linear infinite;    
+        animation:spin 10s linear infinite;
         position: relative;
         top:90px;
     }
-    
+
     .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
         top:90px;
-    
+
     }
     .icon-align-wallet{
         position: relative;
@@ -1964,13 +1976,13 @@ footer .logolunes {
         margin-bottom: 1%;
         width: 60%
     }
-    
+
     .icon-align-lpos{
         position: relative;
-        margin-left: 15%; 
-        margin-top:-85%;  
+        margin-left: 15%;
+        margin-top:-85%;
         margin-bottom: 1%;
-        width: 70% 
+        width: 70%
     }
     .icon-align-gateway{
         position: relative;
@@ -1987,34 +1999,34 @@ footer .logolunes {
         width: 100%;
     }
 }
-@media only screen and (min-width:426px) and (max-width: 767px) {  
+@media only screen and (min-width:426px) and (max-width: 767px) {
     .icon-rotate2, .icon-rotate3{
-        margin-top: -100%;    
+        margin-top: -100%;
     }
 
     .icon-rotate-truth{
         top:90px;
     }
-    
+
     .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
         top:90px;
-    
+
     }
 }
 @media only screen and (max-width:425px){
-    
+
     .icon-rotate2, .icon-rotate3{
         margin-top: -100%;
-    
+
     }
     .icon-rotate-truth{
         top:100px;
     }
-    
+
     .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
-        top:100px;    
+        top:100px;
     }
 
     .icon-align-wallet{
@@ -2073,13 +2085,13 @@ footer .logolunes {
         margin-bottom: 1%;
         width: 70%
     }
-    
+
     .icon-align-lpos{
         position: relative;
-        margin-left: 8%; 
-        margin-top:-90%;  
+        margin-left: 8%;
+        margin-top:-90%;
         margin-bottom: 1%;
-        width: 80% 
+        width: 80%
     }
     .icon-align-gateway{
         position: relative;
@@ -2107,30 +2119,30 @@ footer .logolunes {
 @media only screen and (min-width:768px) and (max-width:1023px){
     .icon-rotate2, .icon-rotate3{
         margin-top: -100%;
-    
+
     }
     .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top:-100%;
     }
-    
+
 }
 @media only screen and (min-width:1024px) and (max-width:1199px){
-    .icon-rotate2, .icon-rotate3{  
+    .icon-rotate2, .icon-rotate3{
         margin-top: -100%;
-    
+
     }
 
     .icon-rotate-truth{
         top:90px;
     }
-    
+
     .icon-rotate-truth2, .icon-rotate-truth3{
         margin-top: -100%;
-        top:90px;    
+        top:90px;
     }
 }
 @media only screen and (min-width:415px) and (max-width:1040px){
-    
+
     #robo{
         margin-top:-100px;
         max-width: 85%;

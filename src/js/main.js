@@ -75,10 +75,8 @@ var nav = $('.header'); // Change to nav div
     });
 
 $("#language-button").click(function(){
-    var languageMenu = $('#language-menu');
+    const languageMenu = $('#language-menu');
     languageMenu.addClass('language-menu-down-animation'); // Add class to nav
-
-
 });
 
 let endDate = '';
@@ -88,32 +86,26 @@ function updateSaldo() {
         url: 'https://apiw.lunes.io/api/ico/phase',
         type: 'POST',
         success: function(result) {
-            var found_sale = $.grep(result, function(v) {
-                return v.sale_status === "active";
-            });
+            const found_sale = $.grep(result, v => v.sale_status === "active");
 
-            var coin_sale = parseInt(found_sale[0].total_value);
+            const coin_sale = parseInt(found_sale[0].total_value);
 
             endDate = found_sale[0].end_datetime;
-            var coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+            const coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
 
             const total_fiat_value = Math.floor(parseFloat(found_sale[0].total_fiat_value));
-            const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
+            // const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
 
             $("#coin_sale").html(formatDisplayNumber(coin_sale, ""));
             $("#coin_counter").html(coin_counter);
-            $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
+            // $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
             $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ""));
-            document.getElementById("loading_bar_green").style.width = percBarra(found_sale[0].global_limit, coin_sale) + "%";
+            document.getElementById("loading_bar_green").style.width = `${percBarra(found_sale[0].global_limit, coin_sale)}%`;
 
             // Chama a função que inicia o contador
             getDateTime(endDate);
         },
         error: function (xhr, ajaxOptions, thrownError) {
-            //alert(xhr.status);
-            //alert(thrownError);
-            // console.log(xhr.status);
-            // console.log(thrownError);
             $("#coin_counter").html('0');
             document.getElementById("loading_bar_green").style.width = "0%";
         }
@@ -134,8 +126,8 @@ function diff_hours(dt2, dt1) {
 }
 
 function percBarra(total, atual) {
-    var diff = (Math.round(atual)/Math.round(total));
-    return   Math.abs(diff)*100;
+    const diff = Math.round(atual) / Math.round(total);
+    return Math.abs(diff) * 100;
 }
 
 // Valores iniciais do contador
@@ -147,9 +139,9 @@ document.querySelector('#con_sec').innerHTML = 0;
 $("#put_s_day_en").html('Days');
 $("#put_s_day_pt").html('Dias');
 $("#put_s_day_fr").html('Jours');
-$("#put_s_day_ar").html('أيام'); 
-$("#put_s_day_hi").html('दिन'); 
-$("#put_s_day_es").html('Días'); 
+$("#put_s_day_ar").html('أيام');
+$("#put_s_day_hi").html('दिन');
+$("#put_s_day_es").html('Días');
 
 $("#put_s_hour_en").html('Hours');
 $("#put_s_hour_pt").html('Horas');
@@ -288,7 +280,7 @@ addEvent(window,"load",function(e) {
         var from = e.relatedTarget || e.toElement;
         if (!from || from.nodeName == "HTML") {
             if(!close_splash1){
-                
+
                 var userData = localStorage.getItem('lunes.accessToken')
                 console.log (userData);
                 if (!userData){
@@ -307,7 +299,7 @@ function closeSplash1(){
 
 
 // splash ao ficar X tempo no site
-setTimeout(function(){ 
+setTimeout(function(){
     var userData = localStorage.getItem('lunes.accessToken')
     console.log (userData);
     if (!userData){
