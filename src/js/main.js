@@ -88,19 +88,25 @@ function updateSaldo() {
         success: function(result) {
             const found_sale = $.grep(result, v => v.sale_status === "active");
 
-            const coin_sale = parseInt(found_sale[0].total_value);
+            // Soma os valores totais de tokens vendidos nas fases
+            const coin_sale = result.reduce((total, current) => {
+                const coin_total_value = current.total_value || 0;
+                return total + parseFloat(coin_total_value);
+            }, 0);
 
             endDate = found_sale[0].end_datetime;
-            const coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+
+            // Total de tokens disponíveis para venda
+            const total_avaliable = 450000000;
 
             const total_fiat_value = Math.floor(parseFloat(found_sale[0].total_fiat_value));
             // const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
 
-            $("#coin_sale").html(formatDisplayNumber(coin_sale, ""));
-            $("#coin_counter").html(coin_counter);
+            $("#coin_sale").html(formatDisplayNumber(coin_sale, ''));
+            $("#coin_counter").html(formatDisplayNumber(total_avaliable, ''));
             // $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
-            $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ""));
-            document.getElementById("loading_bar_green").style.width = `${percBarra(found_sale[0].global_limit, coin_sale)}%`;
+            $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ''));
+            document.getElementById("loading_bar_green").style.width = `${percBarra(total_avaliable, coin_sale)}%`;
 
             // Chama a função que inicia o contador
             getDateTime(endDate);
@@ -279,10 +285,8 @@ addEvent(window,"load",function(e) {
         e = e ? e : window.event;
         var from = e.relatedTarget || e.toElement;
         if (!from || from.nodeName == "HTML") {
-            if(!close_splash1){
-
-                var userData = localStorage.getItem('lunes.accessToken')
-                console.log (userData);
+            if (!close_splash1) {
+                const userData = localStorage.getItem('lunes.accessToken')
                 if (!userData){
                     $("#splash_exit").show();
                 }
@@ -300,8 +304,7 @@ function closeSplash1(){
 
 // splash ao ficar X tempo no site
 setTimeout(function(){
-    var userData = localStorage.getItem('lunes.accessToken')
-    console.log (userData);
+    const userData = localStorage.getItem('lunes.accessToken')
     if (!userData){
         $('#splash_buy').show();
     }
