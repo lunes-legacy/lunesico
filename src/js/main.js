@@ -96,23 +96,17 @@ function updateSaldo() {
 
             endDate = found_sale[0].end_datetime;
 
-            const coin_counter = result.reduce((total, current) => {
-                // Soma apenas o resgistros que tem o total registrado, pois se esse valor não é nulo, indica que
-                // a fase já foi iniciada. Não considera o valor da whitelist pois ela pertence à pre-ico
-                if (!current.total_value || current.name == 'Whitelist') {
-                    return total;
-                }
-                return total + parseFloat(current.global_limit);
-            }, 0);
+            // Total de tokens disponíveis para venda
+            const total_avaliable = 450000000;
 
             const total_fiat_value = Math.floor(parseFloat(found_sale[0].total_fiat_value));
             // const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
 
             $("#coin_sale").html(formatDisplayNumber(coin_sale, ''));
-            $("#coin_counter").html(formatDisplayNumber(coin_counter, ''));
+            $("#coin_counter").html(formatDisplayNumber(total_avaliable, ''));
             // $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
             $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ''));
-            document.getElementById("loading_bar_green").style.width = `${percBarra(coin_counter, coin_sale)}%`;
+            document.getElementById("loading_bar_green").style.width = `${percBarra(total_avaliable, coin_sale)}%`;
 
             // Chama a função que inicia o contador
             getDateTime(endDate);
