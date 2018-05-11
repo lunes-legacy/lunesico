@@ -88,19 +88,31 @@ function updateSaldo() {
         success: function(result) {
             const found_sale = $.grep(result, v => v.sale_status === "active");
 
-            const coin_sale = parseInt(found_sale[0].total_value);
+            // Soma os valores totais de tokens vendidos nas fases
+            const coin_sale = result.reduce((total, current) => {
+                const coin_total_value = current.total_value || 0;
+                return total + parseFloat(coin_total_value);
+            }, 0);
 
             endDate = found_sale[0].end_datetime;
-            const coin_counter = formatDisplayNumber(parseInt(found_sale[0].global_limit), "");
+
+            const coin_counter = result.reduce((total, current) => {
+                // Soma apenas o resgistros que tem o total registrado, pois se esse valor não é nulo, indica que
+                // a fase já foi iniciada. Não considera o valor da whitelist pois ela pertence à pre-ico
+                if (!current.total_value || current.name == 'Whitelist') {
+                    return total;
+                }
+                return total + parseFloat(current.global_limit);
+            }, 0);
 
             const total_fiat_value = Math.floor(parseFloat(found_sale[0].total_fiat_value));
             // const current_raised_value = parseFloat(found_sale[0].total_credit_value) * parseFloat(found_sale[0].price_value);
 
-            $("#coin_sale").html(formatDisplayNumber(coin_sale, ""));
-            $("#coin_counter").html(coin_counter);
+            $("#coin_sale").html(formatDisplayNumber(coin_sale, ''));
+            $("#coin_counter").html(formatDisplayNumber(coin_counter, ''));
             // $("#raisedValue").html('$ ' + formatDisplayNumber(Math.floor(current_raised_value), ""));
-            $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ""));
-            document.getElementById("loading_bar_green").style.width = `${percBarra(found_sale[0].global_limit, coin_sale)}%`;
+            $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ''));
+            document.getElementById("loading_bar_green").style.width = `${percBarra(coin_counter, coin_sale)}%`;
 
             // Chama a função que inicia o contador
             getDateTime(endDate);
@@ -279,10 +291,8 @@ addEvent(window,"load",function(e) {
         e = e ? e : window.event;
         var from = e.relatedTarget || e.toElement;
         if (!from || from.nodeName == "HTML") {
-            if(!close_splash1){
-
-                var userData = localStorage.getItem('lunes.accessToken')
-                console.log (userData);
+            if (!close_splash1) {
+                const userData = localStorage.getItem('lunes.accessToken')
                 if (!userData){
                     $("#splash_exit").show();
                 }
@@ -300,8 +310,7 @@ function closeSplash1(){
 
 // splash ao ficar X tempo no site
 setTimeout(function(){
-    var userData = localStorage.getItem('lunes.accessToken')
-    console.log (userData);
+    const userData = localStorage.getItem('lunes.accessToken')
     if (!userData){
         $('#splash_buy').show();
     }
