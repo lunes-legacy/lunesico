@@ -271,8 +271,7 @@ header #logo {
     margin-bottom: 20px;
 }
 
-#counter .global_value {
-    display: block;
+#counter > .global_value {
     text-align: right;
     font-size: 1.3em;
     margin-bottom: 10px;
