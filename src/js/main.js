@@ -89,8 +89,8 @@ function updateSaldo() {
             const found_sale = $.grep(result, v => v.sale_status === "active");
 
             // Soma os valores totais de tokens vendidos nas fases
-            const coin_sale = result.reduce((total, current) => {
-                const coin_total_value = current.total_value || 0;
+            const coin_sale = result.reduce((total, item) => {
+                const coin_total_value = item.total_value || 0;
                 return total + parseFloat(coin_total_value);
             }, 0);
 
@@ -108,6 +108,9 @@ function updateSaldo() {
             $("#totalValue").html('$ ' + formatDisplayNumber(Math.floor(total_fiat_value), ''));
             document.getElementById("loading_bar_green").style.width = `${percBarra(total_avaliable, coin_sale)}%`;
 
+            $('#active_phase').html(found_sale[0].name);
+            $('#global_limit_phase').html('$ '+ formatDisplayNumber(parseInt(found_sale[0].total_value), ''));
+
             // Chama a função que inicia o contador
             getDateTime(endDate);
         },
@@ -122,6 +125,8 @@ function updateSaldo() {
     $("#raisedValue").html('$ ' + formatDisplayNumber(0, ""));
     $("#totalValue").html('$ ' + formatDisplayNumber(0, ""));
     document.getElementById("loading_bar_green").style.width = "0%";
+    $('#active_phase').html('<br>');
+    $('#global_limit_phase').html('<br>');
     // $("#coin_counter").html('100.000.000');
 }
 

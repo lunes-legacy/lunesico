@@ -271,7 +271,7 @@ header #logo {
     margin-bottom: 20px;
 }
 
-#counter #coin_counter {
+#counter .global_value {
     display: block;
     text-align: right;
     font-size: 1.3em;
@@ -2104,7 +2104,7 @@ footer .logolunes {
         display: block;
     }
 
-    #counter #coin_counter {
+    #counter .global_value {
         text-align: center;
     }
 
