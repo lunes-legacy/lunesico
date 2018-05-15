@@ -109,7 +109,9 @@ function updateSaldo() {
             document.getElementById("loading_bar_green").style.width = `${percBarra(total_avaliable, coin_sale)}%`;
 
             $('#active_phase').html(found_sale[0].name);
-            $('#global_limit_phase').html('$ '+ formatDisplayNumber(parseInt(found_sale[0].total_value), ''));
+
+            const total_phase_sale = parseFloat(found_sale[0].total_value) * parseFloat(found_sale[0].price_value);
+            $('#total_phase_sale').html('$ '+ formatDisplayNumber(parseInt(total_phase_sale), ''));
 
             // Chama a função que inicia o contador
             getDateTime(endDate);
