@@ -144,10 +144,10 @@ function percBarra(total, atual) {
 }
 
 // Valores iniciais do contador
-document.querySelector('#con_days').innerHTML = 0;
-document.querySelector('#con_hours').innerHTML = 0;
-document.querySelector('#con_min').innerHTML = 0;
-document.querySelector('#con_sec').innerHTML = 0;
+//document.querySelector('#con_days').innerHTML = 0;
+//document.querySelector('#con_hours').innerHTML = 0;
+//document.querySelector('#con_min').innerHTML = 0;
+//document.querySelector('#con_sec').innerHTML = 0;
 
 $("#put_s_day_en").html('Days');
 $("#put_s_day_pt").html('Dias');
@@ -193,10 +193,10 @@ function getDateTime(endDate) {
     setInterval(function() {
         duration = moment.duration(duration - 1000, 'milliseconds');
 
-        document.querySelector('#con_days').innerHTML = Math.floor(duration.asDays());
-        document.querySelector('#con_hours').innerHTML = duration.hours();
-        document.querySelector('#con_min').innerHTML = duration.minutes();
-        document.querySelector('#con_sec').innerHTML = duration.seconds();
+        //document.querySelector('#con_days').innerHTML = Math.floor(duration.asDays());
+        //document.querySelector('#con_hours').innerHTML = duration.hours();
+        //document.querySelector('#con_min').innerHTML = duration.minutes();
+        //document.querySelector('#con_sec').innerHTML = duration.seconds();
 
         if (duration.days() < 1) {
             $("#put_s_day_en").html('Day');
