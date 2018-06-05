@@ -1692,21 +1692,36 @@ footer .logolunes {
 }
 
 .splash {
-    display:none;
     /*background-color:#fff;*/
+    
     background-color:#4cd566;
     color: #4B2C82;
-    padding: 30px;
-    width:100%;
-    max-width: 600px;
+    padding: 1px;
     z-index: 999;
     position: fixed;
-    left: 50%;
-    top: 50px;
-    margin-left:-300px;
-    border-radius: 10px;
+    left: 27%;
+    top: 25%;
     box-shadow: 0px 10px 15px rgba(0,0,0,.3);
 }
+
+#splash_buy .svg-inline--fa{
+    position: absolute;
+    float: right;
+    color: #4cd566;
+    height: 25px;
+    width: 25px;
+    margin-left: 95%; 
+    margin-top: 1%;
+}
+
+#splash_buy img{
+    max-width: 100%;
+}
+
+@media only screen and (width:768px)                             { .splash { left: 0px; } }
+@media only screen and (min-width:769px) and (max-width:1024px)  { .splash { left: 10%;} }
+@media only screen and (min-width:1025px) and (max-width:1440px) { .splash { left: 18%;} }
+
 
 .icon-float-size-max{ /* o maior tamanho que tem*/
     width: 110% !important;
