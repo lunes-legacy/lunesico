@@ -1692,8 +1692,6 @@ footer .logolunes {
 }
 
 .splash {
-    /*background-color:#fff;*/
-    
     background-color:#4cd566;
     color: #4B2C82;
     padding: 1px;
@@ -1704,7 +1702,7 @@ footer .logolunes {
     box-shadow: 0px 10px 15px rgba(0,0,0,.3);
 }
 
-#splash_buy .svg-inline--fa{
+#splash_buy .svg-inline--fa {
     position: absolute;
     float: right;
     color: #4cd566;
@@ -1714,11 +1712,11 @@ footer .logolunes {
     margin-top: 1%;
 }
 
-#splash_buy img{
+#splash_buy img {
     max-width: 100%;
 }
 
-@media only screen and (width:768px)                             { .splash { left: 0px; } }
+@media only screen and (width:768px)                             { .splash { left: 0px;} }
 @media only screen and (min-width:769px) and (max-width:1024px)  { .splash { left: 10%;} }
 @media only screen and (min-width:1025px) and (max-width:1440px) { .splash { left: 18%;} }
 
